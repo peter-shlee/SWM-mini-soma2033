@@ -1,0 +1,17 @@
+{
+  "name": "SWM-mini-soma2033",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development NODE_CONFIG_DIR=./configs/app node app"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "~1.18.2",
+    "config": "^3.3.6",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "morgan": "~1.9.0"
+  }
+}
