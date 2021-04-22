@@ -1,0 +1,33 @@
+{
+	"story_id": {
+		"condition": [main - story - 4], // 필요한 특정 spec state나 hidden state list,
+		"weight": 10, // 확률을 정하는 변수. 이 story의 확률은 "weight/(현재 컨디션으로 가능한 모든 story weight 합계)"로 정의됩니다.
+
+		"achieve": ["achieve code"], // (ex: hero-of-downtown). (보통 빈칸, 업적 달성 스토리에 들어감. 업적은 사용자마다 쌓임)
+		"picture": "", // 관련 그림 directory. 비어있어도 무관,
+		"body": "", //스토리 메인 텍스트,
+		"options": [
+			{
+				"option_text": "", // 옵션 이름
+				"option_condition": ["sensor-electric_1"],
+				"option_action": [
+					"del_AI",
+					"del_AI",
+					"add_back-end",
+					"del_main-project-2",
+					"add_main-project-3"
+				]
+			},
+			{
+				"option_text": "", // 옵션 이름,
+				"option_condition": [],
+				"option_action": [
+					"execute_sub54",
+					"add_front-end",
+					"del_main-project-2",
+					"add_main-project-4"
+				]
+			}
+		]
+	}
+}
