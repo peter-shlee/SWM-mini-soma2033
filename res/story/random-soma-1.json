@@ -1,10 +1,10 @@
 {
 	"mentoring1": {
-		"condition": ["main1"], // 필요한 특정 spec state나 hidden state list,
-		"weight": 100, // 확률을 정하는 변수. 이 story의 확률은 "weight/(현재 컨디션으로 가능한 모든 story weight 합계)"로 정의됩니다.
-		"achieve": [], // (ex: "hero-of-downtown"). (보통 빈칸, 업적 달성 스토리에 들어감. 업적은 사용자마다 쌓임)
-		"picture": "", // 관련 그림 directory. 비어있어도 무관,
-		"body": "이제 소마를 시작한 당신, 멘토님들이 열어놓은 많은 멘토링이 있네요! 어떤 것을 들을까요?", //스토리 메인 텍스트,
+		"condition": ["main1"],
+		"weight": 100,
+		"achieve": [],
+		"picture": "",
+		"body": "이제 소마를 시작한 당신, 멘토님들이 열어놓은 많은 멘토링이 있네요! 어떤 것을 들을까요?",
 		"options": [
 			{
 				"option_text": "백엔드 강의를 듣자!",
@@ -62,7 +62,7 @@
 		"weight": 100,
 		"achieve": [],
 		"picture": "",
-		"body": "길을 돌아다니는데 눈앞에 팀원이 될 수 있는 다른 연수생들이 어슬렁거리네요! 앞으로 프로젝트를 잘하려면 유능한 팀원은 필수죠!", //스토리 메인 텍스트,
+		"body": "길을 돌아다니는데 눈앞에 팀원이 될 수 있는 다른 연수생들이 어슬렁거리네요! 앞으로 프로젝트를 잘하려면 유능한 팀원은 필수죠!",
 		"options": [
 			{
 				"option_text": "능숙하게 말을 건다.",
