@@ -1,0 +1,146 @@
+{
+	"mentoring1": {
+		"condition": ["main1"], // 필요한 특정 spec state나 hidden state list,
+		"weight": 100, // 확률을 정하는 변수. 이 story의 확률은 "weight/(현재 컨디션으로 가능한 모든 story weight 합계)"로 정의됩니다.
+		"achieve": [], // (ex: "hero-of-downtown"). (보통 빈칸, 업적 달성 스토리에 들어감. 업적은 사용자마다 쌓임)
+		"picture": "", // 관련 그림 directory. 비어있어도 무관,
+		"body": "이제 소마를 시작한 당신, 멘토님들이 열어놓은 많은 멘토링이 있네요! 어떤 것을 들을까요?", //스토리 메인 텍스트,
+		"options": [
+			{
+				"option_text": "백엔드 강의를 듣자!",
+				"option_condition": [],
+				"option_action": [
+					"execute_mentoring11",
+				],
+			},
+			{
+				"option_text": "프론트엔드 강의를 듣자!",
+				"option_condition": [],
+				"option_action": [
+					"execute_mentoring12",
+				],
+			},
+			{
+				"option_text": "멘토링보다는 팀원 구하는게 먼저지!",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv"
+				],
+			},
+		],
+	},
+	"mentoring11": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "백엔드 강의를 열심히 들어서 백엔드 관련 지식이 상승했습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_backend"],
+			},
+		],
+	},
+	"mentoring12": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "프론트엔드 강의를 열심히 들어서 프론트엔드 관련 지식이 상승했습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_frontend"],
+			},
+		],
+	},
+	"conv": {
+		"condition": ["main1"],
+		"weight": 100,
+		"achieve": [],
+		"picture": "",
+		"body": "길을 돌아다니는데 눈앞에 팀원이 될 수 있는 다른 연수생들이 어슬렁거리네요! 앞으로 프로젝트를 잘하려면 유능한 팀원은 필수죠!", //스토리 메인 텍스트,
+		"options": [
+			{
+				"option_text": "능숙하게 말을 건다.",
+				"option_condition": ["speach"],
+				"option_action": [
+					"execute_conv1",
+				],
+			},
+			{
+				"option_text": "농담을 치면서 자연스럽게 말을 건다.",
+				"option_condition": ["humor"],
+				"option_action": [
+					"execute_conv1",
+				],
+			},
+			{
+				"option_text": "모른체 지나간다.",
+				"option_condition": [],
+				"option_action": [],
+			},
+		],
+	},
+	"conv1": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "능숙한 말솜씨로 말을 건 당신, 이제 연수생들이 이제는 당신이 물어볼 차레입니다. 어떤 것들을 물어볼까요?",
+		"options": [
+			{
+				"option_text": "AI기술에 대해서 물어본다.",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv11",
+				],
+			},
+			{
+				"option_text": "다른 연수생들 정보에 대해서 물어본다.",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv12",
+				],
+			},
+			{
+				"option_text": "재밌는 이야기를 이어간다.",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv13",
+				],
+			},
+		],
+	},
+	"conv11": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "연수생들과 재밌게 AI에 대해서 이야기를 진행했습니다. 팀원들에게서 핫스팟도 공유받고 AI에 관련된 지식도 얻었습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_AI", "add_wifi"],
+			},
+		],
+	},
+	"conv12": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "연수생들과 다른 연수생들에 대한 정보들을 얻었습니다. 앞으로 팀을 짤 때 도움이 될 것 같네요!",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_team-info"],
+			},
+		],
+	},
+}
