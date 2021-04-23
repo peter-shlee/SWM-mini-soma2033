@@ -2,6 +2,7 @@
 // leeez : https://swm-mini-soma2033-hvbpc.run.goorm.io
 const express = require('express');
 const router = express.Router();
+const imageUrl = "https://drive.google.com/uc?id=";
 
 const libKakaoWork = require('../libs/kakaoWork');
 
@@ -10,7 +11,6 @@ router.get('/', async (req, res, next) => {
   // 유저 목록 검색 (1)
   const users = await libKakaoWork.getUserList();
 		
-	
   // 검색된 모든 유저에게 각각 채팅방 생성 (2)
   const conversations = await Promise.all(
     users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
@@ -30,34 +30,21 @@ router.get('/', async (req, res, next) => {
 			},
 			{
 			  "type": "image_link",
-			  "url": "https://drive.google.com/uc?id=1l5ZoK8UgqslcZK1448NlVGGLs7r2O-8C"
+			  "url": imageUrl + "1HPY4cY7ml_zkpCuf7zdgTPA-sju97fzu"
 			},
 			{
 			  "type": "text",
-			  "text": "당신은 길을 가다가 춥고 험난한 설산을 발견합니다. 시리에 의하면 이 설산 깊숙히에는 고대 기계룡이 잠자고 있다고 합니다.",
+			  "text": "📟전세계가 주목하는 소마2033📟\n2033년, 기술의 발전은 모든 전문가의 예상을 깨고 급속도로 발전하여, 인류는 화성에 거주지를 마련하고, 인공지능 로봇이 지배하는 국가와 전쟁을 벌이고, 사후세계대신 가상세계로 이주를 시작하였습니다.\n이러한 추세를 따라가기 위해서는 열심히 소프트웨어 역량을 길러야겠죠!?\n2021년 한국의 소프트웨어 인재를 양성하는 프로그램이었던 소프트웨어 마에스트로는 이제 ❗️전세계에서 가장 유명한 소프트웨어 인재양성 프로그램❗️이 되었습니다!\n면접 경쟁률만 2033:1인 경쟁률을 뚫고 당신은 소프트웨어 마에스트로 프로그램에 합격한 당신은 이제 프로젝트를 수행하기 위해서 모험을 떠납니다! 준비되셨나요?",
 			  "markdown": true
-			},
-			{
-			  "type": "action",
-			  "elements": [
-				{
-				  "type": "button",
-				  "text": "산 안쪽으로",
-				  "style": "primary"
-				},
-				{
-				  "type": "button",
-				  "text": "지나간다",
-				  "style": "primary"
-				}
-			  ]
 			},
 			{
 			  "type": "divider"
 			},
 			{
 			  "type": "button",
-			  "text": "내 상태 및 소지품",
+			  "action_type": 'submit_action',
+			  "value": 'main_story_start',
+			  "text": "🕹 게임 시작하기",
 			  "style": "default"
 			}
 	  ],
@@ -65,46 +52,6 @@ router.get('/', async (req, res, next) => {
       })
     ),
   ]);
-
-// router.get('/', async (req, res, next) => {
-//   // 유저 목록 검색 (1)
-//   const users = await libKakaoWork.getUserList();
-
-//   // 검색된 모든 유저에게 각각 채팅방 생성 (2)
-//   const conversations = await Promise.all(
-//     users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
-//   );
-
-//   // 생성된 채팅방에 메세지 전송 (3)
-//   const messages = await Promise.all([
-//     conversations.map((conversation) =>
-//       libKakaoWork.sendMessage({
-//         conversationId: conversation.id,
-//         text: '설문조사 이벤트',
-//         blocks: [
-//           {
-//             type: 'header',
-//             text: '☕ 사내 카페 만족도 조사 🥤',
-//             style: 'blue',
-//           },
-//           {
-//             type: 'text',
-//             text:
-//               '어느덧 사내카페가 바뀐지 한달이 되었습니다.\n구르미들이 카페를 이용하고 계신지 의견을 들어보고자 설문 조사를 진행해봅니다!!\n설문에 참여하면 푸짐한 경품 찬스가있으니 상품 꼭 받아가세요! 🎁',
-//             markdown: true,
-//           },
-//           {
-//             type: 'button',
-//             action_type: 'call_modal',
-//             value: 'cafe_survey',
-//             text: '설문 참여하기',
-//             style: 'default',
-//           },
-//         ],
-//       })
-//     ),
-//   ]);
-
   // 응답값은 자유롭게 작성하셔도 됩니다.
   res.json({
     users,
@@ -118,6 +65,7 @@ router.post('/request', async (req, res, next) => {
   const { message, value } = req.body;
 
   switch (value) {
+
     case 'cafe_survey':
       // 설문조사용 모달 전송
       return res.json({
@@ -187,6 +135,35 @@ router.post('/callback', async (req, res, next) => {
   const { message, actions, action_time, value } = req.body; // 설문조사 결과 확인 (2)
 
   switch (value) {
+	  case 'main_story_start' :
+		   await libKakaoWork.sendMessage({
+        	conversationId: message.conversation_id,
+		  "text" : "SOMA 2033 test",
+		  "blocks": [
+			{
+			  "type": "image_link",
+			  "url": imageUrl + "1l5ZoK8UgqslcZK1448NlVGGLs7r2O-8C"
+			},
+			{
+			  "type": "text",
+			  "text": "story context",
+			  "markdown": true
+			},
+			{
+			  "type": "button",
+			  "text": "go",
+			  "style": "default"
+			},
+			{
+			  "type": "button",
+			  "text": "pass",
+			  "style": "default"
+			}
+		  ],
+		});
+		break;
+		  
+		  
     case 'cafe_survey_results':
       // 설문조사 응답 결과 메세지 전송 (3)
       await libKakaoWork.sendMessage({
