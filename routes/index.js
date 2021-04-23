@@ -42,16 +42,19 @@ router.get('/', async (req, res, next) => {
 			},
 			{
 			  "type": "button",
-			  "action_type": 'submit_action',
-			  "value": 'main_story_start',
 			  "text": "🕹 게임 시작하기",
-			  "style": "default"
+			  "action_type": 'submit_action',
+			  "action_name": 'main_story_start',
+			  "value" : 'main_story_start', //storyID
+			  "style": "default"			
 			}
 	  ],
 
       })
     ),
   ]);
+	
+	
   // 응답값은 자유롭게 작성하셔도 됩니다.
   res.json({
     users,
@@ -134,36 +137,7 @@ router.post('/request', async (req, res, next) => {
 router.post('/callback', async (req, res, next) => {
   const { message, actions, action_time, value } = req.body; // 설문조사 결과 확인 (2)
 
-  switch (value) {
-	  case 'main_story_start' :
-		   await libKakaoWork.sendMessage({
-        	conversationId: message.conversation_id,
-		  "text" : "SOMA 2033 test",
-		  "blocks": [
-			{
-			  "type": "image_link",
-			  "url": imageUrl + "1l5ZoK8UgqslcZK1448NlVGGLs7r2O-8C"
-			},
-			{
-			  "type": "text",
-			  "text": "story context",
-			  "markdown": true
-			},
-			{
-			  "type": "button",
-			  "text": "go",
-			  "style": "default"
-			},
-			{
-			  "type": "button",
-			  "text": "pass",
-			  "style": "default"
-			}
-		  ],
-		});
-		break;
-		  
-		  
+  switch (value) {	  
     case 'cafe_survey_results':
       // 설문조사 응답 결과 메세지 전송 (3)
       await libKakaoWork.sendMessage({
