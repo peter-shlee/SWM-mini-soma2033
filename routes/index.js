@@ -1,5 +1,5 @@
 // routes/index.js
-// leeez : https://swm-mini-soma2033-rotke.run.goorm.io
+// leeez : https://swm-mini-soma2033-hvbpc.run.goorm.io
 const express = require('express');
 const router = express.Router();
 
