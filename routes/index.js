@@ -1,4 +1,5 @@
 // routes/index.js
+// leeez : https://swm-mini-soma2033-rotke.run.goorm.io
 const express = require('express');
 const router = express.Router();
 
@@ -8,7 +9,8 @@ const libKakaoWork = require('../libs/kakaoWork');
 router.get('/', async (req, res, next) => {
   // 유저 목록 검색 (1)
   const users = await libKakaoWork.getUserList();
-
+		
+	
   // 검색된 모든 유저에게 각각 채팅방 생성 (2)
   const conversations = await Promise.all(
     users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
@@ -18,47 +20,47 @@ router.get('/', async (req, res, next) => {
   const messages = await Promise.all([
     conversations.map((conversation) =>
       libKakaoWork.sendMessage({
-        conversationId: conversation.id,
-        "text": "SOMA 2033 test",
-  "blocks": [
-    {
-      "type": "header",
-      "text": "SOMA 2033",
-      "style": "blue"
-    },
-    {
-      "type": "image_link",
-      "url": "https://t1.kakaocdn.net/kakaowork/resources/block-kit/imagelink/image3@3x.jpg"
-    },
-    {
-      "type": "text",
-      "text": "당신은 길을 가다가 춥고 험난한 설산을 발견합니다. 시리에 의하면 이 설산 깊숙히에는 고대 기계룡이 잠자고 있다고 합니다ㅠㅠ",
-      "markdown": true
-    },
-    {
-      "type": "action",
-      "elements": [
-        {
-          "type": "button",
-          "text": "산 안쪽으로",
-          "style": "primary"
-        },
-        {
-          "type": "button",
-          "text": "지나간다",
-          "style": "primary"
-        }
-      ]
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "button",
-      "text": "내 상태 및 소지품",
-      "style": "default"
-    }
-  ],
+		conversationId: conversation.id,
+		"text": "SOMA 2033 test",
+	    "blocks": [
+			{
+			  "type": "header",
+			  "text": "SOMA 2033",
+			  "style": "blue"
+			},
+			{
+			  "type": "image_link",
+			  "url": "https://drive.google.com/uc?id=1l5ZoK8UgqslcZK1448NlVGGLs7r2O-8C"
+			},
+			{
+			  "type": "text",
+			  "text": "당신은 길을 가다가 춥고 험난한 설산을 발견합니다. 시리에 의하면 이 설산 깊숙히에는 고대 기계룡이 잠자고 있다고 합니다.",
+			  "markdown": true
+			},
+			{
+			  "type": "action",
+			  "elements": [
+				{
+				  "type": "button",
+				  "text": "산 안쪽으로",
+				  "style": "primary"
+				},
+				{
+				  "type": "button",
+				  "text": "지나간다",
+				  "style": "primary"
+				}
+			  ]
+			},
+			{
+			  "type": "divider"
+			},
+			{
+			  "type": "button",
+			  "text": "내 상태 및 소지품",
+			  "style": "default"
+			}
+	  ],
 
       })
     ),
