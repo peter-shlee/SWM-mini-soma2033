@@ -2,6 +2,7 @@ const fs = require("fs")
 const resIO = require('../resIO');
 const play = require('../play');
 
+// story 객체의 option_action을 인자로 받아, action의 type별로 분류하여 리턴하는 함수
 exports.divideOptionsByTypeOfAction = (option_action) => {
 	const execute_actions = []
 	const add_actions = []
@@ -30,10 +31,12 @@ exports.divideOptionsByTypeOfAction = (option_action) => {
 	}
 }
 
+// 인자로 전달된 두 정수 사이의 값을 랜덤하게 선택하여 리턴
 exports.getRandomIntBetween = (min, max) => {
 	return Math.floor(Math.random() * (max - min) + min);
 }
 
+// 다음으로 나올 수 있는 스토리들의 story_id들이 담긴 배열을 받은 뒤, 그 스토리들중 하나를 랜덤하게 선택해 리턴하는 함수
 exports.getNextStory = (story_ids, stories) => {
 	if (story_ids.length == 0) {
 		// 랜덤하게 스토리 하나 선택
@@ -58,11 +61,14 @@ exports.getNextStory = (story_ids, stories) => {
 	}
 }
 
-// function createStoryBlockKit(story_id, ) {
+// 전달받은 story_id를 이용해 해당 story에 대한 정보를 찾은 뒤 그 스토리에 대한 블록킷을 생성해 리턴하는 함수
+// function createStoryBlockKit(story_id, stories) {
 	
 // }
 
-exports.loadStory = (story_dir_path) => {
+
+// res/story 디렉토리 내에 있는 json 파일들을 읽어와 하나의 객체에 story들을 모두 넣어 리턴하는 함수
+exports.loadStories = (story_dir_path) => {
 	const stories = {};
 	var story_jsons = null;
 	
