@@ -72,10 +72,7 @@ exports.loadStory = (story_dir_path) => {
 		console.log(err);
 	}
 	
-	console.log(story_jsons)
-	
 	for (story_json of story_jsons) {
-		console.log(story_json)
 		const story = resIO.readJsonSync(story_dir_path + "/" + story_json);
 		Object.assign(stories, story)
 	}
