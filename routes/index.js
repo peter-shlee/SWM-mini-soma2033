@@ -13,7 +13,7 @@ module.exports = router;
 // const userInfos = resIO.readJsonSync("res/user.json")
 // const states = resIO.readJsonSync("res/state.json")
 // const achivements = resIO.readJsonSync("res/achieve.json")
-const stories = play.loadStory("res/story")
+const stories = play.loadStories("res/story")
 console.log(stories)
 //console.log(stories["mentoring1"]["options"][0]["option_action"])
 divided_option_action = play.divideOptionsByTypeOfAction(stories["mentoring1"]["options"][0]["option_action"])
