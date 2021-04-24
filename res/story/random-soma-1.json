@@ -10,24 +10,24 @@
 				"option_text": "백엔드 강의를 듣자!",
 				"option_condition": [],
 				"option_action": [
-					"execute_mentoring11",
-				],
+					"execute_mentoring11"
+				]
 			},
 			{
 				"option_text": "프론트엔드 강의를 듣자!",
 				"option_condition": [],
 				"option_action": [
-					"execute_mentoring12",
-				],
+					"execute_mentoring12"
+				]
 			},
 			{
 				"option_text": "멘토링보다는 팀원 구하는게 먼저지!",
 				"option_condition": [],
 				"option_action": [
 					"execute_conv"
-				],
-			},
-		],
+				]
+			}
+		]
 	},
 	"mentoring11": {
 		"condition": [],
@@ -39,9 +39,9 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["add_backend"],
-			},
-		],
+				"option_action": ["add_backend"]
+			}
+		]
 	},
 	"mentoring12": {
 		"condition": [],
@@ -53,9 +53,9 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["add_frontend"],
-			},
-		],
+				"option_action": ["add_frontend"]
+			}
+		]
 	},
 	"conv": {
 		"condition": ["main1"],
@@ -68,22 +68,22 @@
 				"option_text": "능숙하게 말을 건다.",
 				"option_condition": ["speach"],
 				"option_action": [
-					"execute_conv1",
-				],
+					"execute_conv1"
+				]
 			},
 			{
 				"option_text": "농담을 치면서 자연스럽게 말을 건다.",
 				"option_condition": ["humor"],
 				"option_action": [
-					"execute_conv1",
-				],
+					"execute_conv1"
+				]
 			},
 			{
 				"option_text": "모른체 지나간다.",
 				"option_condition": [],
-				"option_action": [],
-			},
-		],
+				"option_action": []
+			}
+		]
 	},
 	"conv1": {
 		"condition": [],
@@ -96,24 +96,24 @@
 				"option_text": "AI기술에 대해서 물어본다.",
 				"option_condition": [],
 				"option_action": [
-					"execute_conv11",
-				],
+					"execute_conv11"
+				]
 			},
 			{
 				"option_text": "다른 연수생들 정보에 대해서 물어본다.",
 				"option_condition": [],
 				"option_action": [
-					"execute_conv12",
-				],
+					"execute_conv12"
+				]
 			},
 			{
 				"option_text": "재밌는 이야기를 이어간다.",
 				"option_condition": [],
 				"option_action": [
-					"execute_conv13",
-				],
-			},
-		],
+					"execute_conv13"
+				]
+			}
+		]
 	},
 	"conv11": {
 		"condition": [],
@@ -125,9 +125,9 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["add_AI", "add_wifi"],
-			},
-		],
+				"option_action": ["add_AI", "add_wifi"]
+			}
+		]
 	},
 	"conv12": {
 		"condition": [],
@@ -139,8 +139,8 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["add_team-info"],
-			},
-		],
-	},
+				"option_action": ["add_team-info"]
+			}
+		]
+	}
 }
