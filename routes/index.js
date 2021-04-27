@@ -141,37 +141,15 @@ router.post('/request', async (req, res, next) => {
 });
 
 router.post('/callback', async (req, res, next) => {
-	const { message, actions, action_time, value } = req.body; // 설문조사 결과 확인 (2)
+	const { message, actions, action_time, value, react_user_id } = req.body; // 설문조사 결과 확인 (2)
 
 	console.log(value);
+	console.log(req.body)
 
 	switch (value) {
-		case 'main_story_start':
-			await libKakaoWork.sendMessage({
-				conversationId: message.conversation_id,
-				text: 'SOMA 2033 test',
-				blocks: [
-					{
-						type: 'image_link',
-						url: imageUrl + '1l5ZoK8UgqslcZK1448NlVGGLs7r2O-8C',
-					},
-					{
-						type: 'text',
-						text: 'story context',
-						markdown: true,
-					},
-					{
-						type: 'button',
-						text: 'go',
-						style: 'default',
-					},
-					{
-						type: 'button',
-						text: 'pass',
-						style: 'default',
-					},
-				],
-			});
+		case 'welcome':
+			console.log(userInfos[react_user_id])
+			await libKakaoWork.sendMessage(libKakaoWork.sendMessage(block_kit.storyBlock(message.conversation_id, userInfos[react_user_id], stories, "start")));
 			break;
 
 		case 'cafe_survey_results':
@@ -314,8 +292,8 @@ function getWelcomBlock(conversation) {
 							type: 'button',
 							text: '🕹 게임 시작하기',
 							action_type: 'submit_action',
-							action_name: 'main_story_start', // action_name이 없으면 submit_action 작동 안함
-							value: 'main_story_start',
+							action_name: 'welcome', // action_name이 없으면 submit_action 작동 안함
+							value: 'welcome',
 							style: 'default',
 						},
 					],
