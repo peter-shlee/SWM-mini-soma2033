@@ -1,9 +1,8 @@
+const imgUrl = "https://swm-mini-soma2033-girbv.run.goorm.io/request/img"
 const resIO = require('../resIO');
-const imageUrl = 'https://drive.google.com/uc?id=';
-const basic_state = resIO.readJsonSync("libs/block-kit/basic-state.json");
 
-getBaseStateUrl = (bs) => {
-  return basic_state[bs]
+getImageUrl = (imgName) => {
+  return imgUrl + "?name=" + imgName;
 }
 
 // 스토리 블록킷을 넘겨줍니다.
@@ -34,11 +33,11 @@ exports.storyBlock = (conversation_id, user_json, story_json) => {
       },
       {
         type: 'image_link',
-        url: imageUrl + getBaseStateUrl(userBaseState[0] + userBaseState[1] + userBaseState[2]), // ToDo: Implementation
+        url: getImageUrl(userBaseState[0] + userBaseState[1] + userBaseState[2] + '.jpg'), // ToDo: Implementation
       },
       {
         type: 'image_link',
-        url: 'https://github.com/shlee4290/SWM-mini-soma2033/blob/main/res/img/sample-image.png?raw=true',
+        url: getImageUrl(story_json.picture)
       },
       {
         type: 'text',
