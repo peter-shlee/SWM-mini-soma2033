@@ -25,7 +25,7 @@ exports.saveJsonSync = (filePath, jsonObject) => {
 }
 
 // save json file asynchronously
-exports.saveJsonAsync = (filePath, jsonObject, callback) => {
+exports.saveJsonAsync = async (filePath, jsonObject, callback) => {
 	const jsonString = JSON.stringify(jsonObject)
 	fs.writeFile(filePath, jsonString, function (err) {
 		if (err) {
