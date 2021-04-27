@@ -1,0 +1,160 @@
+{
+	"mentoring1": {
+		"condition": ["start"],
+		"weight": 100,
+		"achieve": [],
+		"picture": "",
+		"body": "이제 소마를 시작한 당신, 멘토님들이 열어놓은 많은 멘토링이 있네요! 어떤 것을 들을까요?",
+		"options": [
+			{
+				"option_text": "백엔드 강의를 듣자!",
+				"option_condition": [],
+				"option_action": [
+					"execute_mentoring11"
+				]
+			},
+			{
+				"option_text": "프론트엔드 강의를 듣자!",
+				"option_condition": [],
+				"option_action": [
+					"execute_mentoring12"
+				]
+			},
+			{
+				"option_text": "멘토링보다는 팀원 구하는게 먼저지!",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv"
+				]
+			}
+		]
+	},
+	"mentoring11": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "'이런 식으로 backend structure에 이더리움 네트워크를 이용하면 양자 네트워크 구축을 할 수 있습니다!'\n\n이더리움 양자 네트워크를 이용한 열정적인 백엔드 강의네요! 당신은 새로운 backend 지식에 눈을 떴습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_backend"]
+			}
+		]
+	},
+	"mentoring12": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "'UX는 과거로부터 가장 중요한 프론트엔드 덕목중에 하나죠. 디자이너가 아무리 따로 있다고 하더라도 우리 프론트엔드 개발자들은 사용자를 위한 프로그램을 만들 줄 알아야합니다.'\n\n감각적인 디자인 관련된 프론트엔드 강의네요. 디자이너랑 일하려면 잘 알아야겠죠!? 프론트엔드 감각이 늘어났습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_frontend"]
+			}
+		]
+	},
+	"conv": {
+		"condition": ["main1"],
+		"weight": 100,
+		"achieve": [],
+		"picture": "",
+		"body": "길을 돌아다니는데 눈앞에 팀원이 될 수 있는 다른 연수생들이 어슬렁거리네요! 앞으로 프로젝트를 잘하려면 유능한 팀원은 필수죠!",
+		"options": [
+			{
+				"option_text": "능숙하게 말을 건다.",
+				"option_condition": ["speach"],
+				"option_action": [
+					"execute_conv1"
+				]
+			},
+			{
+				"option_text": "프론트엔드 지식에 관련하여 이야기하면서 다가간다.",
+				"option_condition": ["frontend"],
+				"option_action": [
+					"execute_conv1"
+				]
+			},
+			{
+				"option_text": "모른체 지나간다.",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+	"conv1": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "능숙한 말솜씨로 말을 건 당신, 연수생들은 당신의 말에 귀를 기울이고 있습니다. 분명 이 연수생분들이 다양한 정보들을 가지고 있을거에요! 이제 연수생들에게 당신이 물어볼 차례입니다. 어떤 것들을 물어볼까요?",
+		"options": [
+			{
+				"option_text": "AI기술에 대해서 물어본다.",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv11"
+				]
+			},
+			{
+				"option_text": "화성 거주지에 대해서 물어본다.",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv12"
+				]
+			},
+			{
+				"option_text": "다른 연수생들 정보에 대해서 물어본다.",
+				"option_condition": [],
+				"option_action": [
+					"execute_conv13"
+				]
+			}
+		]
+	},
+	"conv11": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "연수생들과 재밌게 AI에 대해서 이야기를 진행했습니다. 팀원들에게서 핫스팟도 공유받고 AI에 관련된 지식도 얻었습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_AI", "add_wifi"]
+			}
+		]
+	},
+	"conv12": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "연수생들과 화성 거주지에 대해서 이야기를 진행했습니다. 팀원 중에서 화성 거주지로 돈을 많이 번 팀원도 있네요! 부자 연수생에게 소마코인도 받고 우주기술에 대한 정보도 얻었습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": ["add_space", "add_coin"]
+			}
+		]
+	},
+	"conv13": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": "\"소마2033에서 가장 유능한 연수생들은 '재홍', '수환', '주원', '승현', '중훈'이 있어! 재홍은 AI기술을 잘 알고있고, 수환은 VR기술, 주원은 백엔드, 승현은 프론트엔드 기술에 대해서 잘 알고있어. 중훈은 우주기술에 대해서 알고있으니까 관련되서 궁금한게 있으면 가서 물어봐! 모든 연수생들은 소마센터에 있으니까 잘 돌아다니다보면 만날 수 있을거야!\"\n\n연수생들의 정보를 충분히 알아낸 당신은 다시 길을 나섰습니다.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	}
+}
