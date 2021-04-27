@@ -15,13 +15,19 @@ module.exports = router;
 // const states = resIO.readJsonSync("res/state.json")
 // const achivements = resIO.readJsonSync("res/achieve.json")
 const stories = play.loadStories("res/story")
-console.log(stories)
+// console.log(stories)
 //console.log(stories["mentoring1"]["options"][0]["option_action"])
 divided_option_action = play.divideOptionsByTypeOfAction(stories["mentoring1"]["options"][0]["option_action"])
-console.log(divided_option_action)
-console.log(play.getNextStory(divided_option_action["execute"], stories))
+// console.log(divided_option_action)
+// console.log(play.getNextStory(divided_option_action["execute"], stories))
 //console.log(resIO.readJsonSync('res/state.json'));
-
+stories['start']['story_id'] = 'start';
+userExample = {
+	current_story: "main",
+	states: ['health_3', 'wifi_3', 'coin_3'],
+	essentials: [],
+	achieves: []
+}
 
 router.get('/', async (req, res, next) => {
 	// 유저 목록 검색 (1)
@@ -35,38 +41,7 @@ router.get('/', async (req, res, next) => {
 	// 생성된 채팅방에 메세지 전송 (3)
 	const messages = await Promise.all([
 		conversations.map((conversation) =>
-			libKakaoWork.sendMessage({
-				conversationId: conversation.id,
-				text: 'SOMA 2033 test',
-				blocks: [
-					{
-						type: 'header',
-						text: 'SOMA 2033',
-						style: 'blue',
-					},
-					{
-						type: 'image_link',
-						url: imageUrl + '1HPY4cY7ml_zkpCuf7zdgTPA-sju97fzu',
-					},
-					{
-						type: 'text',
-						text:
-							'📟전세계가 주목하는 소마2033📟\n2033년, 기술의 발전은 모든 전문가의 예상을 깨고 급속도로 발전하여, 인류는 화성에 거주지를 마련하고, 인공지능 로봇이 지배하는 국가와 전쟁을 벌이고, 사후세계대신 가상세계로 이주를 시작하였습니다.\n이러한 추세를 따라가기 위해서는 열심히 소프트웨어 역량을 길러야겠죠!?\n2021년 한국의 소프트웨어 인재를 양성하는 프로그램이었던 소프트웨어 마에스트로는 이제 ❗️전세계에서 가장 유명한 소프트웨어 인재양성 프로그램❗️이 되었습니다!\n면접 경쟁률만 2033:1인 경쟁률을 뚫고 당신은 소프트웨어 마에스트로 프로그램에 합격한 당신은 이제 프로젝트를 수행하기 위해서 모험을 떠납니다! 준비되셨나요?',
-						markdown: true,
-					},
-					{
-						type: 'divider',
-					},
-					{
-						type: 'button',
-						text: '🕹 게임 시작하기',
-						action_type: 'submit_action',
-						action_name: 'main_story_start', // action_name이 없으면 submit_action 작동 안함
-						value: 'main_story_start',
-						style: 'default',
-					},
-				],
-			})
+			libKakaoWork.sendMessage(block_kit.storyBlock(conversation.id, userExample, stories["start"]))
 		),
 	]);
 	// 응답값은 자유롭게 작성하셔도 됩니다.
