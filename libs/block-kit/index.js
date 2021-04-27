@@ -32,8 +32,12 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
       type: 'image_link',
       url: getImageUrl(story_json.picture)
     };
-  } else {
-    imgBlock = {};
+  } else { // 일단 임시 방편으로 text로 처리해놨습니다
+    imgBlock = {
+		type: "text",
+		text: "",
+		markdown: false
+    };
   }
   ret_object = {
     conversationId: conversation_id,

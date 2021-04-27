@@ -1,6 +1,8 @@
 const fs = require("fs")
 const resIO = require('../resIO');
 const play = require('../play');
+const block_kit = require('../block-kit');
+const libKakaoWork = require('../kakaoWork');
 
 // story 객체의 option_action을 인자로 받아, action의 type별로 분류하여 리턴하는 함수
 exports.divideOptionsByTypeOfAction = (option_action) => {
@@ -143,6 +145,7 @@ exports.createNewUser = (user) => {
 		current_story: 'start',
 		states: ['health_3', 'wifi_3', 'coin_3'],
 		achieves: [],
+		essentials: [],
 	};
 
 	return new_user;
@@ -202,17 +205,17 @@ exports.deleteState = (user_id, userInfos, target_state, count) => {
 	return;
 }
 
-exports.addState = (user_id, userInfos, new_status, count) => {
+exports.addState = (user_id, userInfos, new_state, count) => {
 	const user_states = userInfos[user_id].states;
 	const state_dict = play.statesList2dict(user_states);
 	
-	if (!Object.keys(state_dict).includes(new_status))
-		state_dict[new_status] = 0;
+	if (!Object.keys(state_dict).includes(new_state))
+		state_dict[new_state] = 0;
 	
-	state_dict[new_status] += count;
-	if (new_status == "health" || new_status ==  "wifi" || new_status == "coin")
-		if (state_dict[new_status] > 3)
-			state_dict[new_status] = 3;
+	state_dict[new_state] += count;
+	if (new_state == "health" || new_state ==  "wifi" || new_state == "coin")
+		if (state_dict[new_state] > 3)
+			state_dict[new_state] = 3;
 	
 	const new_user_states = play.statesDict2list(state_dict);
 	userInfos[user_id].states = new_user_states;
@@ -221,4 +224,98 @@ exports.addState = (user_id, userInfos, new_status, count) => {
 		});
 	
 	return;
+}
+
+exports.deleteEssentialState = (user_id, userInfos, target_state, count) => {
+	const user_states = userInfos[user_id].essentials;
+	const state_dict = play.statesList2dict(user_states);
+	
+	if (Object.keys(state_dict).includes(target_state)){
+		state_dict[target_state] -= count;
+		
+		if (state_dict[target_state] <= 0)
+			delete state_dict[target_state];
+	}
+	
+	const new_user_states = play.statesDict2list(state_dict);
+	userInfos[user_id].essentials = new_user_states;
+	resIO.saveJsonSync('res/user.json', userInfos, () => {
+			console.log('save user.json');
+		});
+	
+	return;
+}
+
+exports.addEssentialState = (user_id, userInfos, new_state, count) => {
+	const user_states = userInfos[user_id].essentials;
+	const state_dict = play.statesList2dict(user_states);
+	
+	if (!Object.keys(state_dict).includes(new_state))
+		state_dict[new_state] = 0;
+	
+	state_dict[new_state] += count;
+	if (new_state == "health" || new_state ==  "wifi" || new_state == "coin")
+		if (state_dict[new_state] > 3)
+			state_dict[new_state] = 3;
+	
+	const new_user_states = play.statesDict2list(state_dict);
+	userInfos[user_id].essentials = new_user_states;
+	resIO.saveJsonSync('res/user.json', userInfos, () => {
+			console.log('save user.json');
+		});
+	
+	return;
+}
+
+exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversation_id) => {
+	// button의 value parsing
+	const splitted_values = play.parseButtonValue(value);
+	const current_story = splitted_values[0];
+	const button_idx = splitted_values[1];
+	
+	const clicked_button_option_actions = stories[current_story].options[button_idx].option_action;
+	
+	const divided_option_action = play.divideOptionsByTypeOfAction(clicked_button_option_actions);
+	// option actions 확인하여 user의 states 갱신
+	const states_to_add = play.statesList2dict(divided_option_action["add"]);
+	for (state of Object.keys(states_to_add)) {
+		play.addState(react_user_id, userInfos, state, states_to_add[state]);
+	}
+	
+	const states_to_delete = play.statesList2dict(divided_option_action["del"]);
+	for (state of Object.keys(states_to_delete)) {
+		play.deleteState(react_user_id, userInfos, state, states_to_delete[state]);
+	}
+	
+	// essentials
+	const essential_states_to_add = play.statesList2dict(divided_option_action["add_es"]);
+	for (state of Object.keys(essential_states_to_add)) {
+		play.addEssentialState(react_user_id, userInfos, state, essential_states_to_add[state]);
+	}
+	
+	const essential_states_to_delete = play.statesList2dict(divided_option_action["del_es"]);
+	for (state of Object.keys(essential_states_to_delete)) {
+		play.deleteEssentialState(react_user_id, userInfos, state, essential_states_to_delete[state]);
+	}
+	
+	// new-start도 처리해야 함
+	
+	
+	// achieve도 처리해야 함
+	
+	// add_page -> page 수 하나 추가해야 함
+	
+	// 다음 스토리 실행
+	// value parsing한 정보로 어떤 스토리로 넘어갈지 결정 -> getNextStoryId() 이용
+	const next_story_id = play.getNextStoryId(stories, userInfos[react_user_id], divided_option_action["execute"]);
+	
+	const next_block = block_kit.storyBlock(conversation_id, userInfos[react_user_id], stories[next_story_id], next_story_id);
+	libKakaoWork.sendMessage(next_block);
+	
+	return;
+}
+
+exports.parseButtonValue = (value) => {
+	values = value.split("_");
+	return [values[0], parseInt(values[1])];
 }
