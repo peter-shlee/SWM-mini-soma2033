@@ -4,6 +4,13 @@ const resIO = require('../resIO');
 getImageUrl = (imgName) => {
   return imgUrl + "?name=" + imgName;
 }
+getStatusBar = (status) => {
+  return {
+    type: 'text',
+    text: "TEST STATUS BAR",
+    markdown: true,
+  };
+}
 
 // 스토리 블록킷을 넘겨줍니다.
 exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
@@ -20,8 +27,14 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
       userBaseState[2] = state.split('_')[1];
     }
   }
-  console.log(imageUrl + story_json.picture);
-  console.log(getBaseStateUrl(userBaseState[0] + userBaseState[1] + userBaseState[2]));
+  if(story_json.picture){
+    imgBlock = {
+      type: 'image_link',
+      url: getImageUrl(story_json.picture)
+    };
+  } else {
+    imgBlock = {};
+  }
   ret_object = {
     conversationId: conversation_id,
     text: 'SOMA 2033 test',
@@ -31,14 +44,8 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
         text: 'SOMA 2033',
         style: 'blue',
       },
-      {
-        type: 'image_link',
-        url: getImageUrl(userBaseState[0] + userBaseState[1] + userBaseState[2] + '.jpg'), // ToDo: Implementation
-      },
-      {
-        type: 'image_link',
-        url: getImageUrl(story_json.picture)
-      },
+      getStatusBar(userBaseState[0] + userBaseState[1] + userBaseState[2]),
+      imgBlock,
       {
         type: 'text',
         text: story_json.body,
@@ -62,7 +69,7 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
       text: option.option_text,
       action_type: 'submit_action',
       action_name: "AcTioN nAmE",
-      value: story_id + "_" + String(cnt),
+      value: story_id + '_' + String(cnt),
       style: 'default'
     })
   }
