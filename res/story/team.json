@@ -1,0 +1,178 @@
+{
+	"team-jaehong": {
+		"condition": ["start", "need-team"],
+		"weight": 200,
+		"achieve": [],
+		"picture": "",
+		"body": " 깜짝이야!\n\n '너 내 팀이 되어라!'\n\n 뜬금없이 연수생 재홍님이 튀어나와서 당신에게 말을 걸었습니다!",
+		"options": [
+      {
+				"option_text": "좋아! 가보자!",
+				"option_condition": [],
+				"option_action": [
+					"del_need-team",
+					"add_team",
+					"add_team-jaehong",
+					"add_AI"
+				]
+			},
+      {
+				"option_text": "이상한 사람이다...! 지나가자..",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+  "team-suhwan": {
+		"condition": ["start", "need-team"],
+		"weight": 200,
+		"achieve": [],
+		"picture": "",
+		"body": " 길을 가다가 야생의 연수생, 수환님을 만났습니다. 수환님은 소마2033에서 몇 안되는 유능한 연수생 중에 한 명이죠! 어떻게 할까요?",
+		"options": [
+      {
+				"option_text": "수환님..! 저와 함께하시겠어요?",
+				"option_condition": [],
+				"option_action": ["execute_suhwan"]
+			},
+      {
+				"option_text": "아직은 고민이 더 필요해. 넘어가자.",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+  "suhwan": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": " 당신의 급작스러운 팀 제의에 조금 당황하신 것 같습니다. 수환님은 고민하다가 말은 꺼내지 못하고 결국 고개만 끄덕거립니다. 수환님이 해주시는 가장 큰 제스쳐인게 분명합니다! 수환님과 함께 팀을 하게되었습니다!",
+		"options": [
+      {
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": [
+					"del_need-team",
+					"add_team",
+					"add_team-suhwan",
+					"add_ar-vr"
+				]
+			}
+		]
+	},
+  "team-joonghoon": {
+		"condition": ["start", "need-team"],
+		"weight": 200,
+		"achieve": [],
+		"picture": "",
+		"body": " 오늘은 특별히 우주박물관을 돌아다니던 당신은 중훈님을 마주치게 되었습니다. 중훈님이 말을 걸어오네요!\n\n'이렇게 멋진 우주남자 가져보지 않겠어?'\n\n아무래도 미친 사람같습니다.",
+		"options": [
+      {
+				"option_text": "너 내 남자가 되어라",
+				"option_condition": [],
+				"option_action": ["execute_joonghoon"]
+			},
+      {
+				"option_text": "어우 저 그런 취향 아닙니다 도망쳐!",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+	"joonghoon": {
+		"condition": ["start", "need-team"],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": " '좋아 멋진 프로젝트를 해보자구!' 당신은 중훈님과 팀이 되었습니다!",
+		"options": [
+      {
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": [
+					"del_need-team",
+					"add_team",
+					"add_team-joonghoon",
+					"add_space"
+				]
+			}
+		]
+	},
+  "team-seunghyun": {
+		"condition": ["start", "need-team"],
+		"weight": 200,
+		"achieve": [],
+		"picture": "",
+		"body": "오늘도 소마센터를 돌아다니던 당신, 휴게실에서 개발하고있는 승현님을 발견했습니다. 멋있는 3d 안경을 쓰고 백엔드 프로그래밍을 열심히 하고 있는 승현님이 정말 멋지네요!",
+		"options": [
+      {
+				"option_text": "승현님과 팀을 맺어볼까!?",
+				"option_condition": [],
+				"option_action": ["execute_seunghyun"]
+			},
+      {
+				"option_text": "지나간다.",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+  "seunghyun": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": " '승현님! 저와 팀을 해보시지 않겠어요?' 당신이 말을 걸었습니다.\n'음... 생각치 못한 일이군요... 하지만 그 눈빛...! 믿을만한 것 같네요. 한번 해보죠!'\n\n 당신은 승현님과 팀을 맺었습니다.",
+		"options": [
+      {
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": [
+					"del_need-team",
+					"add_team",
+					"add_team-seunghyun",
+					"add_frontend"
+				]
+			}
+		]
+	},
+	"team-juwon": {
+		"condition": ["start", "need-team"],
+		"weight": 200,
+		"achieve": [],
+		"picture": " 소마센터를 가는 길, 문을 여는 순간! 아얏! 반대편에서 연수생 주원님이 동시에 문을 여는 바람에 문에 머리를 부딪쳤습니다. 아픈 머리를 비비고 있는 당신이 귀여워보였는지 주원님이 말을 걸어옵니다.\n\n '너 쫌 귀엽네...? 나랑 팀할래??'",
+		"body": "",
+		"options": [
+      {
+				"option_text": "에..? 뭐라구요?",
+				"option_condition": [],
+				"option_action": ["execute_juwon"]
+			},
+      {
+				"option_text": "뭐라는거야! 아파죽겠는데..지나가자!",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+  "juwon": {
+		"condition": [],
+		"weight": 0,
+		"achieve": [],
+		"picture": "",
+		"body": " '우리 팀인걸로 알게~'\n\n 주원님이 순식간에 시야에서 사라졌습니다. 당신은 얼떨떨하지만 능력있는 팀원이 생긴걸로 만족합니다.",
+		"options": [
+      {
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": [
+					"del_need-team",
+					"add_team",
+					"add_team-juwon",
+					"add_backend"
+				]
+			}
+		]
+	}
+}

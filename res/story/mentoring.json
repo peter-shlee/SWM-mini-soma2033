@@ -72,7 +72,7 @@
 				]
 			},
 			{
-				"option_text": "프론트엔드 지식에 관련하여 이야기하면서 다가간다.",
+				"option_text": "프론트엔드 지식에 관련하여 이야기한다",
 				"option_condition": ["frontend"],
 				"option_action": [
 					"execute_conv1"
@@ -107,7 +107,7 @@
 				]
 			},
 			{
-				"option_text": "다른 연수생들 정보에 대해서 물어본다.",
+				"option_text": "다른 연수생 정보에 대해서 물어본다.",
 				"option_condition": [],
 				"option_action": [
 					"execute_conv13"
