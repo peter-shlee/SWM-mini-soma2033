@@ -6,7 +6,7 @@ getImageUrl = (imgName) => {
 }
 
 // 스토리 블록킷을 넘겨줍니다.
-exports.storyBlock = (conversation_id, user_json, story_json) => {
+exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
   userBaseState = ['', '', ''];
   for(state of user_json.states){
     first = state.split('_')[0]
@@ -62,7 +62,7 @@ exports.storyBlock = (conversation_id, user_json, story_json) => {
       text: option.option_text,
       action_type: 'submit_action',
       action_name: "AcTioN nAmE",
-      value: story_json.story_id + String(cnt),
+      value: story_id + "_" + String(cnt),
       style: 'default'
     })
   }
