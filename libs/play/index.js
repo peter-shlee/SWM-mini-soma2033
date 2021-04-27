@@ -308,6 +308,10 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	// 다음 스토리 실행
 	// value parsing한 정보로 어떤 스토리로 넘어갈지 결정 -> getNextStoryId() 이용
 	const next_story_id = play.getNextStoryId(stories, userInfos[react_user_id], divided_option_action["execute"]);
+	if (!next_story_id) {
+		console.log("다음으로 플레이 할 수 있는 스토리가 없어요 ㅠㅠ. 버그일지도...");
+		return;
+	}
 	
 	const next_block = block_kit.storyBlock(conversation_id, userInfos[react_user_id], stories[next_story_id], next_story_id);
 	libKakaoWork.sendMessage(next_block);
