@@ -21,7 +21,6 @@ divided_option_action = play.divideOptionsByTypeOfAction(stories["mentoring1"]["
 // console.log(divided_option_action)
 // console.log(play.getNextStory(divided_option_action["execute"], stories))
 //console.log(resIO.readJsonSync('res/state.json'));
-stories['start']['story_id'] = 'start';
 userExample = {
 	current_story: "main",
 	states: ['health_3', 'wifi_3', 'coin_3'],
@@ -58,7 +57,7 @@ router.get('/', async (req, res, next) => {
 		// 생성된 채팅방에 메세지 전송 (3)
 		messages = await Promise.all([
 			conversations.map((conversation) =>
-				libKakaoWork.sendMessage(block_kit.storyBlock(conversation.id, ))
+				libKakaoWork.sendMessage(block_kit.storyBlock(conversation.id, userExample, stories['start'], 'start'))
 			),
 		]);
 	}
