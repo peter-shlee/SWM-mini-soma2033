@@ -80,3 +80,85 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
   }
   return ret_object;
 }
+
+exports.stateUpdateBlock = (conversation_id, user_json, state) => { // parameter state is for "representation". plz check once
+  ret_object = {
+    conversationId: conversation_id,
+    text: 'SOMA 2033 test',
+    blocks: [
+      {
+        type: 'header',
+        text: '상태 획득!',
+        style: 'blue',
+      },
+      {
+        type: 'text',
+        text: '상태 ' + state + '획득!',
+        markdown: true,
+      },
+      {
+        type: 'divider',
+      },
+      {
+        type: 'button',
+        text: option.option_text,
+        action_type: 'submit_action',
+        action_name: "AcTioN nAmE",
+        value: 'getUserInfo',
+        style: 'default'
+      }
+    ],
+  }
+}
+
+exports.achieveUpdateBlock = (conversation_id, user_json, achieve) => { // parameter achieve is for "representation". plz check once
+  ret_object = {
+    conversationId: conversation_id,
+    text: 'SOMA 2033 test',
+    blocks: [
+      {
+        type: 'header',
+        text: '업적 획득!',
+        style: 'blue',
+      },
+      {
+        type: 'text',
+        text: '업적 ' + achieve + '획득!',
+        markdown: true,
+      },
+      {
+        type: 'divider',
+      },
+      {
+        type: 'button',
+        text: option.option_text,
+        action_type: 'submit_action',
+        action_name: "AcTioN nAmE",
+        value: 'getUserInfo',
+        style: 'default'
+      }
+    ],
+  }
+}
+
+exports.userInfoBlock = (user_json, states, achieves) => {
+  txt = '';
+  txt += '[ 상태 ]\n';
+  for(state of user_json.states) txt += ' - ' + states[state] + '\n';
+  txt += '[ 업적 ]\n';
+  for(achieve of user_json.achieves) txt += ' - ' + achieves[achieve] + '\n';
+  ret_object = {
+    "title": "User Info",
+    "accept": "확인",
+    "decline": "취소",
+    "value": "vAlUe",  // implement if necessary
+    "blocks": [
+      {
+        "type": "label",
+        "text": txt,
+        "markdown": true
+      }
+    ]
+  }
+  return ret_object;
+}
