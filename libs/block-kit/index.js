@@ -102,7 +102,7 @@ exports.stateUpdateBlock = (conversation_id, user_json, state) => { // parameter
       {
         type: 'button',
         text: option.option_text,
-        action_type: 'submit_action',
+        action_type: 'call_modal',
         action_name: "AcTioN nAmE",
         value: 'getUserInfo',
         style: 'default'
@@ -132,7 +132,7 @@ exports.achieveUpdateBlock = (conversation_id, user_json, achieve) => { // param
       {
         type: 'button',
         text: option.option_text,
-        action_type: 'submit_action',
+        action_type: 'call_modal',
         action_name: "AcTioN nAmE",
         value: 'getUserInfo',
         style: 'default'
