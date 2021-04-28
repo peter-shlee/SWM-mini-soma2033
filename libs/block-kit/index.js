@@ -4,10 +4,18 @@ const resIO = require('../resIO');
 getImageUrl = (imgName) => {
   return imgUrl + "?name=" + imgName;
 }
-getStatusBar = (status) => {
+getStatusBar = (a, b, c) => {
+  txt = '';
+	a=0;b=0;c=0;
+  if(a == 0) txt += '💔';
+  for(i = 0; i < a; i++) txt += '❤️'; txt += ' | ';
+  if(b == 0) txt += '📵';
+  for(i = 0; i < b; i++) txt += '📡'; txt += ' | ';
+  if(c == 0) txt += '❌';
+  for(i = 0; i < c; i++) txt += '💰';
   return {
     type: 'text',
-    text: "TEST STATUS BAR",
+    text: txt,
     markdown: true,
   };
 }
@@ -36,7 +44,7 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
         text: 'SOMA 2033',
         style: 'blue',
       },
-      getStatusBar(userBaseState[0] + userBaseState[1] + userBaseState[2]),
+      getStatusBar(parseInt(userBaseState[0]), parseInt(userBaseState[1]), parseInt(userBaseState[2])),
       {
         type: 'text',
         text: story_json.body,
