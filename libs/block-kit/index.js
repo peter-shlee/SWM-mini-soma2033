@@ -6,7 +6,6 @@ getImageUrl = (imgName) => {
 }
 getStatusBar = (a, b, c) => {
   txt = '';
-	a=0;b=0;c=0;
   if(a == 0) txt += '💔';
   for(i = 0; i < a; i++) txt += '❤️'; txt += ' | ';
   if(b == 0) txt += '📵';
