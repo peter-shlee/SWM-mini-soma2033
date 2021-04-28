@@ -1,0 +1,54 @@
+{
+  "subject-select": {
+    "condition": ["start", "need-subject"],
+    "weight": 200,
+    "achieve": "",
+    "picture": "",
+    "body": " 이제 슬슬 어떤 주제를 할지 생각해봐야 할 것 같지 않나요? 다른 팀들은 이미 주제를 선택했다구요!\n\n 아래 선택지들은 현재 당신의 능력으로 선택 가능한 주제들입니다. 원하는 주제를 선택해주세요!",
+    "options": [
+      {
+        "option_text": "로봇과 AI...! 합치면 로봇AI!",
+        "option_condition": ["AI"],
+        "option_action": ["execute_subject-select-ai"]
+      },
+      {
+        "option_text": "화성이 요즘 핫하지. 화성으로 가자!",
+        "option_condition": ["space"],
+        "option_action": ["execute_subject-select-mars"]
+      },
+      {
+        "option_text": "조금 있다가 정해야 할 것 같다.",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "subject-select-ai": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 역시 2033년에 새로운 인류(?)인 AI로봇들을 생각하는 연구가 최근 대세죠! 당신은 로봇AI를 주제로 선택하기로 결정했습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_need-subject", "add_subject", "add_main-AI"]
+      }
+    ]
+  },
+  "subject-select-mars": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 이 지구는 당신을 가두기에는 너무 작은 공간이죠! 우주로 나가야겠어요! 당신은 화성 우주학을 주제로 선택하기로 결정했습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_need-subject", "add_subject", "add_main-mars"]
+      }
+    ]
+  }
+}

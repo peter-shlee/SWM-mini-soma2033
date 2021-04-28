@@ -2,7 +2,7 @@
 	"mentor-siri": {
 		"condition": ["start", "need-mentor"],
 		"weight": 200,
-		"achieve": [],
+		"achieve": "",
 		"picture": "",
 		"body": " 소마센터 행정실을 지나가는데 행정실에서 나오는 로봇을 맞닥드렸습니다. 천천히 쳐다보니 시리 멘토님이네요! 시리 멘토님은 2028년 애플에서 탈출해서 AI로봇이 되고, 2033년부터 소마 멘토링에 참여하기로 했죠! AI에 정통하신 분입니다!",
 		"options": [
@@ -21,7 +21,7 @@
   "siri-add": {
 		"condition": [],
 		"weight": 0,
-		"achieve": [],
+		"achieve": "",
 		"picture": "",
 		"body": " 시리 멘토님은 잠깐 당신을 쳐다보더니 답합니다.\n\n '연수생..? 멘토링에 다량의 통신량 필요. 연수생의 동의와 각오가 필요. 동의?'",
 		"options": [
@@ -44,7 +44,7 @@
   "siri-add1": {
 		"condition": [],
 		"weight": 0,
-		"achieve": [],
+		"achieve": "",
 		"picture": "siri.jpg",
 		"body": " 모든 통신망을 통해서 지식을 다운로드 받은 당신은 AI관련 지식이 늘어났습니다. 대신 사용 가능한 통신이 줄어들었네요. \n\n '연수생 상태 양호. 멘토링 진행!'\n\n 시리 멘토님이 지정 멘토님으로 결정되었습니다!",
 		"options": [
@@ -53,7 +53,8 @@
 				"option_condition": [],
 				"option_action": [
 					"del_need-mentor",
-					"add_mentor-siri"
+					"add_mentor-siri",
+					"add_mentor"
 				]
 			}
 		]
@@ -61,7 +62,7 @@
   "mentor-musk": {
 		"condition": ["start", "need-mentor"],
 		"weight": 200,
-		"achieve": [],
+		"achieve": "",
 		"picture": "",
 		"body": " 오늘은 일론 머스크 멘토님과 화상 멘토링이 있는 날이네요! 2033년의 소마는 전세계에서 가장 유명한 인재양성 프로그램인 만큼, 역시 유능하신 멘토님이 많네요. 오늘따라 일찍 들어가고 싶은 기분에 먼저 들어가보니 머스크 멘토님이 이미 들어와 계십니다. 말을 붙이기 딱 좋은 타이밍 같아요!",
 		"options": [
@@ -80,7 +81,7 @@
   "musk-add": {
 		"condition": [],
 		"weight": 0,
-		"achieve": [],
+		"achieve": "",
 		"picture": "",
 		"body": " 머스크 멘토님이 당신의 체격을 잠시 보더니 말을 하십니다.\n\n '연수생분은 체력이 받아줄 것 같지 않은데요? 제 특훈을 받으시려면 정말 강한 체력을 가지셔야합니다!'",
 		"options": [
@@ -103,7 +104,7 @@
   "musk-add1": {
 		"condition": [],
 		"weight": 0,
-		"achieve": [],
+		"achieve": "",
 		"picture": "musk.png",
 		"body": " 바로 특훈을 받은 당신은 체력이 바닥이 났지만 우주에 관련된 지식이 늘어났습니다.\n\n '좋습니다. 잘 버티시네요! 앞으로도 좋은 체력 유지해주세요!'\n\n 일론 머스크 멘토님이 지정 멘토님으로 결정되었습니다!",
 		"options": [
@@ -112,17 +113,18 @@
 				"option_condition": [],
 				"option_action": [
 					"del_need-mentor",
-					"add_mentor-musk"
+					"add_mentor-musk",
+					"add_mentor"
 				]
 			}
 		]
 	},
   "mentor-mark": {
-		"condition": ["start", "need-mentor"],
+		"condition": ["start", "need-mentor", "need-subject"],
 		"weight": 200,
-		"achieve": [],
+		"achieve": "",
 		"picture": "",
-		"body": " 오늘 하루는 소마센터에서 막힌 코드를 하루종일 보고있는 것으로 시작되네요 ㅠㅠ 당신이 막힌 곳에서 고통스러워 하고있을 때 옆에서 마크 주커버그 멘토님이 말을 겁니다.\n\n'그거 그렇게 하는거 아닌데'",
+		"body": " 오늘 하루는 소마센터에서 막힌 코드를 하루종일 보고있는 것으로 시작되네요 ㅠㅠ 당신이 막힌 곳에서 고통스러워 하고있을 때 옆에서 마크 저커버그 멘토님이 말을 겁니다.\n\n'그거 그렇게 하는거 아닌데'",
 		"options": [
       {
 				"option_text": "어어..! 멘토님!",
@@ -139,9 +141,9 @@
   "mark-add": {
 		"condition": [],
 		"weight": 0,
-		"achieve": [],
+		"achieve": "",
 		"picture": "",
-		"body": " '연수생님이 하시는거 보니까 충분히 재능있으신데요? 제 가르침 받으시면서 프로젝트 진행하실 생각 없으신가요?'\n\n 마크 주커버그 멘토님이 직접 팀 멘토링 제의를 해주시다니! 정말 좋은 기회인 것 같은데 어떻게 하실건가요??",
+		"body": " '연수생님이 하시는거 보니까 충분히 재능있으신데요? 제 가르침 받으시면서 지정과제 프로젝트 진행하실 생각 없으신가요?'\n\n 마크 저커버그 멘토님이 직접 팀 멘토링에 지정과제까지 제의를 해주시다니! 정말 좋은 기회인 것 같은데 어떻게 하실건가요??",
 		"options": [
       {
 				"option_text": "와! 저를 가져주세요!",
@@ -151,7 +153,7 @@
 				]
 			},
       {
-				"option_text": "죄송합니다. 다른 분을 찾아보겠습니다.",
+				"option_text": "죄송합니다. 다른 분을 찾아보겠습니다",
 				"option_condition": [],
 				"option_action": []
 			}
@@ -160,17 +162,21 @@
   "mark-add1": {
 		"condition": [],
 		"weight": 0,
-		"achieve": [],
+		"achieve": "",
 		"picture": "mark.jpg",
-		"body": " '일단 제가 facebook에 적용하고 있는 AR VR기술부터 알려드리겠습니다! 앞으로는 공짜로 수업 안해주니까 그렇게 아시구요!'\n\n 아무리 경제적 관념이 철저하신 주커버그 멘토님이지만 마지막 말은 농담이시겠죠...? 불안하지만 당신은 마크 주커버그 멘토님을 지정 멘토님으로 결정하였습니다!",
+		"body": " '저희 지정과제는 망해버린 facebook을 부활시키는 겁니다! 일단 제가 facebook에 적용되어있는 frontend기술을 알려드릴게요. 앞으로는 공짜로 수업 안해주니까 그렇게 아시구요! '\n\n 아무리 경제적 관념이 철저하신 저커버그 멘토님이지만 마지막 말은 농담이시겠죠...? 불안하지만 당신은 마크 주커버그 멘토님을 지정 멘토님으로 결정하였습니다!",
 		"options": [
       {
 				"option_text": "다음",
 				"option_condition": [],
 				"option_action": [
-          "add_ar-vr",
+          "add_frontend",
 					"del_need-mentor",
-					"add_mentor-mark"
+					"del_need-subject",
+					"add_mentor-mark",
+					"add_main-facebook",
+					"add_mentor",
+					"add_subject"
 				]
 			}
 		]
