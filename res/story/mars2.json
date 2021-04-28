@@ -1,0 +1,92 @@
+{
+	"gotorocket": {
+		"condition": ["main-mars"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "드디어 우주로 출발하는 날이 밝았습니다. 가족들과 작별인사를 마쳤으니 이제 우주선에 탑승할까요?",
+		"options": [
+			{
+				"option_text": "조종석에 탑승한다.",
+				"option_condition": ["marspion"],
+				"option_action": ["add_marsship1"]
+			},
+			{
+				"option_text": "이주민 칸에 탑승한다.",
+				"option_condition": ["marsimig"],
+				"option_action": ["add_marsship2"]
+			},
+			{
+				"option_text": "이주민 칸에 탑승한다.",
+				"option_condition": ["marspion"],
+				"option_action": ["add_marsship2"]
+			}
+		]
+	},
+	"rocket1": {
+		"condition": ["main-mars"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "이런! 우주선 바로 앞에 잠복 근무 중이던 UFO가 보입니다.\n이대로 가다가는 충돌할 것 같아 보입니다. 어떻게 할까요?",
+		"options": [
+			{
+				"option_text": "우주선이 선회 제동 하도록 조종한다.",
+				"option_condition": ["marsship1"],
+				"option_action": ["add_marsufo", "execute_marsufo1"]
+			},
+			{
+				"option_text": "조종사를 믿고 기도한다.",
+				"option_condition": ["marsship2"],
+				"option_action": ["add_marsufo", "execute_marsufo2"]
+			}
+		]
+	},
+	"marsufo1": {
+		"condition": ["main-mars", "marsufo", "marsgravity"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "선회 제동에 성공했다! 역시 훈련에 열심히 참여한 보람이 있다.\n앞으로 어떤 일이든지 잘 해낼 수 있을것만 같다. 자신감을 얻었다!",
+		"options": [
+			{
+				"option_text": "(체력 +1)",
+				"option_condition": [""],
+				"option_action": ["add_health_1", "del_marsufo", "execute_marsgotoiss"]
+			}
+		]
+	},
+	"marsufo2": {
+		"condition": ["main-mars", "marsufo", "nomarsgravity"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "선회 제동 도중 정신을 잃어버렸다. 다행히 정면 충돌은 피했지만 수신기 일부가 파손되었다.\n지구로 돌아가면 중력가속도 내성 훈련을 받도록 하자.",
+		"options": [
+			{
+				"option_text": "(wifi -1)",
+				"option_condition": [],
+				"option_action": [
+					"add_wifi_1",
+					"del_marsufo",
+					"add_marsbroken1",
+					"execute_marsgotoiss"
+				]
+			}
+		]
+	},
+	"marsgotoiss": {
+		"condition": ["main-mars"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "저 멀리 스페이스x 우주정거장이 보입니다! 다행히 도킹은 시스템이 자동으로 진행해줍니다.",
+		"options": [
+			{
+				"option_text": "도킹한다.",
+				"option_condition": [],
+				"option_action": ["del_marsufo", "add_marssleep", "execute_marsiss"]
+			}
+		]
+	}
+}
