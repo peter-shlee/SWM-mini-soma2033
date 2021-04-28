@@ -69,7 +69,7 @@ exports.checkPlayableStory = (story, user) => {
 	for (condition of Object.keys(conditions)) {
 		if (!Object.keys(states).includes(condition)) return false;
 		
-		if (conditions[conditions] > states[condition]) return false;
+		if (conditions[condition] > states[condition]) return false;
 	}
 
 	return true;
@@ -113,12 +113,6 @@ exports.getNextStoryId = (stories, user, executes) => {/////////////////////////
 	return next_story_id;
 }
 
-// 전달받은 story_id를 이용해 해당 story에 대한 정보를 찾은 뒤 그 스토리에 대한 블록킷을 생성해 리턴하는 함수
-// exports.createStoryBlockKit(story_id, stories) {
-	
-// }
-
-
 // res/story 디렉토리 내에 있는 json 파일들을 읽어와 하나의 객체에 story들을 모두 넣어 리턴하는 함수
 exports.loadStories = (story_dir_path) => {
 	const stories = {};
@@ -151,6 +145,11 @@ exports.createNewUser = (user) => {
 	return new_user;
 }
 
+exports.initUser = (user_id, userInfos) => {
+	userInfos[user_id].current_story = 'start';
+	userInfos[user_id].states = ['health_3', 'wifi_3', 'coin_3'];
+	userInfos[user_id].essentials = [];
+}
 
 exports.statesList2dict = (states_list) => {
 	const status_dict = {}
@@ -198,9 +197,6 @@ exports.deleteState = (user_id, userInfos, target_state, count) => {
 	
 	const new_user_states = play.statesDict2list(state_dict);
 	userInfos[user_id].states = new_user_states;
-	resIO.saveJsonSync('res/user.json', userInfos, () => {
-			console.log('save user.json');
-		});
 	
 	return;
 }
@@ -219,9 +215,6 @@ exports.addState = (user_id, userInfos, new_state, count) => {
 	
 	const new_user_states = play.statesDict2list(state_dict);
 	userInfos[user_id].states = new_user_states;
-	resIO.saveJsonSync('res/user.json', userInfos, () => {
-			console.log('save user.json');
-		});
 	
 	return;
 }
@@ -239,9 +232,6 @@ exports.deleteEssentialState = (user_id, userInfos, target_state, count) => {
 	
 	const new_user_states = play.statesDict2list(state_dict);
 	userInfos[user_id].essentials = new_user_states;
-	resIO.saveJsonSync('res/user.json', userInfos, () => {
-			console.log('save user.json');
-		});
 	
 	return;
 }
@@ -260,9 +250,6 @@ exports.addEssentialState = (user_id, userInfos, new_state, count) => {
 	
 	const new_user_states = play.statesDict2list(state_dict);
 	userInfos[user_id].essentials = new_user_states;
-	resIO.saveJsonSync('res/user.json', userInfos, () => {
-			console.log('save user.json');
-		});
 	
 	return;
 }
@@ -270,14 +257,21 @@ exports.addEssentialState = (user_id, userInfos, new_state, count) => {
 exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversation_id) => {
 	// button의 value parsing
 	const splitted_values = play.parseButtonValue(value);
-	const current_story = splitted_values[0];
+	const current_story_id = splitted_values[0];
 	const button_idx = splitted_values[1];
 	
-	const clicked_button_option_actions = stories[current_story].options[button_idx].option_action;
+	// 현재 사용자가 위치하는 story가 맞는지 확인. 이전 스토리 챗봇의 버튼 눌렀으면 아무 일도 일어나지 않는다.
+	if (userInfos[react_user_id].current_story != current_story_id) return;
+	
+	// option actions 확인하여 user의 states와 essentials 갱신
+	const clicked_button_option_actions = stories[current_story_id].options[button_idx].option_action;
 	
 	const divided_option_action = play.divideOptionsByTypeOfAction(clicked_button_option_actions);
-	// option actions 확인하여 user의 states 갱신
+	
 	const states_to_add = play.statesList2dict(divided_option_action["add"]);
+	// add_page -> page 수 하나씩 추가해야 함
+	states_to_add["page"] = 1;
+	
 	for (state of Object.keys(states_to_add)) {
 		play.addState(react_user_id, userInfos, state, states_to_add[state]);
 	}
@@ -287,7 +281,7 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		play.deleteState(react_user_id, userInfos, state, states_to_delete[state]);
 	}
 	
-	// essentials
+	// essentials 갱신
 	const essential_states_to_add = play.statesList2dict(divided_option_action["add_es"]);
 	for (state of Object.keys(essential_states_to_add)) {
 		play.addEssentialState(react_user_id, userInfos, state, essential_states_to_add[state]);
@@ -299,11 +293,20 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	}
 	
 	// new-start도 처리해야 함
+	if (divided_option_action.new_start) {
+		// user states 초기화
+		play.initUser(react_user_id, userInfos);
+		
+		// userInfos 저장
+		play.saveUserInfos(userInfos);
+		
+		// 처음부터 다시 시작
+		const start_block = block_kit.storyBlock(conversation_id, userInfos[react_user_id], stories["start"], "start");
+		libKakaoWork.sendMessage(start_block);
+		
+		return;
+	}
 	
-	
-	// achieve도 처리해야 함
-	
-	// add_page -> page 수 하나 추가해야 함
 	
 	// 다음 스토리 실행
 	// value parsing한 정보로 어떤 스토리로 넘어갈지 결정 -> getNextStoryId() 이용
@@ -313,6 +316,16 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		return;
 	}
 	
+	// achieve도 처리해야 함
+	play.addAchieves(stories[next_story_id].achieve, react_user_id, userInfos);
+	
+	// user의 current story 변경해야 함
+	userInfos[react_user_id].current_story = next_story_id;
+	
+	// userInfos 저장
+	play.saveUserInfos(userInfos);
+	
+	// 다음 story 챗봇 전송
 	const next_block = block_kit.storyBlock(conversation_id, userInfos[react_user_id], stories[next_story_id], next_story_id);
 	libKakaoWork.sendMessage(next_block);
 	
@@ -322,4 +335,17 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 exports.parseButtonValue = (value) => {
 	values = value.split("_");
 	return [values[0], parseInt(values[1])];
+}
+
+exports.addAchieves = (new_achieves, user_id, userInfos) => {
+	if (new_achieves.length == 0) return;
+	
+	const concated_achieves = userInfos[user_id].achieves.concat(new_achieves);
+	userInfos[user_id].achieves = concated_achieves;
+}
+
+exports.saveUserInfos = (userInfos) => {
+		resIO.saveJsonSync('res/user.json', userInfos, () => {
+			console.log('save user.json');
+		});
 }

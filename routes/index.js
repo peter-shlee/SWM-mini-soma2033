@@ -145,10 +145,9 @@ router.post('/callback', async (req, res, next) => {
 			break;
 			
 		default:
+			// 게임 진행 중 버튼 선택해 눌렀을 때 여기로 넘어온다
+			// value를 parsing해서 어떤 스토리로 넘어갈지 등등 결정해야 한다. (story 객체 이용) + 현재 사용자가 위치하는 story가 맞는지 확인 -> onButtonClicked()에서 확인 
 			play.onButtonClicked(value, react_user_id, userInfos, stories, message.conversation_id);
-			
-		// 게임 진행 중 버튼 선택해 눌렀을 때 여기로 넘어온다
-		// value를 parsing해서 어떤 스토리로 넘어갈지 등등 결정해야 한다. (story 객체 이용) + 현재 사용자가 위치하는 story가 맞는지 확인 필요
 	}
 
 	res.json({ result: true });
