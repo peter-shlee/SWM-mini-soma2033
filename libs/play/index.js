@@ -321,7 +321,7 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	}
 	
 	// achieve도 처리해야 함
-	play.addAchieves(stories[next_story_id].achieve, react_user_id, userInfos);
+	play.addAchieve(stories[next_story_id].achieve, react_user_id, userInfos);
 	
 	// user의 current story 변경해야 함
 	userInfos[react_user_id].current_story = next_story_id;
@@ -341,11 +341,17 @@ exports.parseButtonValue = (value) => {
 	return [values[0], parseInt(values[1])];
 }
 
-exports.addAchieves = (new_achieves, user_id, userInfos) => {
-	if (new_achieves.length == 0) return;
+// exports.addAchieves = (new_achieves, user_id, userInfos) => {
+// 	if (new_achieves.length == 0) return;
 	
-	const concated_achieves = userInfos[user_id].achieves.concat(new_achieves);
-	userInfos[user_id].achieves = concated_achieves;
+// 	const concated_achieves = userInfos[user_id].achieves.concat(new_achieves);
+// 	userInfos[user_id].achieves = concated_achieves;
+// }
+
+exports.addAchieve = (new_achieve, user_id, userInfos) => {
+	if (new_achieve == "") return;
+	
+	userInfos[user_id].push(new_achieve);
 }
 
 exports.saveUserInfos = (userInfos) => {
