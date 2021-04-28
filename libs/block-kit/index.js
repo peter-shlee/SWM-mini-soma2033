@@ -101,7 +101,7 @@ exports.stateUpdateBlock = (conversation_id, user_json, state) => { // parameter
       },
       {
         type: 'button',
-        text: option.option_text,
+        text: "상태/업적 확인하기",
         action_type: 'call_modal',
         action_name: "AcTioN nAmE",
         value: 'getUserInfo',
@@ -131,7 +131,7 @@ exports.achieveUpdateBlock = (conversation_id, user_json, achieve) => { // param
       },
       {
         type: 'button',
-        text: option.option_text,
+        text: '상태/업적 확인하기',
         action_type: 'call_modal',
         action_name: "AcTioN nAmE",
         value: 'getUserInfo',
