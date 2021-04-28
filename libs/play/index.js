@@ -351,7 +351,7 @@ exports.parseButtonValue = (value) => {
 exports.addAchieve = (new_achieve, user_id, userInfos) => {
 	if (new_achieve == "") return;
 	
-	userInfos[user_id].push(new_achieve);
+	userInfos[user_id].achieves.push(new_achieve);
 }
 
 exports.saveUserInfos = (userInfos) => {
