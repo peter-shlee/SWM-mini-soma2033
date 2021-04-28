@@ -27,18 +27,6 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
       userBaseState[2] = state.split('_')[1];
     }
   }
-  if(story_json.picture){
-    imgBlock = {
-      type: 'image_link',
-      url: getImageUrl(story_json.picture)
-    };
-  } else { // 일단 임시 방편으로 text로 처리해놨습니다
-    imgBlock = {
-		type: "text",
-		text: "",
-		markdown: false
-    };
-  }
   ret_object = {
     conversationId: conversation_id,
     text: 'SOMA 2033 test',
@@ -49,7 +37,6 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
         style: 'blue',
       },
       getStatusBar(userBaseState[0] + userBaseState[1] + userBaseState[2]),
-      imgBlock,
       {
         type: 'text',
         text: story_json.body,
@@ -59,6 +46,13 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
         type: 'divider',
       }
     ],
+  }
+  if(story_json.picture){
+    imgBlock = {
+      type: 'image_link',
+      url: getImageUrl(story_json.picture)
+    };
+	ret_object.blocks.splice(2, 0, imgBlock);
   }
   cnt = -1;
   for(option of story_json.options){
@@ -77,6 +71,5 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
       style: 'default'
     })
   }
-
   return ret_object;
 }
