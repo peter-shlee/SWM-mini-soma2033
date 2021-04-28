@@ -1,0 +1,171 @@
+{
+	"marsstory": {
+		"condition": ["main-mars"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "무사히 화성에 도착했습니다. 무엇을 할까요?",
+		"options": [
+			{
+				"option_text": "길을 따라 걷는다.",
+				"option_condition": [],
+				"option_action": ["add_marsstorymain"]
+			}
+		]
+	},
+	"marsstorycon1": {
+		"condition": ["main-mars", "marsstorymain"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "주변에 수많은 건물들과 농장들이 보입니다. 계속 넘어올 사람들을 위해 다들 분주히 움직이는 모습입니다.\n계속 걸어볼까요?",
+		"options": [
+			{
+				"option_text": "길을 따라 걷는다.",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+	"marsstorycon2": {
+		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
+		"weight": 50,
+		"achieve": "",
+		"picture": "",
+		"body": "비트코인 가격이 낮아졌다는 소식입니다. 지금 매도할까요?",
+		"options": [
+			{
+				"option_text": "매도한다. (소마코인 +1)",
+				"option_condition": [],
+				"option_action": ["add_coin_1", "del_marsbitcoin"]
+			},
+			{
+				"option_text": "조금 더 기다린다.",
+				"option_condition": [],
+				"option_action": [""]
+			}
+		]
+	},
+	"marsstorycon3": {
+		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "비트코인 가격이 높아졌다는 소식입니다. 지금 매도할까요?",
+		"options": [
+			{
+				"option_text": "매도한다. (소마코인 +2)",
+				"option_condition": [],
+				"option_action": ["add_coin_2", "del_marsbitcoin"]
+			},
+			{
+				"option_text": "조금 더 기다린다.",
+				"option_condition": [],
+				"option_action": ["del_marsbitcoin", "add_marsbitcoin2"]
+			}
+		]
+	},
+	"marsstorycon4": {
+		"condition": ["main-mars", "marsstorymain", "marsbitcoin2"],
+		"weight": 50,
+		"achieve": "",
+		"picture": "",
+		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
+		"options": [
+			{
+				"option_text": "풀매도한다. (소마코인 +2) (업적 획득)",
+				"option_condition": [],
+				"option_action": ["add_coin_2", "execute_marscoinking"]
+			}
+		]
+	},
+	"marsstorycoinking": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "축하합니다. 당신은 인류 최고의 부자가 되었습니다.\n앞으로 지구와 화성을 자유롭게 오가며 원하는 삶을 즐길 수 있게 되었습니다.\n해당 프로젝트는 게임일 뿐, 일체의 투자 권유 목적이 아니며 자산 투자는 본인의 판단과 책임으로 하시길 바랍니다.\n포스가 함께하기를",
+		"options": [
+			{
+				"option_text": "처음으로",
+				"option_condition": [],
+				"option_action": ["new-start"]
+			}
+		]
+	},
+	"marsstoryfarm1": {
+		"condition": ["main-mars", "marsstorymain"],
+		"weight": 30,
+		"achieve": "",
+		"picture": "",
+		"body": "이곳은 소마센터 화성지부 입니다. 그동안의 활동을 바탕으로 최종 평가를 받을 수 있습니다.\n인증자로 선발되면 일론 머스크 멘토가 은퇴할 때 테크노킹 자리 후계자 목록에 오를 수 있습니다.\n지금 최종 평가를 받겠습니까?",
+		"options": [
+			{
+				"option_text": "평가를 받는다.",
+				"option_condition": [],
+				"option_action": ["add_marsfinal", "execute_marsstoryfin1"]
+			},
+			{
+				"option_text": "일단 지나친다.",
+				"option_condition": [],
+				"option_action": [""]
+			}
+		]
+	},
+	"marsstoryfin1": {
+		"condition": ["main-mars", "marsstorymain", "marsfinal", "marspion", "marsfin1"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "축하드립니다. 최종 인증자로 선발되셨습니다. 개척자 자격을 갖고 있으며, 다양한 활동과 체력 관리로 앞으로 어떤 화성 임무든지 해낼 수 있으리라 기대합니다.\n내일부터 스페이스x 화성 지부로 출근하셔서 화성으로의 이주를 도와주시면 됩니다.",
+		"options": [
+			{
+				"option_text": "무야호!",
+				"option_condition": [],
+				"option_action": ["execute_marsend1"]
+			}
+		]
+	},
+	"marsstoryfin2": {
+		"condition": ["main-mars", "marsstorymain", "marsfinal"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "축하드립니다. 소마 수료생 자격을 획득하셨습니다. 최종 인증자는 아니지만 앞으로 스페이스x 지구 지부에서 이주를 도와주시면 됩니다.\n소마 과정에 다시한번 도전하시게 된다면 개척자 자격 획득과 체력 관리 및 다양한 활동에 적극적으로 참여하신다면 더 좋은 결과를 얻으실 수 있으리라 기대합니다.",
+		"options": [
+			{
+				"option_text": "아쉽지만 지구로 돌아간다.",
+				"option_condition": [],
+				"option_action": ["execute_marsend2"]
+			}
+		]
+	},
+	"marsend1": {
+		"condition": ["main-mars", "marsstorymain", "marsfinal"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "",
+		"options": [
+			{
+				"option_text": "",
+				"option_condition": [],
+				"option_action": ["new-start"]
+			}
+		]
+	},
+	"marsend1": {
+		"condition": ["main-mars", "marsstorymain", "marsfinal"],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "",
+		"options": [
+			{
+				"option_text": "",
+				"option_condition": [],
+				"option_action": ["new-start"]
+			}
+		]
+	}
+}
