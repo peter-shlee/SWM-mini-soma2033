@@ -292,6 +292,10 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		play.deleteEssentialState(react_user_id, userInfos, state, essential_states_to_delete[state]);
 	}
 	
+	if (play.checkGameEnd(react_user_id, userInfos, stories, conversation_id)) {
+		return;
+	}
+	
 	// new-start도 처리해야 함
 	if (divided_option_action.new_start) {
 		// user states 초기화
@@ -348,4 +352,25 @@ exports.saveUserInfos = (userInfos) => {
 		resIO.saveJsonSync('res/user.json', userInfos, () => {
 			console.log('save user.json');
 		});
+}
+
+exports.checkGameEnd = (user_id, userInfos, stories, conversation_id) => {
+	const user_states = userInfos[user_id].states;
+	const state_dict = play.statesList2dict(user_states);
+	
+	const states = Object.keys(state_dict);
+	
+	if (!states.includes("health")){
+		const next_block = block_kit.storyBlock(conversation_id, userInfos[user_id], stories["health-ending"], "health-ending");
+		libKakaoWork.sendMessage(next_block);
+		return true;
+	}
+	
+	if (!states.includes("wifi")){
+		const next_block = block_kit.storyBlock(conversation_id, userInfos[user_id], stories["wifi-ending"], "wifi-ending");
+		libKakaoWork.sendMessage(next_block);
+		return true;
+	}
+	
+	return false;
 }
