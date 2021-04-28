@@ -1,6 +1,6 @@
 {
 	"marsmain": {
-		"condition": ["main-mars"],
+		"condition": ["main"],
 		"weight": 100,
 		"achieve": "",
 		"picture": "",
@@ -9,12 +9,12 @@
 			{
 				"option_text": "본과정에 참여한다.",
 				"option_condition": [],
-				"option_action": ["execute_marsstart"]
+				"option_action": ["add_main-mars", "execute_marsstart"]
 			}
 		]
 	},
 	"marsstart": {
-		"condition": [],
+		"condition": ["main-mars"],
 		"weight": 100,
 		"achieve": "",
 		"picture": "",
