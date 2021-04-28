@@ -13,7 +13,7 @@
 			}
 		]
 	},
-  "yebi_ending": {
+  "yebi-ending": {
     "condition": ["page_150", "start"],
     "weight": 1000000000,
     "achieve": ["yebi-ending"],

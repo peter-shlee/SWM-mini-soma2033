@@ -1,0 +1,238 @@
+{
+    "subject-facekbook0": {
+     "condition" : ["이주원", "마크저커버그", "main", "subject-facebook"],
+     "weight": 0,
+     "achieve": "",
+     "picture": "",
+     "body": "허걱..! 하버드를 중퇴하신 멘토님이라니... 소마의 위상이 엄청나쿤...\n멘토님의 기대에 못미치면 어떡하지 이거 옳은 선택인걸까...\n그치만 인증을 위해 마크저커버그 멘토님이 꼭 필요해!!\n\n멘토님께 잘보여야지 단정한 옷차림이 중요하겠어..!\n무슨 옷을 입어야되지???? 초록색?? 노란색?????",
+     "options": [
+         {
+         "option_text": "초록색",
+         "option_condition": [],
+         "option_action":["del_health_1", "del_coin_1", "execute_subject-facekbook01"]
+         },
+         {
+         "option_text": "노란색",
+         "option_condition": [],
+         "option_action":["execute_subject-facekbook02"]
+         }
+         ]
+     },
+     "subject-facekbook01": {
+     "condition": ["이주원", "마크저커버그", "subject-facebook01"],
+     "weight": 0,
+     "achieve": "",
+     "picture": "",
+     "body": "이런...ㅠㅠ 멘토님은 적록색맹이 있으셔서 빨간색 초록색 안좋아하셔요ㅠㅠ\n\n파란색이나 노란색을 선호하신답니다!!\n\n체력 -1, 코인 -1",
+     "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook1"]
+         }
+         ]
+     },
+     "subject-facekbook02": {
+     "condition": ["이주원", "마크저커버그", "subject-facebook02"],
+     "weight": 0,
+     "achieve": "",
+     "picture": "",
+     "body": "허걱!! 당신은 앞으로 멘토님께 사랑받을 수 있겠어요!\n\n멘토님은 적록색맹이 있으셔서 파란색이나 노란색을 선호하신답니다!!",
+     "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook1"]
+         }
+         ]
+     },
+     "subject-facekbook1": {
+         "condition": ["이주원", "마크저커버그", "subject-facebook1"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "곧 있으면 멘토님과의 첫 미팅 시작이에요! 두근두근.... 어떤 이야기를 꺼내실지 기대가 되네요..\n\n헉.. 서로의 취미를 얘기해보자고 하세요!\n이런... 멘토님께서 가지고 계신 특이한 취미를 맞춘다면 인증꿀팁을 주신다네요..\n\n멘토님의 취미 생활은 과연.. 무엇일까요??????",
+         "options": [
+          {
+         "option_text": "중국어책읽기",
+         "option_condition": [],
+         "option_action":["del_wifi_1", "execute_subject-facebook11"]
+         },   
+         {
+         "option_text": "바느질하기",
+         "option_condition": [],
+         "option_action" :["del_wifi_1", "execute_subject-facebook11"]
+         },
+         {
+         "option_text": "사냥하기",
+         "option_condition": [],
+         "option_action":["add_coin_1", "execute_subject-facebook12"]
+         }
+         ]
+     },
+     "subject-facekbook11": {
+     "condition": ["이주원", "마크저커버그", "subject-facebook11"],
+     "weight": 0,
+     "achieve": "",
+     "picture": "",
+     "body": "아쉽지만 멘토님의 취미는 아니예요... \n\n앞으로 멘토님과의 멘토링을 통해 더 알아가도록 해요!!\n\n통신 -1",
+     "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook2"]
+         }
+         ]
+     },
+     "subject-facekbook12": {
+     "condition": ["이주원", "마크저커버그", "subject-facebook12"],
+     "weight": 0,
+     "achieve": "",
+     "picture": "",
+     "body": "딩~동~댕~!! 멘토님께서는 사냥하기가 취미세요!\n그래서 직접 먹을 닭이나 돼지를 잡을 때도 있고, 도축도 가능하십니다.\n자신이 직접 잡은 고기 이외에는 먹지 않으신다고 해요.\n훌륭합니다. 멘토님과 한층 더 가까워졌네요!\n\n코인 +1",
+     "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook2"]
+         }
+         ]
+     },
+     "subject-facekbook2": {
+         "condition": ["이주원", "마크저커버그", "subject-facebook2"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "멘토링 시간이 한창이에요! 비대면으로 소마 활동이 이루어지다 보니, 조금 어색한 분위기가 있네요..\n\n이런 분위기를 바꾸기 위해 멘토님은.. 장기자랑 시간을 준비하셨습니다!!\n\n각자의 끼를 마음껏 표출해보시라고 하네요..!\n\n어라.. 그런데... 멘토님께서 먼저 마이크를 잡으시네요...\n\n노래를 부르려고 하시는데.... 어?.. 저 노래를........????",
+         "options": [
+          {
+         "option_text": "BTS_Dynamic",
+         "option_condition": [],
+         "option_action":["del_coin_1", "execute_subject-facebook21"]
+         },   
+         {
+         "option_text": "Eminem_My name is...",
+         "option_condition": [],
+         "option_action":["add_health_1", "execute_subject-facebook22"]
+         },
+         {
+         "option_text": "2pac_califonia love",
+         "option_condition": [],
+         "option_action":["del_coin_1", "execute_subject-facebook21"]
+         }
+         ]
+     },
+     "subject-facekbook21": {
+         "condition": ["이주원", "마크저커버그", "subject-facebook21"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "멘토님의 취향저격은 실패!ㅠㅠ 아쉽네요..\n멘토님과 더욱 친해지세요.\n\n코인 -1",
+         "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook3"]
+         }
+         ]
+     },
+     "subject-facekbook22": {
+         "condition": ["이주원", "마크저커버그", "subject-facebook22"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "맞았어요! \n 에미넴의 첫 메이저 싱글 \"My Name Is...\"의 커버 아트 문구를 패러디한 장난삼아 자신을 Slim Shady라 칭할 정도로 에미넴의 팬이라고 하십니다!\n\n체력 +1",
+            "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook3"]
+         }
+         ]
+     },
+     "subject-facekbook3": {
+        "condition": ["이주원", "마크저커버그", "subject-facebook3"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "휴~.. 걱정이 많았던 멘토링 시간이 끝났네요!\n멘토님께서 친해질 겸 간단한 양꼬치로 저녁식사를 하자고 하시네요\n\n그런데.... 양꼬치에 칭따오가 빠질 수 있나요-__-ㅠ\n\n칭따오를 마시며 분위기가 무르익은 순간...\n 멘토님께서 숨겨왔던 비밀이라며 한 말씀 하시네요.....\n알고보니, 멘토님께서는....",
+         "options": [
+          {
+         "option_text": "탈모가 진행중이시래요..",
+         "option_condition": [],
+         "option_action":["add_coin_1", "execute_subject-facebook31"]
+         },   
+         {
+         "option_text": "난독증이 있으시대요..",
+         "option_condition": [],
+         "option_action":["del_health_1", "execute_subject-facebook32"]
+         }
+         ]
+     },
+     "subject-facekbook31": {
+     "condition": ["이주원", "마크저커버그", "subject-facebook31"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "큼큼... 정답이에요... 분위기에 취해 말씀 하신걸수도 있으니..\n말 조심은 필수에요!!\n\n코인 +1",
+         "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook4"]
+         }
+         ]
+     },
+      "subject-facekbook32": {
+         "condition": ["이주원", "마크저커버그", "subject-facebook32"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "아니에요... 난독증은 없으세요. 멘토님께서는 다른 비밀을 갖고 계세요..\n그렇지만.. 그 비밀을 알아내려고 하지 마세요... \n\n체력 -1",
+            "options": [
+         {
+         "option_text": "다음",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook4"]
+         }
+         ]
+     },
+     "subject-facekbook4": {
+         "condition": ["이주원", "마크저커버그", "subject-facebook4"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+         "body": "집으로 헤어지기 전!! 멘토님께서 구상중이신 아이디어를 슬쩍 꺼내십니다\n\n\"학교 동문을 관리하는 프로그램.... 어때\"\n\n당신은 느꼈습니다!!! 아악!! 이건 무조건 인증이다.. 무조건 해야지.... \n\n멘토님께 준비된 모습을 보이기 위해.. 당신의 팀원과 아이디어를 구체화해보기로 했습니다.\n\n해당 서비스의 이름을 뭘로 하시겠어요??",
+         "options": [
+          {
+         "option_text": "딥페이크북",
+         "option_condition": [],
+         "option_action":["del_health_1"]
+         },   
+         {
+         "option_text": "페이스북",
+         "option_condition": [],
+         "option_action":["execute_subject-facebook5"]
+         },
+          {
+         "option_text": "핑거북",
+         "option_condition": [],
+         "option_action":["del_health_1"]
+         }
+         ]
+     },
+     "subject-facekbook5": {
+            "condition": ["이주원", "마크저커버그", "subject-facebook5"],
+         "weight": 0,
+         "achieve": "",
+         "picture": "",
+            "body": "오우와~!! 당신은 멘토님과 찰떡궁합이에요!! 멘토님께서는 당신이 세계 부자가 될 수 있는 서비스를 만드는데에 커다란 도움을 주실거예요!\n\n부디 성공해서 소마를 널리 알려주세요!\n\n",
+         "options": [
+         {
+         "option_text": "",
+         "option_condition": [],
+         "option_action":[]
+         }
+         ]
+     }
+ }
