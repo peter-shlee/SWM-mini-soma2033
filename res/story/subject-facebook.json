@@ -1,6 +1,6 @@
 {
     "subject-facekbook0": {
-     "condition" : ["이주원", "마크저커버그", "main", "subject-facebook"],
+     "condition" : ["mentor-mark"],
      "weight": 0,
      "achieve": "",
      "picture": "",
@@ -19,7 +19,7 @@
          ]
      },
      "subject-facekbook01": {
-     "condition": ["이주원", "마크저커버그", "subject-facebook01"],
+     "condition": ["mentor-mark", "subject-facebook0"],
      "weight": 0,
      "achieve": "",
      "picture": "",
@@ -33,7 +33,7 @@
          ]
      },
      "subject-facekbook02": {
-     "condition": ["이주원", "마크저커버그", "subject-facebook02"],
+     "condition": ["mentor-mark", "subject-facebook0"],
      "weight": 0,
      "achieve": "",
      "picture": "",
@@ -47,7 +47,7 @@
          ]
      },
      "subject-facekbook1": {
-         "condition": ["이주원", "마크저커버그", "subject-facebook1"],
+         "condition": ["mentor-mark"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -71,7 +71,7 @@
          ]
      },
      "subject-facekbook11": {
-     "condition": ["이주원", "마크저커버그", "subject-facebook11"],
+     "condition": ["mentor-mark", "subject-facebook1"],
      "weight": 0,
      "achieve": "",
      "picture": "",
@@ -85,7 +85,7 @@
          ]
      },
      "subject-facekbook12": {
-     "condition": ["이주원", "마크저커버그", "subject-facebook12"],
+     "condition": ["mentor-mark", "subject-facebook1"],
      "weight": 0,
      "achieve": "",
      "picture": "",
@@ -99,7 +99,7 @@
          ]
      },
      "subject-facekbook2": {
-         "condition": ["이주원", "마크저커버그", "subject-facebook2"],
+         "condition": ["mentor-mark"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -123,7 +123,7 @@
          ]
      },
      "subject-facekbook21": {
-         "condition": ["이주원", "마크저커버그", "subject-facebook21"],
+         "condition": ["mentor-mark", "subject-facebook2"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -137,7 +137,7 @@
          ]
      },
      "subject-facekbook22": {
-         "condition": ["이주원", "마크저커버그", "subject-facebook22"],
+         "condition": ["mentor-mark", "subject-facebook2"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -151,7 +151,7 @@
          ]
      },
      "subject-facekbook3": {
-        "condition": ["이주원", "마크저커버그", "subject-facebook3"],
+        "condition": ["mentor-mark"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -170,7 +170,7 @@
          ]
      },
      "subject-facekbook31": {
-     "condition": ["이주원", "마크저커버그", "subject-facebook31"],
+     "condition": ["mentor-mark", "subject-facebook3"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -184,7 +184,7 @@
          ]
      },
       "subject-facekbook32": {
-         "condition": ["이주원", "마크저커버그", "subject-facebook32"],
+         "condition": ["mentor-mark", "subject-facebook3"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -198,7 +198,7 @@
          ]
      },
      "subject-facekbook4": {
-         "condition": ["이주원", "마크저커버그", "subject-facebook4"],
+         "condition": ["mentor-mark"],
          "weight": 0,
          "achieve": "",
          "picture": "",
@@ -222,7 +222,7 @@
          ]
      },
      "subject-facekbook5": {
-            "condition": ["이주원", "마크저커버그", "subject-facebook5"],
+            "condition": ["mentor-mark"],
          "weight": 0,
          "achieve": "",
          "picture": "",
