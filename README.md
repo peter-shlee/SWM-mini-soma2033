@@ -15,7 +15,7 @@
 준비되셨나요?<br><br>
 
 ## 시나리오📟
-<img width="275" alt="스크린샷 2021-04-30 오전 2 47 43" src="https://user-images.githubusercontent.com/48276633/116595590-70d59e80-a95e-11eb-8654-d58a84ee42e0.png">&nbsp;<img width="290" alt="스크린샷 2021-04-30 오전 2 56 51" src="https://user-images.githubusercontent.com/48276633/116596726-b777c880-a95f-11eb-87e2-be69ab6f5f04.png">&nbsp;<img width="290" alt="스크린샷 2021-04-30 오전 2 57 45" src="https://user-images.githubusercontent.com/48276633/116596833-d8d8b480-a95f-11eb-88e6-3cc2803265e7.png">
+<img width="246" alt="스크린샷 2021-04-30 오전 2 47 43" src="https://user-images.githubusercontent.com/48276633/116595590-70d59e80-a95e-11eb-8654-d58a84ee42e0.png">&nbsp;<img width="260" alt="스크린샷 2021-04-30 오전 2 56 51" src="https://user-images.githubusercontent.com/48276633/116596726-b777c880-a95f-11eb-87e2-be69ab6f5f04.png">&nbsp;<img width="260" alt="스크린샷 2021-04-30 오전 2 57 45" src="https://user-images.githubusercontent.com/48276633/116596833-d8d8b480-a95f-11eb-88e6-3cc2803265e7.png">
 <br><br><br>
 
 ## 👆스토리의 구성
