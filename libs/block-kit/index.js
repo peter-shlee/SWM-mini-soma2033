@@ -249,10 +249,10 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 				markdown: true,
 			},
 			{
-  				'type': 'input',
-				'name': 'restart',
-  				'required': false,
-  				'placeholder': '재시작'
+  				type: 'input',
+				name: 'restart',
+  				required: false,
+  				placeholder: '재시작'
 			},
 			{
 				type: 'label',
