@@ -10,7 +10,7 @@ const block_kit = require('../libs/block-kit');
 
 module.exports = router;
 
-const userInfos = resIO.readJsonSync('res/user.json');
+var userInfos = resIO.readJsonSync('res/user.json');
 const states = resIO.readJsonSync("res/state.json")
 const achievements = resIO.readJsonSync("res/achieve.json")
 const stories = play.loadStories("res/story")
@@ -24,41 +24,11 @@ userExample = {
 }
 
 router.get('/', async (req, res, next) => {
-	// 유저 목록 검색 (1)
-	const users = await libKakaoWork.getUserList();
-	const new_users = [];
-
-	existing_user_ids = Object.keys(userInfos);
-	var new_user_added_flag = false;
-	for (user of users) {
-		if (existing_user_ids.includes(user.id)) continue;
-
-		new_users.push(user);
-		Object.assign(userInfos, play.createNewUser(user));
-		new_user_added_flag = true;
-	}
-
-	var conversations;
-	var messages;
-	const conv2user = {};
-	if (new_user_added_flag) {
-		resIO.saveJsonAsync('res/user.json', userInfos, () => {
-			console.log('save user.json');
-		});
-
-		conversations = await Promise.all(
-			new_users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
-		);
-		
-		conversations.forEach((conversation, i) => conv2user[conversation.id] = new_users[i].id);
-
-		// 생성된 채팅방에 메세지 전송 (3)
-		messages = await Promise.all([
-			conversations.map((conversation) =>
-				libKakaoWork.sendMessage(block_kit.storyBlock(conversation.id, userInfos[conv2user[conversation.id]], stories["start"], "start"))
-			),
-		]);
-	}
+	// 유저 목록 갱신
+	const responses = await chatToAllNewUsers(userInfos);
+	const users = responses[0];
+	const conversations = responses[1];
+	const messages = responses[2];
 
 	// 응답값은 자유롭게 작성하셔도 됩니다.
 	res.json({
@@ -104,9 +74,57 @@ router.get('/request/img', async (req, res, next) => {
 })
 
 router.get('/request/init', async (req, res, next) => {
-	//res.sendFile('/workspace/SWM-mini-soma2033/res/img/' + req.query.name);
+	userInfos = {}
+	const responses = await chatToAllNewUsers(userInfos);
+	const users = responses[0];
+	const conversations = responses[1];
+	const messages = responses[2];
+	
+	res.json({
+		users,
+		conversations,
+		messages,
+	});
 })
+
+async function chatToAllNewUsers(userInfos) {
+	const users = await libKakaoWork.getUserList();
+	const new_users = [];
+
+	existing_user_ids = Object.keys(userInfos);
+	var new_user_added_flag = false;
+	for (user of users) {
+		if (existing_user_ids.includes(user.id)) continue;
+		
+		new_users.push(user);
+		Object.assign(userInfos, play.createNewUser(user));
+		new_user_added_flag = true;
+	}
+
+	var conversations;
+	var messages;
+	const conv2user = {};
+	if (new_user_added_flag) {
+		resIO.saveJsonSync('res/user.json', userInfos);
+		
+		conversations = await Promise.all(
+			new_users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
+		);
+		
+		conversations.forEach((conversation, i) => conv2user[conversation.id] = new_users[i].id);
+
+		// 생성된 채팅방에 메세지 전송 (3)
+		messages = await Promise.all([
+			conversations.map((conversation) =>
+				libKakaoWork.sendMessage(block_kit.storyBlock(conversation.id, userInfos[conv2user[conversation.id]], stories["start"], "start"))
+			),
+		]);
+	}
+	
+	return [users, conversations, messages]
+}
 
 function deepcopy(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
+

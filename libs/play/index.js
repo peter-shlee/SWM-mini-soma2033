@@ -380,9 +380,7 @@ exports.addAchieve = (new_achieve, user_id, userInfos) => {
 }
 
 exports.saveUserInfos = (userInfos) => {
-		resIO.saveJsonSync('res/user.json', userInfos, () => {
-			console.log('save user.json');
-		});
+		resIO.saveJsonSync('res/user.json', userInfos);
 }
 
 exports.checkGameEnd = (user_id, userInfos, stories, conversation_id) => {
