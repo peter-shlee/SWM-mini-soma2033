@@ -54,7 +54,7 @@
 	},
 	"substory3": {
 		"condition": ["main"],
-		"weight": 100,
+		"weight": 0,
 		"achieve": "",
 		"picture": "substory2.jpg",
 		"body": "무사히 도망쳤다!",
@@ -68,7 +68,7 @@
 	},
 	"substory4": {
 		"condition": ["main"],
-		"weight": 100,
+		"weight": 0,
 		"achieve": "",
 		"picture": "substory2.jpg",
 		"body": "싸울 수 있는 포켓몬이 없다...\n로봇 개에게 물려버렸다!",
