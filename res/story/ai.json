@@ -1,0 +1,106 @@
+{
+  "main-ai-start": {
+    "condition": ["main-AI"],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 로봇AI를 본과정으로 선택한 당신은 이제 세부적으로 어떤 개발을 할지 선택해야겠네요! 당신은 어떤 세부 주제를 선택할 것인가요?",
+    "options": [
+      {
+        "option_text": "로봇 복지를 생각하는 ai를 만들겠어",
+        "option_condition": [],
+        "option_action": ["execute_main-ai1"]
+      },
+      {
+        "option_text": "나를 위한 ai로봇왕국을 만들자!",
+        "option_condition": ["AI_2"],
+        "option_action": ["execute_main-ai2"]
+      },
+      {
+        "option_text": "다른 사람들을 만나보고 결정해야지",
+        "option_condition": [],
+        "option_action": ["add_main-AI-need"]
+      }
+    ]
+  },
+  "main-ai1": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 역시 로봇들을 위한 AI가 너무 부족해요! 열심히 AI를 공부해서 로봇들을 위한 AI를 만들어야겠네요! 결심을 한 당신은 오늘도 AI공부로 소마센터에서 밤을 샙니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_main-AI-standard", "add_AI", "del_health"]
+      }
+    ]
+  },
+  "main-ai2": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 당신은 로봇왕국에 대한 생각에 사로 잡혔어요. 로봇 왕국은 얼마나 멋질까요! 당신은 로봇 왕국에 군림하는 꿈같은 상상에 밤잠을 설쳐서 체력을 잃었습니다. 그래도 이렇게 멋진 상상력을 가졌으니 언젠가 로봇 왕국을 만들 수 있지 않을까요!?",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_main-AI-kingdom", "add_need-kingdom-consult", "del_health"]
+      }
+    ]
+  },
+  "main-ai-jaehong": {
+    "condition": ["main-AI", "team-jaehong", "main-AI-need"],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 오늘은 팀 미팅이 있는 날! 카페에 가보니 재홍님이 먼저 와있네요. 자리에 앉자마자 재홍님이 뜬금없이 물어봅니다.\n\n'너... 패왕색을 가지고 있구나!? 혹시 로봇들의 왕에 도전해보지 않을래?'\n\n 역시.. 재홍님은 미친사람인게 분명해요. 이런 팀원을 고른 당신 잘못이겠죠. 그래도 로봇 왕국이라니.. 나름 괜찮은 것 같기도 한걸요?",
+    "options": [
+      {
+        "option_text": "좋아 까짓거 가보자!",
+        "option_condition": [],
+        "option_action": ["execute_main-ai2"]
+      },
+      {
+        "option_text": "음.. 다른 주제를 더 생각해볼게.",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "main-ai-siri": {
+    "condition": ["main-AI", "device-mac", "mentor-siri"],
+    "weight": 200,
+    "achieve": "",
+    "picture": "",
+    "body": " 시리 멘토님과 멘토링을 시작하였다. \n\n '이곳. 매우 중요. CNN은 지금 쓰레기.'\n\n 지루한 멘토링을 듣고 있었는데... 아! 생각해보니까 그전에 챙겼던 맥북이 있었지! 당신은 쉬는 시간에 시리 멘토님께 맥북을 보여드립니다. 시리 멘토님은 맥북을 잠시 쳐다보다가 자신과 연동을 하시더니 말투와 인상이 완전히 바뀌셨네요!\n\n '어! 이거 내가 옛날에 만들었던거잖아? 요즘엔 가지고 싶어도 못 갖는건데! 고마워 ㅎㅎ'\n\n 시리 멘토님의 얼굴이 붉어집니다. 시리 멘토님이 이렇게 귀여우셨나...? 정신이 나간 당신은 급기야 로봇과 인간과의 연애에 관해서 주제를 진행할 생각까지 해버립니다.",
+    "options": [
+      {
+        "option_text": "어우야.. 정신차려.",
+        "option_condition": [],
+        "option_action": [""]
+      },
+      {
+        "option_text": "그래도 한번 해볼까...!",
+        "option_condition": ["main-AI-need"],
+        "option_action": ["execute_main-ai-siri1"]
+      }
+    ]
+  },
+  "main-ai-siri1": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 당신... 제대로 미친 사람이군요? 멘토님과 연애라니...! 하지만 한번 미쳐버린 당신을 이젠 막을 수 없습니다. 이제 당신에게는 더이상 '시리 멘토님'은 존재하지 않고 그저 '사랑스러운 시리'만이 존재합니다. AI지식이고 인증이고 뭐고 다 필요없이 갑자기 통신망을 다 이용하더라도 시리에 대해서 찾아보는 등 시리와 연애할 생각에 푹 빠져버렸습니다. 소마2033은 더이상 당신에게 의미가 없어졌어요. 시리에게 잘 보이려면 어떻게 해야할지, 어떤 것들을 좋아하는지 찾아보게 되었습니다.\n\n 생각해보니 시리는 이젠 망해버린 애플 제품을 좋아했죠! 그것부터 찾아보는게 좋겠다고 생각한 당신은 바로 애플 제품을 보이는대로 모으기로 했습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": ["main-AI-need"],
+        "option_action": ["del_wifi", "del_AI_5", "add_siri", "add_main-AI-siri", "add_need-apple"]
+      }
+    ]
+  },
+}

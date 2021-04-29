@@ -3,7 +3,7 @@
 		"condition": ["main-mars"],
 		"weight": 0,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstory.jpg",
 		"body": "무사히 화성에 도착했습니다. 무엇을 할까요?",
 		"options": [
 			{
@@ -17,7 +17,7 @@
 		"condition": ["main-mars", "marsstorymain"],
 		"weight": 100,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstorycon1.jpg",
 		"body": "주변에 수많은 건물들과 농장들이 보입니다. 계속 넘어올 사람들을 위해 다들 분주히 움직이는 모습입니다.\n계속 걸어볼까요?",
 		"options": [
 			{
@@ -31,7 +31,7 @@
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
 		"weight": 50,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstorycon2.jpg",
 		"body": "비트코인 가격이 낮아졌다는 소식입니다. 지금 매도할까요?",
 		"options": [
 			{
@@ -50,7 +50,7 @@
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
 		"weight": 100,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstorycon3.jpg",
 		"body": "비트코인 가격이 높아졌다는 소식입니다. 지금 매도할까요?",
 		"options": [
 			{
@@ -69,7 +69,7 @@
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin2"],
 		"weight": 50,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstorycon4.jpg",
 		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
 		"options": [
 			{
@@ -82,8 +82,8 @@
 	"marsstorycoinking": {
 		"condition": [],
 		"weight": 0,
-		"achieve": "",
-		"picture": "",
+		"achieve": "bitcoin-master",
+		"picture": "marsstorycoinking.jpg",
 		"body": "축하합니다. 당신은 인류 최고의 부자가 되었습니다.\n앞으로 지구와 화성을 자유롭게 오가며 원하는 삶을 즐길 수 있게 되었습니다.\n해당 프로젝트는 게임일 뿐, 일체의 투자 권유 목적이 아니며 자산 투자는 본인의 판단과 책임으로 하시길 바랍니다.\n포스가 함께하기를",
 		"options": [
 			{
@@ -97,7 +97,7 @@
 		"condition": ["main-mars", "marsstorymain"],
 		"weight": 30,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstoryfarm1.jpg",
 		"body": "이곳은 소마센터 화성지부 입니다. 그동안의 활동을 바탕으로 최종 평가를 받을 수 있습니다.\n인증자로 선발되면 일론 머스크 멘토가 은퇴할 때 테크노 킹 자리 후계자 목록에 오르게 됩니다.\n지금 최종 평가를 받을까요?",
 		"options": [
 			{
@@ -116,7 +116,7 @@
 		"condition": ["main-mars"],
 		"weight": 0,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstoryfin1.jpg",
 		"body": "축하합니다. 최종 인증자로 선발되셨습니다. 개척자 자격을 갖고 있으며, 다양한 활동과 체력 관리로 앞으로 어떤 화성 임무든지 해낼 수 있으리라 기대합니다.\n내일부터 스페이스x 화성 지부로 출근하셔서 화성으로의 이주를 도와주시면 됩니다.",
 		"options": [
 			{
@@ -130,7 +130,7 @@
 		"condition": ["main-mars"],
 		"weight": 0,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsstoryfin2.jpg",
 		"body": "축하합니다. 소마 수료생 자격을 획득하셨습니다. 최종 인증자는 아니지만 앞으로 스페이스x 지구 지부에서 이주를 도와주시면 됩니다.\n소마 과정에 다시한번 도전하시게 된다면 개척자 자격 획득과 체력 관리 및 다양한 활동에 적극적으로 참여하신다면 더 좋은 결과를 얻으실 수 있으리라 기대합니다.",
 		"options": [
 			{
@@ -144,7 +144,7 @@
 		"condition": ["main-mars", "marsendtrig", "mentor-musk"],
 		"weight": 100000000,
 		"achieve": "techno-king",
-		"picture": "",
+		"picture": "marsend11.jpg",
 		"body": "시간이 흘러 벌써 화성에 온지 3년이 흘렀다. 일론 머스크 멘토의 '화성 갈끄니까' 선언 이후 정확히 15년이 지났다.\n화성에 거주지를 건설하고 감자 농사도 짓는다. 진짜 화성에 갈 줄 누가 알았겠는가.\n작년에는 시바견 얼굴이 담긴 달을 화성에서 찍은 사진이 퓰리처상을 받았다.\n\n멘토님은 이제 은퇴하신다고 한다. '테크노 킹' 자리는 내가 물려받게 되었고, 이제 인류의 미래를 위해 내가 직접 노력해야 한다.\n만약 과거로 돌아가게 된다면 그때 비트코인을 사두는 것도 좋았을 것 같다.\n\n\n-소마2033을 플레이 해주셔서 감사합니다.-",
 		"options": [
 			{
@@ -157,8 +157,8 @@
 	"marsend12": {
 		"condition": ["main-mars", "marsendtrig"],
 		"weight": 100,
-		"achieve": "",
-		"picture": "",
+		"achieve": "mars-ending",
+		"picture": "marsend12.jpg",
 		"body": "시간이 흘러 벌써 화성에 온지 3년이 흘렀다. 일론 머스크 멘토의 '화성 갈끄니까' 선언 이후 정확히 15년이 지났다.\n화성에 거주지를 건설하고 감자 농사도 짓는다. 진짜 화성에 갈 줄 누가 알았겠는가.\n작년에는 시바견 얼굴이 담긴 달을 화성에서 찍은 사진이 퓰리처상을 받았다.\n\n멘토님은 이제 은퇴하신다고 한다. '테크노 킹' 자리를 내가 물려받지는 못했지만, 이제 인류의 미래를 위해 내가 직접 노력해야 한다.\n만약 과거로 돌아가게 된다면 그때 비트코인을 사두는 것도 좋았을 것 같다.\n\n\n-소마2033을 플레이 해주셔서 감사합니다.-",
 		"options": [
 			{
@@ -171,8 +171,8 @@
 	"marsend2": {
 		"condition": ["main-mars"],
 		"weight": 0,
-		"achieve": "",
-		"picture": "",
+		"achieve": "mars-ending",
+		"picture": "marsend2.jpg",
 		"body": "소마 과정이 끝나고 지구로 돌아온지 벌써 10년이 흘렀다. 인류의 80%는 화성으로 이주했지만, 나는 아직 지구에 남아있다.\n다음주면 내가 화성으로 이주할 차례이다. 여기에 남아있을지는 아직도 고민중이지만.\n\n소마 2033에서 훈련을 받고 개척자 자격으로 참가했다면 어떻게 달라졌을지 궁금하다.\n만약 과거로 돌아가게 된다면 좀더 다양한 것들을 적극적으로 해보지 않았을까?\n\n\n-소마2033을 플레이 해주셔서 감사합니다.-",
 		"options": [
 			{

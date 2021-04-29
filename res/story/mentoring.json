@@ -28,7 +28,7 @@
 			},
 			{
 				"option_text": "멘토링보다는 팀원 구하는게 먼저지!",
-				"option_condition": [],
+				"option_condition": ["need-team"],
 				"option_action": ["execute_conv"]
 			}
 		]
