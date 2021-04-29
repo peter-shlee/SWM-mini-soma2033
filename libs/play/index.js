@@ -254,7 +254,7 @@ exports.addEssentialState = (user_id, userInfos, new_state, count) => {
 	return;
 }
 
-exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversation_id) => {
+exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversation_id, stateInfos, achieveInfos) => {
 	// button의 value parsing
 	const splitted_values = play.parseButtonValue(value);
 	const current_story_id = splitted_values[0];
@@ -274,6 +274,13 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	
 	for (state of Object.keys(states_to_add)) {
 		play.addState(react_user_id, userInfos, state, states_to_add[state]);
+		
+		state = state.split("_")[0]
+		state = stateInfos[stateInfos]
+		if (state != undefined && state != null && state != "") {
+			const state_update_block = block_kit.stateUpdateBlock(conversation_id, userInfos[react_user_id], state);
+			libKakaoWork.sendMessage(state_update_block);
+		}
 	}
 	
 	const states_to_delete = play.statesList2dict(divided_option_action["del"]);
@@ -321,7 +328,15 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	}
 	
 	// achieve도 처리해야 함
-	play.addAchieve(stories[next_story_id].achieve, react_user_id, userInfos);
+	if (stories[next_story_id].achieve != "") {
+		play.addAchieve(stories[next_story_id].achieve, react_user_id, userInfos);
+		
+		const achieve = achieveInfos[stories[next_story_id].achieve]
+		if (achieve != undefined && achieve != null && achieve != "") {
+			const achieve_Update_Block = block_kit.achieveUpdateBlock(conversation_id, userInfos[react_user_id], achieve);
+			libKakaoWork.sendMessage(achieve_Update_Block);
+		}
+	}
 	
 	// user의 current story 변경해야 함
 	userInfos[react_user_id].current_story = next_story_id;

@@ -13,7 +13,7 @@ module.exports = router;
 
 const userInfos = resIO.readJsonSync('res/user.json');
 const states = resIO.readJsonSync("res/state.json")
-// const achivements = resIO.readJsonSync("res/achieve.json")
+const achievements = resIO.readJsonSync("res/achieve.json")
 const stories = play.loadStories("res/story")
 divided_option_action = play.divideOptionsByTypeOfAction(stories["mentoring1"]["options"][0]["option_action"])
 stories['start']['story_id'] = 'start';
@@ -70,9 +70,13 @@ router.get('/', async (req, res, next) => {
 });
 
 router.post('/request', async (req, res, next) => {
-	const { message, value } = req.body;
+	const { message, value, react_user_id } = req.body;
 
 	switch (value) {
+		case 'getUserInfo':
+			const modal_block = block_kit.userInfoBlock(userInfos[react_user_id], states, achievements);
+			return res.json({view: modal_block});
+			break;
 		case 'cafe_survey':
 			// 설문조사용 모달 전송
 			return res.json({
@@ -140,14 +144,13 @@ router.post('/callback', async (req, res, next) => {
 	const { message, actions, action_time, value, react_user_id } = req.body; // 설문조사 결과 확인 (2)
 
 	switch (value) {
-		case 'welcome': // 불필요한 case
-			await libKakaoWork.sendMessage(block_kit.storyBlock(message.conversation_id, userInfos[react_user_id], stories["start"], "start"));
+		case 'gotUserInfo':
 			break;
 			
 		default:
 			// 게임 진행 중 버튼 선택해 눌렀을 때 여기로 넘어온다
 			// value를 parsing해서 어떤 스토리로 넘어갈지 등등 결정해야 한다. (story 객체 이용) + 현재 사용자가 위치하는 story가 맞는지 확인 -> onButtonClicked()에서 확인 
-			play.onButtonClicked(value, react_user_id, userInfos, stories, message.conversation_id);
+			play.onButtonClicked(value, react_user_id, userInfos, stories, message.conversation_id, states, achievements);
 	}
 
 	res.json({ result: true });
