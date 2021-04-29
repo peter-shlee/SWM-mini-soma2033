@@ -93,7 +93,7 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 			console.log({
 				story_id: story_id,
 				option_text: option.option_text,
-				errorMsg: 'button option length 20 exceeded',
+				errorMsg: 'btn option length 20 exceeded',
 			});
 			option.option_text = option.option_text.slice(0, 20);
 		}
