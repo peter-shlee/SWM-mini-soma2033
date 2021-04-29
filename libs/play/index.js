@@ -322,6 +322,10 @@ exports.onButtonClicked = async (value, react_user_id, userInfos, stories, conve
 	if (play.checkGameEnd(react_user_id, userInfos, stories, conversation_id)) {
 		// userInfos 저장
 		play.saveUserInfos(userInfos);
+		if (statusOrAchieveChanged) {
+			const statusAndAchieveBlock = block_kit.showUpdatedStatesAndAchieve(conversation_id, divided_option_action["add"], divided_option_action["del"], "", stateInfos, achieveInfos);
+			await libKakaoWork.sendMessage(statusAndAchieveBlock);
+		}
 		return;
 	}
 	

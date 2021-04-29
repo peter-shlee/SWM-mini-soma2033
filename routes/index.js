@@ -103,7 +103,9 @@ router.get('/request/img', async (req, res, next) => {
 	res.sendFile('/workspace/SWM-mini-soma2033/res/img/' + req.query.name);
 })
 
-
+router.get('/request/init', async (req, res, next) => {
+	//res.sendFile('/workspace/SWM-mini-soma2033/res/img/' + req.query.name);
+})
 
 function deepcopy(obj) {
   return JSON.parse(JSON.stringify(obj));
