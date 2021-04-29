@@ -56,7 +56,7 @@
 		"options": [
 			{
 				"option_text": "(체력 +1)",
-				"option_condition": [""],
+				"option_condition": [],
 				"option_action": ["add_health_1", "del_marsufo", "execute_marsgotoiss"]
 			}
 		]
