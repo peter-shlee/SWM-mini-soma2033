@@ -95,6 +95,27 @@ router.get('/request/init', async (req, res, next) => {
 	});
 })
 
+router.get('/request/rank', async (req, res, next) => {
+	ranking = []
+	result = {}
+	
+	for (user of Object.keys(userInfos)) {
+		ranking.push([user, userInfos[user].achieves.length]);
+	}
+	
+	ranking.sort(function(a, b) {
+    	return b[1] - a[1];
+	});
+	
+	ranking = ranking.slice(0, 20)
+	
+	for (info of ranking) {
+		result[ await libKakaoWork.getUserInfo(info[0]) ] = info[1];
+	}
+	
+	res.json(result);
+})
+
 async function chatToAllNewUsers(userInfos) {
 	const users = await libKakaoWork.getUserList();
 	const new_users = [];

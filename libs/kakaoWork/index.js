@@ -45,3 +45,9 @@ exports.sendMessage = async ({ conversationId, text, blocks }) => {
 	const res = await kakaoInstance.post('/v1/messages.send', data);
 	return res.data.message;
 };
+	
+exports.getUserInfo = async (user_id) => {
+	var res = await kakaoInstance.get(`/v1/users.info?user_id=${user_id}`);
+	
+	return res.data.user.name;
+};
