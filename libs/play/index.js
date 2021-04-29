@@ -254,11 +254,12 @@ exports.addEssentialState = (user_id, userInfos, new_state, count) => {
 	return;
 }
 
-exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversation_id, stateInfos, achieveInfos) => {
+exports.onButtonClicked = async (value, react_user_id, userInfos, stories, conversation_id, stateInfos, achieveInfos) => {
 	// button의 value parsing
 	const splitted_values = play.parseButtonValue(value);
 	const current_story_id = splitted_values[0];
 	const button_idx = splitted_values[1];
+	var statusOrAchieveChanged = false;
 	
 	// 현재 사용자가 위치하는 story가 맞는지 확인. 이전 스토리 챗봇의 버튼 눌렀으면 아무 일도 일어나지 않는다.
 	if (userInfos[react_user_id].current_story != current_story_id) return;
@@ -269,7 +270,6 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	const divided_option_action = play.divideOptionsByTypeOfAction(clicked_button_option_actions);
 	
 	const states_to_add = play.statesList2dict(divided_option_action["add"]);
-	console.log(states_to_add)
 	// add_page -> page 수 하나씩 추가해야 함
 	states_to_add["page"] = 1;
 	
@@ -279,8 +279,7 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		st = st.split("_")[0]
 		st = stateInfos[st]
 		if (st != undefined && st != null && st != "") {
-			const state_update_block = block_kit.stateUpdateBlock(conversation_id, userInfos[react_user_id], st);
-			libKakaoWork.sendMessage(state_update_block);
+				statusOrAchieveChanged = true;
 		}
 	}
 	
@@ -300,10 +299,6 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		play.deleteEssentialState(react_user_id, userInfos, state, essential_states_to_delete[state]);
 	}
 	
-	if (play.checkGameEnd(react_user_id, userInfos, stories, conversation_id)) {
-		return;
-	}
-	
 	// new-start도 처리해야 함
 	if (divided_option_action.new_start) {
 		// user states 초기화
@@ -312,6 +307,11 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		// userInfos 저장
 		play.saveUserInfos(userInfos);
 		
+		if (statusOrAchieveChanged) {
+			const statusAndAchieveBlock = block_kit.showUpdatedStatesAndAchieve(conversation_id, divided_option_action["add"], divided_option_action["del"], "", stateInfos, achieveInfos);
+			await libKakaoWork.sendMessage(statusAndAchieveBlock);
+		}
+		
 		// 처음부터 다시 시작
 		const start_block = block_kit.storyBlock(conversation_id, userInfos[react_user_id], stories["start"], "start");
 		libKakaoWork.sendMessage(start_block);
@@ -319,6 +319,11 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 		return;
 	}
 	
+	if (play.checkGameEnd(react_user_id, userInfos, stories, conversation_id)) {
+		// userInfos 저장
+		play.saveUserInfos(userInfos);
+		return;
+	}
 	
 	// 다음 스토리 실행
 	// value parsing한 정보로 어떤 스토리로 넘어갈지 결정 -> getNextStoryId() 이용
@@ -335,10 +340,14 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 
 			const achieve = achieveInfos[stories[next_story_id].achieve]
 			if (achieve != undefined && achieve != null && achieve != "") {
-				const achieve_Update_Block = block_kit.achieveUpdateBlock(conversation_id, userInfos[react_user_id], achieve);
-				libKakaoWork.sendMessage(achieve_Update_Block);
+				statusOrAchieveChanged = true;
 			}
 		}
+	}
+	
+	if (statusOrAchieveChanged) {
+		const statusAndAchieveBlock = block_kit.showUpdatedStatesAndAchieve(conversation_id, divided_option_action["add"], divided_option_action["del"], stories[next_story_id].achieve, stateInfos, achieveInfos);
+		await libKakaoWork.sendMessage(statusAndAchieveBlock);
 	}
 	
 	// user의 current story 변경해야 함
@@ -379,12 +388,14 @@ exports.checkGameEnd = (user_id, userInfos, stories, conversation_id) => {
 	const states = Object.keys(state_dict);
 	
 	if (!states.includes("health")){
+		userInfos[user_id].current_story = "health-ending";
 		const next_block = block_kit.storyBlock(conversation_id, userInfos[user_id], stories["health-ending"], "health-ending");
 		libKakaoWork.sendMessage(next_block);
 		return true;
 	}
 	
 	if (!states.includes("wifi")){
+		userInfos[user_id].current_story = "wifi-ending"
 		const next_block = block_kit.storyBlock(conversation_id, userInfos[user_id], stories["wifi-ending"], "wifi-ending");
 		libKakaoWork.sendMessage(next_block);
 		return true;
