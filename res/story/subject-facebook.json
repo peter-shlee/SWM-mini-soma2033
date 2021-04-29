@@ -230,8 +230,8 @@
 		"options": [
 			{
 				"option_text": "다시 시작하기",
-				"option_condition": ["new-start"],
-				"option_action": []
+				"option_condition": [],
+				"option_action": ["new-start"]
 			}
 		]
 	}
