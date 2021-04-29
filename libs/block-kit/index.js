@@ -44,7 +44,7 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 	}
 	ret_object = {
 		conversationId: conversation_id,
-		text: 'SOMA 2033 test',
+		text: '새로운 이야기가 도착했어요!',
 		blocks: [
 			{
 				type: 'header',
@@ -203,7 +203,7 @@ exports.showUpdatedStatesAndAchieve = (
 
 	ret_object = {
 		conversationId: conversation_id,
-		text: 'SOMA 2033',
+		text: '상태/업적이 변경되었어요!',
 		blocks: blocks,
 	};
 
@@ -249,10 +249,16 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 				markdown: true,
 			},
 			{
-				type: 'label',
-				text: '\n\n뒤로 가기를 눌러주세요.',
-				markdown: true,
+  				'type': 'input',
+				'name': 'restart',
+  				'required': false,
+  				'placeholder': '재시작'
 			},
+			{
+				type: 'label',
+				text: '재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 이외의 경우 뒤로 가기를 눌러주세요.',
+				markdown: true
+			}
 		],
 	};
 	return ret_object;
