@@ -1,5 +1,8 @@
 <h3 align= "center"> SW Maestro 미니프로젝트 13팀 </h3>
 <h1 align= "center"> '소마 2033' </h1>
+<p align="center">
+<img src="https://camo.githubusercontent.com/929eedf61647aab4e6d304fb3683005540051070d83d1aaae9b834beec7c21c0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6f64652d7631302e31362e332d677265656e3f7374796c653d666c61742d737175617265" alt="node" data-canonical-src="https://img.shields.io/badge/node-v10.16.3-green?style=flat-square" style="max-width:100%;"><img src="https://camo.githubusercontent.com/6140a0d4140d4a66c920ba05527411b7f6400fa4bd94386287ff6340f2a3c3f3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e706d2d76362e31312e332d677265656e3f7374796c653d666c61742d737175617265" alt="npm" data-canonical-src="https://img.shields.io/badge/npm-v6.11.3-lightgray?style=flat-square" style="max-width:100%;"><img src="https://camo.githubusercontent.com/47c8d1848e1747b0c130948de14b851d0c420305e29e88add0975b267ddca0a9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f676f6f726d4944452d626c75653f7374796c653d666c61742d737175617265" alt="goormIDE" data-canonical-src="https://img.shields.io/badge/goormIDE-blue?style=flat-square" style="max-width:100%;"><img src="https://camo.githubusercontent.com/f88799ed072b7884e6196d4b53a70da16da2375b91818370932c4fd9f0a0c997/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6b616b616f576f726b2d79656c6c6f773f7374796c653d666c61742d737175617265" alt="kakaowork" data-canonical-src="https://img.shields.io/badge/kakaoWork-yellow?style=flat-square" style="max-width:100%;">
+</p>
 
 <p align="center"> 
 <img width="500" alt="스크린샷 2021-04-30 오전 3 47 14" src="https://user-images.githubusercontent.com/48276633/116602488-c1e99080-a966-11eb-8ff0-37a4c3b1d18a.png">
