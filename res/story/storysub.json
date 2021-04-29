@@ -1,15 +1,82 @@
 {
 	"substory1": {
 		"condition": ["main"],
-		"weight": 10,
+		"weight": 50,
 		"achieve": "",
-		"picture": "",
-		"body": "",
+		"picture": "substory1.jpg",
+		"body": "오늘은 구름에서 강의들이 할인하는 날 입니다. 평소에 부족했던 공부를 하면 많은 도움이 되지 않을까요?\n어떤 강의를 들을까요?\n수강 시 1 소마코인이 지불됩니다.",
+		"options": [
+			{
+				"option_text": "인공지능 (AI +1)",
+				"option_condition": [],
+				"option_action": ["del_coin_1", "add_AI_1"]
+			},
+			{
+				"option_text": "프론트엔드 (frontend +1)",
+				"option_condition": [],
+				"option_action": ["del_coin_1", "add_frontend_1"]
+			},
+			{
+				"option_text": "백엔드 (backend +1)",
+				"option_condition": [],
+				"option_action": ["del_coin_1", "add_backend_1"]
+			},
+			{
+				"option_text": "우주기술 (space +1)",
+				"option_condition": [],
+				"option_action": ["del_coin_1", "add_space_1"]
+			},
+			{
+				"option_text": "다음에 듣도록 하자.",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+	"substory2": {
+		"condition": ["main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "substory2.jpg",
+		"body": "앗! 야생의 로봇 개 (이)가 나타났다!\n무엇을 할까?",
+		"options": [
+			{
+				"option_text": "싸우다",
+				"option_condition": [],
+				"option_action": ["execute_substory4"]
+			},
+			{
+				"option_text": "도망치다",
+				"option_condition": [],
+				"option_action": ["execute_substory3"]
+			}
+		]
+	},
+	"substory3": {
+		"condition": ["main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "substory2.jpg",
+		"body": "무사히 도망쳤다!",
 		"options": [
 			{
 				"option_text": "",
 				"option_condition": [],
 				"option_action": []
+			}
+		]
+	},
+	"substory4": {
+		"condition": ["main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "substory2.jpg",
+		"body": "싸울 수 있는 포켓몬이 없다...\n로봇 개에게 물려버렸다!",
+		"options": [
+			{
+				"option_text": "도망친다. (체력 -1)",
+				"option_condition": [],
+				"option_action": ["del_health_1"]
 			}
 		]
 	}
