@@ -1,7 +1,7 @@
 {
 	"subject-facekbook0": {
-		"condition": ["mentor-mark"],
-		"weight": 0,
+		"condition": ["mentor-mark", "main-facebook"],
+		"weight": 100,
 		"achieve": "",
 		"picture": "facebook_Q0.jpeg",
 		"body": "허걱..! 하버드를 중퇴하신 멘토님이라니... 소마의 위상이 엄청나쿤...\n멘토님의 기대에 못미치면 어떡하지 이거 옳은 선택인걸까...\n그치만 인증을 위해 마크저커버그 멘토님이 꼭 필요해!!\n\n멘토님께 잘보여야지 단정한 옷차림이 중요하겠어..!\n무슨 옷을 입어야되지???? 초록색?? 노란색?????",
@@ -19,7 +19,7 @@
 		]
 	},
 	"subject-facekbook01": {
-		"condition": ["mentor-mark", "subject-facebook0"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "facebook_Q01.jpeg",
@@ -28,12 +28,12 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook1"]
+				"option_action": ["add_subject-facebook1"]
 			}
 		]
 	},
 	"subject-facekbook02": {
-		"condition": ["mentor-mark", "subject-facebook0"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "facebook_Q02.jpeg",
@@ -42,13 +42,13 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook1"]
+				"option_action": ["add_subject-facebook1"]
 			}
 		]
 	},
 	"subject-facekbook1": {
-		"condition": ["mentor-mark"],
-		"weight": 0,
+		"condition": ["mentor-mark", "subject-facebook1"],
+		"weight": 200,
 		"achieve": "",
 		"picture": "facebook_Q1.jpeg",
 		"body": "곧 있으면 멘토님과의 첫 미팅 시작이에요! 두근두근.... 어떤 이야기를 꺼내실지 기대가 되네요..\n\n헉.. 서로의 취미를 얘기해보자고 하세요!\n이런... 멘토님께서 가지고 계신 특이한 취미를 맞춘다면 인증꿀팁을 주신다네요..\n\n멘토님의 취미 생활은 과연.. 무엇일까요??????",
@@ -56,12 +56,12 @@
 			{
 				"option_text": "중국어책읽기",
 				"option_condition": [],
-				"option_action": ["del_wifi_1", "execute_subject-facebook11"]
+				"option_action": ["del_wifi_1", "del_subject-facebook1","execute_subject-facebook11"]
 			},
 			{
 				"option_text": "바느질하기",
 				"option_condition": [],
-				"option_action": ["del_wifi_1", "execute_subject-facebook11"]
+				"option_action": ["del_wifi_1", "del_subject-facebook1","execute_subject-facebook11"]
 			},
 			{
 				"option_text": "사냥하기",
@@ -71,7 +71,7 @@
 		]
 	},
 	"subject-facekbook11": {
-		"condition": ["mentor-mark", "subject-facebook1"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
@@ -80,12 +80,12 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook2"]
+				"option_action": ["add_subject-facebook2"]
 			}
 		]
 	},
 	"subject-facekbook12": {
-		"condition": ["mentor-mark", "subject-facebook1"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
@@ -94,13 +94,13 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook2"]
+				"option_action": ["add_subject-facebook2"]
 			}
 		]
 	},
 	"subject-facekbook2": {
-		"condition": ["mentor-mark"],
-		"weight": 0,
+		"condition": ["mentor-mark", "subject-facebook2"],
+		"weight": 200,
 		"achieve": "",
 		"picture": "facebook_Q2.jpg",
 		"body": "멘토링 시간이 한창이에요! 비대면으로 소마 활동이 이루어지다 보니, 조금 어색한 분위기가 있네요..\n\n이런 분위기를 바꾸기 위해 멘토님은.. 장기자랑 시간을 준비하셨습니다!!\n\n각자의 끼를 마음껏 표출해보시라고 하네요..!\n\n어라.. 그런데... 멘토님께서 먼저 마이크를 잡으시네요...\n\n노래를 부르려고 하시는데.... 어?.. 저 노래를........????",
@@ -108,22 +108,22 @@
 			{
 				"option_text": "BTS_Dynamic",
 				"option_condition": [],
-				"option_action": ["del_coin_1", "execute_subject-facebook21"]
+				"option_action": ["del_coin_1", "del_subject-facebook2","execute_subject-facebook21"]
 			},
 			{
 				"option_text": "Eminem_My name is...",
 				"option_condition": [],
-				"option_action": ["add_health_1", "execute_subject-facebook22"]
+				"option_action": ["add_health_1", "del_subject-facebook2","execute_subject-facebook22"]
 			},
 			{
 				"option_text": "2pac_califonia love",
 				"option_condition": [],
-				"option_action": ["del_coin_1", "execute_subject-facebook21"]
+				"option_action": ["del_coin_1", "del_subject-facebook2","execute_subject-facebook21"]
 			}
 		]
 	},
 	"subject-facekbook21": {
-		"condition": ["mentor-mark", "subject-facebook2"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
@@ -137,7 +137,7 @@
 		]
 	},
 	"subject-facekbook22": {
-		"condition": ["mentor-mark", "subject-facebook2"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
@@ -170,7 +170,7 @@
 		]
 	},
 	"subject-facekbook31": {
-		"condition": ["mentor-mark", "subject-facebook3"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
@@ -179,12 +179,12 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook4"]
+				"option_action": ["add_subject-facebook4"]
 			}
 		]
 	},
 	"subject-facekbook32": {
-		"condition": ["mentor-mark", "subject-facebook3"],
+		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
@@ -193,13 +193,13 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook4"]
+				"option_action": ["add_subject-facebook4"]
 			}
 		]
 	},
 	"subject-facekbook4": {
-		"condition": ["mentor-mark"],
-		"weight": 0,
+		"condition": ["mentor-mark", "subject-facebook4"],
+		"weight": 200,
 		"achieve": "",
 		"picture": "",
 		"body": "집으로 헤어지기 전!! 멘토님께서 구상중이신 아이디어를 슬쩍 꺼내십니다\n\n\"학교 동문을 관리하는 프로그램.... 어때\"\n\n당신은 느꼈습니다!!! 아악!! 이건 무조건 인증이다.. 무조건 해야지.... \n\n멘토님께 준비된 모습을 보이기 위해.. 당신의 팀원과 아이디어를 구체화해보기로 했습니다.\n\n해당 서비스의 이름을 뭘로 하시겠어요??",
@@ -207,17 +207,17 @@
 			{
 				"option_text": "딥페이크북",
 				"option_condition": [],
-				"option_action": ["del_health_1"]
+				"option_action": ["del_health_1", "del_subject-facebook4"]
 			},
 			{
 				"option_text": "페이스북",
 				"option_condition": [],
-				"option_action": ["execute_subject-facebook5"]
+				"option_action": ["execute_subject-facebook5", "del_subject-facebook4"]
 			},
 			{
 				"option_text": "핑거북",
 				"option_condition": [],
-				"option_action": ["del_health_1"]
+				"option_action": ["del_health_1", "del_subject-facebook4"]
 			}
 		]
 	},
@@ -227,6 +227,20 @@
 		"achieve": "facebook-ending",
 		"picture": "facebook-ending.jpeg",
 		"body": "오우와~!! 당신은 멘토님과 찰떡궁합이에요!! 덕분에 소마과정을 통해 2033년 페이스북을 다시 부활시켰네요.\n부활시킨지 한 달만에 사용자수가 50억명이네요.. 엄청나요❗️\n\n멘토님께서는 앞으로도 당신이 세계 부자가 될 수 있는 서비스를 만드는데에 커다란 도움을 주실거예요!\n더욱 승승장구 해서 소마를 널리 알려주세요!\n\nTHE END",
+		"options": [
+			{
+				"option_text": "다시 시작하기",
+				"option_condition": [],
+				"option_action": ["new-start"]
+			}
+		]
+	},
+    "subject-facekbook-badending": {
+		"condition": ["page_100", "mentor-mark"],
+		"weight": 100000000,
+		"achieve": "facebook-badending",
+		"picture": "",
+		"body": "이미 충분히 공부했어요.. 많이 돌아왔네요 수고했어요!\n\n당신의 학습량에 감탄을 보냅니다.👏\n 게임을 새로 시작하고 싶으시면 아래 버튼을 눌러주세요!",
 		"options": [
 			{
 				"option_text": "다시 시작하기",
