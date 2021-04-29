@@ -269,16 +269,17 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	const divided_option_action = play.divideOptionsByTypeOfAction(clicked_button_option_actions);
 	
 	const states_to_add = play.statesList2dict(divided_option_action["add"]);
+	console.log(states_to_add)
 	// add_page -> page 수 하나씩 추가해야 함
 	states_to_add["page"] = 1;
 	
-	for (state of Object.keys(states_to_add)) {
-		play.addState(react_user_id, userInfos, state, states_to_add[state]);
+	for (var st of Object.keys(states_to_add)) {
+		play.addState(react_user_id, userInfos, st, states_to_add[st]);
 		
-		state = state.split("_")[0]
-		state = stateInfos[stateInfos]
-		if (state != undefined && state != null && state != "") {
-			const state_update_block = block_kit.stateUpdateBlock(conversation_id, userInfos[react_user_id], state);
+		st = st.split("_")[0]
+		st = stateInfos[st]
+		if (st != undefined && st != null && st != "") {
+			const state_update_block = block_kit.stateUpdateBlock(conversation_id, userInfos[react_user_id], st);
 			libKakaoWork.sendMessage(state_update_block);
 		}
 	}
@@ -328,13 +329,15 @@ exports.onButtonClicked = (value, react_user_id, userInfos, stories, conversatio
 	}
 	
 	// achieve도 처리해야 함
-	if (stories[next_story_id].achieve != "") {
-		play.addAchieve(stories[next_story_id].achieve, react_user_id, userInfos);
-		
-		const achieve = achieveInfos[stories[next_story_id].achieve]
-		if (achieve != undefined && achieve != null && achieve != "") {
-			const achieve_Update_Block = block_kit.achieveUpdateBlock(conversation_id, userInfos[react_user_id], achieve);
-			libKakaoWork.sendMessage(achieve_Update_Block);
+	if (!userInfos[react_user_id].achieves.includes(stories[next_story_id].achieve)) {
+		if (stories[next_story_id].achieve != "") {
+			play.addAchieve(stories[next_story_id].achieve, react_user_id, userInfos);
+
+			const achieve = achieveInfos[stories[next_story_id].achieve]
+			if (achieve != undefined && achieve != null && achieve != "") {
+				const achieve_Update_Block = block_kit.achieveUpdateBlock(conversation_id, userInfos[react_user_id], achieve);
+				libKakaoWork.sendMessage(achieve_Update_Block);
+			}
 		}
 	}
 	

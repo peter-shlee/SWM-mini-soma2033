@@ -73,11 +73,15 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 		ret_object.blocks.splice(2, 0, imgBlock);
 	}
 	cnt = -1;
+	user_states = []
+	for (state of user_json.states) {
+		user_states.push(state.split("_")[0])
+	}
 	for (option of story_json.options) {
 		cnt++;
 		flag = 0;
 		for (op of option.option_condition) {
-			if (!user_json.states.includes(op)) {
+			if (!user_states.includes(op)) {
 				flag = 1;
 				break;
 			}
