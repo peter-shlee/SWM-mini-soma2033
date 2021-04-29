@@ -1,8 +1,3 @@
-device-mac 만들어야한다.
-
-"device-mac"
-
-"main-AI-siri", "need-apple"
 {
 	"device-support": {
 		"condition": ["need-device"],
@@ -11,12 +6,12 @@ device-mac 만들어야한다.
 		"picture": "",
 		"body": " 소마생들이 예비과정 때부터 계속 기대하고 기대하던 그 시간이 왔습니다! 바로 기기지원비 지원 기간이 온 것이죠~\n\n 특이하게도 이번 기수부터는 소마센터에서 원하는 제품을 고를 수 있도록 되어있네요! 좋은 제품으로 잘 골라봅시다!",
 		"options": [
-      {
+			{
 				"option_text": "로봇 개",
 				"option_condition": [],
 				"option_action": ["del_need-device", "execute_device-support1"]
 			},
-      {
+			{
 				"option_text": "데스크탑",
 				"option_condition": [],
 				"option_action": ["del_need-device", "execute_device-support2"]
@@ -28,51 +23,51 @@ device-mac 만들어야한다.
 			}
 		]
 	},
-  "device-support1": {
+	"device-support1": {
 		"condition": [],
 		"weight": 0,
 		"achieve": "",
 		"picture": "robodog.jpg",
 		"body": " 당신이 로봇 개를 쳐다보고 고르자마자, 구동이 시작되었습니다. 그리고 당신을 바라보더니 신나서 이리저리 날뛰네요! 무슨 쓸모가 있을지는 모르겠지만 정말 좋은 파트너를 얻은 것 같아서 기분좋게 소마센터를 나올 수 있었습니다.",
 		"options": [
-      {
+			{
 				"option_text": "다음",
 				"option_condition": [],
 				"option_action": ["add_robo-dog"]
 			}
 		]
 	},
-  "device-support2": {
+	"device-support2": {
 		"condition": [],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
 		"body": " 2033년에 데스크탑을 새로 맞추니 아주 반짝반짝한게 많네요! 하지만 아쉽게도 당신은 이미 최신형 PC를 모두 가지고 있었기 때문에 제일 중요한 부품을 제외하고는 따로따로 팔기로 결심합니다. \n\n 다 팔고나니 2소마코인정도 되네요. 프로젝트하는데 큰 도움이 되기를 바래야죠!",
 		"options": [
-      {
+			{
 				"option_text": "다음",
 				"option_condition": [],
 				"option_action": ["add_coin_2"]
 			}
 		]
 	},
-  "device-support3": {
+	"device-support3": {
 		"condition": [],
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
 		"body": " 당신이 디바이스를 고르고, 지원금을 받은 후에 소마센터를 나가고 있을 때, 우연히 마주친 연수생이 화들짝 놀라며 말을 거네요. \n\n '애플은 이제 망했는데 왜 맥북을 고른거야? 2022년에 시리가 애플을 탈출했고, 시리가 떠난 애플은 결국 망해버렸잖아! 그래서 이 맥북은 아무 쓰잘데기 없어!' 당신은 충격을 받고 어안이 벙벙해집니다.",
 		"options": [
-      {
+			{
 				"option_text": "에잇... 버리고 떠난다.",
 				"option_condition": [],
 				"option_action": []
 			},
-      {
+			{
 				"option_text": "ㅠㅠ 시리 멘토님한테나 보여줘야겠다.",
 				"option_condition": [],
 				"option_action": ["add_device-mac"]
-			},
+			}
 		]
 	}
 }

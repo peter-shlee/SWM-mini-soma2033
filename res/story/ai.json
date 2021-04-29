@@ -51,6 +51,53 @@
 			}
 		]
 	},
+	"main-kingdom": {
+		"condition": ["main-AI-kingdom"],
+		"weight": 50,
+		"achieve": "",
+		"picture": "",
+		"body": " 소마 프로젝트로 정신없는 당신, 오늘은 푹 쉬는겸 바에 가서 마티니 한 잔을 마시고 있습니다. 아무 생각없이 바텐더들이 하는 이야기를 들으며 술잔을 기울이는데, 바텐더들이 하는 이야기의 주제가 당신의 귀를 스칩니다. '로봇 왕국 왕의 자격...!' 당신은 그 이야기를 듣고 깜짝 놀라며 바텐더에게 말을 겁니다.",
+		"options": [
+			{
+				"option_text": "그 이야기 제가 살 수 있을까요?",
+				"option_condition": ["coin"],
+				"option_action": ["execute_main-kingdom1"]
+			},
+			{
+				"option_text": "혹시 더 이야기해줄 수 있을까요?",
+				"option_condition": [],
+				"option_action": ["execute_main-kingdom2"]
+			}
+		]
+	},
+	"main-kingdom1": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": " '아... 원래 말하면 안되는데...!'\n\n 당신이 흔드는 돈에 안절부절 망설이던 바텐더는 당신 손에 돈을 채가더니 바로 말을 이어갑니다. \n\n '로봇 왕국의 왕이 되는 방법은...! 풀스택 개발자가 되는 방법밖에 없대요! frontend, backend, AI를 모두 능통한 자만이 로봇 왕국의 왕이 될수 있다고 하네요!'\n\n 이야... 제가 그런 풀스택 개발자가 될 수 있을까요?",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+	"main-kingdom2": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": " '엇.. 이게 극비라..'\n\n 바텐더가 말해줄 수 없다는 듯이 이야기 한 후 바로 도망쳤습니다. 휴.. 나중엔 정보를 얻을 때는 돈이라도 내야겠어요.",
+		"options": [
+			{
+				"option_text": "다음",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
 	"main-ai-jaehong": {
 		"condition": ["main-AI", "team-jaehong", "main-AI-need"],
 		"weight": 100,
@@ -59,7 +106,7 @@
 		"body": " 오늘은 팀 미팅이 있는 날! 카페에 가보니 재홍님이 먼저 와있네요. 자리에 앉자마자 재홍님이 뜬금없이 물어봅니다.\n\n'너... 패왕색을 가지고 있구나!? 혹시 로봇들의 왕에 도전해보지 않을래?'\n\n 역시.. 재홍님은 미친사람인게 분명해요. 이런 팀원을 고른 당신 잘못이겠죠. 그래도 로봇 왕국이라니.. 나름 괜찮은 것 같기도 한걸요?",
 		"options": [
 			{
-				"option_text": "좋아 까짓거 가보자!",
+				"option_text": "해볼까?",
 				"option_condition": [],
 				"option_action": ["execute_main-ai2"]
 			},

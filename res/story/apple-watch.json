@@ -9,17 +9,17 @@
       {
         "option_text": "애플워치 - 3 소마코인",
         "option_condition": ["coin_3", "need-apple"],
-        "option_action": ["add_apple-watch"]
+        "option_action": ["del_coin_3","add_apple-watch"]
       },
       {
         "option_text": "로봇 개 - 2 소마코인",
         "option_condition": ["coin_2"],
-        "option_action": ["add_robo-dog"]
+        "option_action": ["del_coin_2","add_robo-dog"]
       },
       {
         "option_text": "우주학개론 책 - 1 소마코인",
         "option_condition": ["coin"],
-        "option_action": ["add_space"]
+        "option_action": ["del_coin", "add_space"]
       },
       {
         "option_text": "돈이 없네... 지나가자",
@@ -37,11 +37,11 @@
     "options": [
       {
         "option_text": "오늘 컨디션 최고! 뛰어든다.",
-        "option_condition": ["health_2"],
+        "option_condition": ["health_3"],
         "option_action": ["execute_crazy1"]
       },
       {
-        "option_text": "죽기보다 더하겠어? 몸을 던진다.",
+        "option_text": "죽기보다 더하겠어? 온 몸을 던진다.",
         "option_condition": [],
         "option_action": ["execute_crazy2"]
       },
