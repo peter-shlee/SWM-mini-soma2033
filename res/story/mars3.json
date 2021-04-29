@@ -3,7 +3,7 @@
 		"condition": ["main-mars"],
 		"weight": 0,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsiss.jpg",
 		"body": "이곳은 스페이스x 우주정거장입니다. 우주선 점검을 마칠때까지 이곳에 머물게 됩니다. 무엇을 할까요?",
 		"options": [
 			{
@@ -55,26 +55,26 @@
 		"condition": ["main-mars"],
 		"weight": 0,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsyoda.jpg",
 		"body": "최후의 제다이여 나는 이 순간을 오랜다. 자네는 지구에서 자라는 동안 포스를 사용하는 방법을 배우지 못했을 것이다.\n진정한 스승이 나타날 그 때까지 자네를 쫓는 무리로부터 생존하기 위한 도음을 주고자 한다. 포스에 따르기를 정확히 이틀 뒤 비트코인의 폭등이 다가올 것이다.\n지구에서 돈은 곧 포스와 같은 존재... 큰 도움이 되기를 바란다. 다시 만나게 될 그 날을 기다리고 있겠다.",
 		"options": [
 			{
 				"option_text": "비트코인 풀매수 (소마코인 -2)",
 				"option_condition": [],
-				"option_action": ["del_coin_2", "add_marsbitcoin", "execute_marsiss"]
+				"option_action": ["del_coin_2", "add_marsbitcoin", "execute_marsissout"]
 			},
 			{
 				"option_text": "그래도 비트코인은 좀...",
 				"option_condition": [],
-				"option_action": ["add_nomarsbitcoin", "execute_marsiss"]
+				"option_action": ["add_nomarsbitcoin", "execute_marsissout"]
 			}
 		]
 	},
-	"marsiss": {
+	"marsissout": {
 		"condition": ["main-mars"],
 		"weight": 0,
 		"achieve": "",
-		"picture": "",
+		"picture": "marsissout.jpg",
 		"body": "이제 화성으로 출발할 모든 준비가 끝났습니다. 화성과 우주정거장을 왕복하는 우주버스에 탑승하시겠습니까?",
 		"options": [
 			{
