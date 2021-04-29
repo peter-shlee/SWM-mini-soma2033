@@ -62,7 +62,7 @@
         "option_text": "다음",
         "option_condition": [],
         "option_action": ["del_AI"]
-      },
+      }
     ]
   },
   "ai-standard2": {

@@ -7,7 +7,7 @@ exports.readJsonSync = (filePath) => {
 		const jsonObject = JSON.parse(jsonString)
 		return jsonObject;
 	} catch (err) {
-		console.log(err)
+		console.log(filePath, err)
 		return
 	}
 };
@@ -19,7 +19,7 @@ exports.saveJsonSync = (filePath, jsonObject) => {
 		fs.writeFileSync(filePath, jsonString)
 		return
 	} catch (err) {
-		console.log(err)
+		console.log(filePath, err)
 		return
 	}
 }
