@@ -36,5 +36,24 @@
 				"option_action": ["add_wifi_1"]
 			}
 		]
+	},
+    "substory-juwon2": {
+		"condition": ["team-juwon", "main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "주원님이 당신에게 며칠 뒤 열리는 소마 컨퍼런스에서 당일치기 소마 홍보 대사를 하자고 조릅니다! 소마코인 +1이 되는 소정의 페이를 받을 수 있어요. 그렇지만 체력은 -1이 되겠죠..\n한편, 이에 응하지 않고 그 시간에 당신은 밥을 사먹게 되므로 소마코인 -1를 지불하는 상황이 옵니다. 대신 체력은 +1이 되겠죠! 어떤 선택을 하시겠어요??",
+		"options": [
+			{
+				"option_text": "소마홍보대사에 참여할래",
+				"option_condition": [],
+				"option_action": ["add_coin_1", "del_health_1"]
+			},
+			{
+				"option_text": "소마홍보대사는 나랑 안맞아 안해",
+				"option_condition": [],
+				"option_action": ["del_coin_1","add_health_1"]
+			}
+		]
 	}
 }
