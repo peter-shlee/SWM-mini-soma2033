@@ -15,7 +15,7 @@
 	},
 	"marsstart": {
 		"condition": ["main-mars"],
-		"weight": 100,
+		"weight": 0,
 		"achieve": "",
 		"picture": "",
 		"body": "우주비행사 훈련을 완료하면 개척자 자격으로 우주 활동이 가능합니다. 어떤 훈련이 등장할지 모르고, 각 훈련마다 체력이 1씩 소모됩니다. 훈련에 참가할까요?",
@@ -40,7 +40,7 @@
 		"body": "이번 훈련은 우주 유영 훈련입니다. 우주정거장에서 비상 상황 발생 시 임무를 수행할 수 있습니다. 훈련에 참가할까요?",
 		"options": [
 			{
-				"option_text": "참가한다.(체력1 소모)",
+				"option_text": "참가한다.(체력 -1)",
 				"option_condition": [],
 				"option_action": ["add_marsspaceswim", "del_health_1", "execute_preparerocket"]
 			},
@@ -72,7 +72,7 @@
 	},
 	"preparerocket": {
 		"condition": ["main-mars"],
-		"weight": 100,
+		"weight": 0,
 		"achieve": "",
 		"picture": "",
 		"body": "이제 개척자 자격으로 우주에 갈 수 있게 되었다. 우주에서 다양한 임무를 수행하고 안전하게 사람들이 화성으로 이주하도록 도와주도록 하자. 이제 우주로 출발합시다!",
@@ -86,7 +86,7 @@
 	},
 	"marsescape": {
 		"condition": ["main-mars"],
-		"weight": 100,
+		"weight": 0,
 		"achieve": "",
 		"picture": "",
 		"body": "이주민 자격으로 우주에 갈 수 있게 되었다. 이제 우주로 츨발하자!",
@@ -94,7 +94,7 @@
 			{
 				"option_text": "우주선에 탑승한다.",
 				"option_condition": [],
-				"option_action": ["del_marscourse", "add_marsimig", "execute_rocket"]
+				"option_action": ["del_marscourse", "add_marsimig", "execute_gotorocket"]
 			}
 		]
 	}

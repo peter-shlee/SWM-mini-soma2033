@@ -9,31 +9,36 @@
 			{
 				"option_text": "조종석에 탑승한다.",
 				"option_condition": ["marspion"],
-				"option_action": ["add_marsship1"]
+				"option_action": ["add_marsship1", "execute_rocket1"]
 			},
 			{
 				"option_text": "이주민 칸에 탑승한다.",
 				"option_condition": ["marsimig"],
-				"option_action": ["add_marsship2"]
+				"option_action": ["add_marsship2", "execute_rocket1"]
 			},
 			{
 				"option_text": "이주민 칸에 탑승한다.",
 				"option_condition": ["marspion"],
-				"option_action": ["add_marsship2"]
+				"option_action": ["add_marsship2", "execute_rocket1"]
 			}
 		]
 	},
 	"rocket1": {
 		"condition": ["main-mars"],
-		"weight": 100,
+		"weight": 0,
 		"achieve": "",
 		"picture": "",
 		"body": "이런! 우주선 바로 앞에 잠복 근무 중이던 UFO가 보입니다.\n이대로 가다가는 충돌할 것 같아 보입니다. 어떻게 할까요?",
 		"options": [
 			{
 				"option_text": "우주선이 선회 제동 하도록 조종한다.",
-				"option_condition": ["marsship1"],
+				"option_condition": ["marsship1", "marsgravity"],
 				"option_action": ["add_marsufo", "execute_marsufo1"]
+			},
+			{
+				"option_text": "우주선이 선회 제동 하도록 조종한다.",
+				"option_condition": ["marsship1", "nomarsgravity"],
+				"option_action": ["add_marsufo", "execute_marsufo2"]
 			},
 			{
 				"option_text": "조종사를 믿고 기도한다.",
@@ -80,7 +85,7 @@
 		"weight": 0,
 		"achieve": "",
 		"picture": "",
-		"body": "저 멀리 스페이스x 우주정거장이 보입니다! 다행히 도킹은 시스템이 자동으로 진행해줍니다.",
+		"body": "저 멀리 스페이스x 우주정거장이 보입니다! 다행히 도킹은 시스템이 자동으로 진행해줍니다.\n우주정거장에 진입할까요?",
 		"options": [
 			{
 				"option_text": "도킹한다.",

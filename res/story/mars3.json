@@ -7,22 +7,22 @@
 		"body": "이곳은 스페이스x 우주정거장입니다. 우주선 점검을 마칠때까지 이곳에 머물게 됩니다. 무엇을 할까요?",
 		"options": [
 			{
-				"option_text": "태양전지판을 수리한다. (체력 -1)",
+				"option_text": "태양전지판을 수리한다. (소마코인 +1)",
 				"option_condition": ["marsspaceswim"],
-				"option_action": ["add_marssleep", "del_health_1", "execute_marsiss"]
+				"option_action": ["add_coin_1", "execute_marsiss"]
 			}
 		],
 		"options": [
 			{
 				"option_text": "송신기를 수리한다. (wifi +1)",
 				"option_condition": ["marsspaceswim", "marsbroken1"],
-				"option_action": ["add_marssleep", "add_wifi_1", "execute_marsiss"]
+				"option_action": ["add_wifi_1", "execute_marsiss"]
 			}
 		],
 		"options": [
 			{
 				"option_text": "숙면을 취한다. (체력 +1)",
-				"option_condition": [],
+				"option_condition": ["marssleep"],
 				"option_action": [
 					"del_marssleep",
 					"add_marssleep2",
