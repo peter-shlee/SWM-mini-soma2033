@@ -1,0 +1,172 @@
+{
+  "ai-standard1": {
+    "condition": ["main-AI-standard"],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 평화롭게 길을 지나가던 당신, 인간에게 학대받는 로봇을 발견하였습니다! 바로 이런 것들을 고치기 위해서 당신은 AI를 공부하고 있죠! 당신은 바로 정의롭게 로봇을 보호하며 인간을 저지합니다. 그러자 상대방이 화가나서 이야기합니다.\n\n'당신 뭐야! 저 연애상담로봇이 나한테 연애할 확률이 0%라고 했다고! 그래놓고 돈은 다시 안돌려주지 뭐야! 저런 로봇은 맞아봐야 정신차려!'\n\n 폭력을 휘두르는 것을 보아하니 딱봐도 연애할 확률이 0%인 것 같아요! 맞고있는 로봇을 그대로 두기에는 너무 마음이 아프네요.",
+    "options": [
+      {
+        "option_text": "제가 돈 대신 돌려드릴게요.",
+        "option_condition": ["coin"],
+        "option_action": ["del_coin", "execute_ai-standard11"]
+      },
+      {
+        "option_text": "로봇이 무슨 죄가 있겠어요!",
+        "option_condition": [],
+        "option_action": ["execute_ai-standard12"]
+      },
+      {
+        "option_text": "지나간다",
+        "option_condition": [],
+        "option_action": ["execute_ai-standard13"]
+      }
+    ]
+  },
+  "ai-standard11": {
+    "condition": ["main-AI-standard"],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 돈을 받은 상대방은 조금은 머쓱해하며 말을 합니다.\n\n '아니이 그래도 연애확률 0%는 고장이 난거지! 기계가 고장나면 맞는게 정상이라니까?'\n\n 정말 얼토당토않는 소리네요! 주변에 사람들이 몰려와서 수근거리자 아저씨는 눈치를 보더니 호다닥 달아납니다. 로봇은 당신에게 너무 고마워하며 AI기술을 전달해주었습니다. 오늘 뭔가 기분 좋은 하나 했네요!",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_AI"]
+      }
+    ]
+  },
+  "ai-standard12": {
+    "condition": ["main-AI-standard"],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " '뭐...? 그러면 너가 대신 맞아라!'\n\n 당신은 흠씬 두드려 맞았지만 로봇을 구해내는데 성공했습니다. 로봇은 너무 고마운 나머지 자신의 ai칩셋 사본을 건내주네요. 당신은 뿌듯함을 느끼며 가던 길을 마저 갑니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_health", "add_AI"]
+      }
+    ]
+  },
+  "ai-standard13": {
+    "condition": ["main-AI-standard"],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 마음이 아프지만 어쩔 수 없죠... 당신은 죄책감에 한동안 AI공부를 하지 못하여 AI실력이 떨어졌습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_AI"]
+      }
+    ]
+  },
+  "ai-standard2": {
+    "condition": ["main-AI-standard"],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 오늘은 AI 공부하는 날이네요! 어떤 식으로 학습하는게 좋을까요?",
+    "options": [
+      {
+        "option_text": "통신망 풀가동!",
+        "option_condition": ["wifi"],
+        "option_action": ["del_wifi", "add_AI"]
+      },
+      {
+        "option_text": "밤샘공부!",
+        "option_condition": ["health"],
+        "option_action": ["del_health", "add_AI"]
+      },
+      {
+        "option_text": "그냥 공부하자",
+        "option_condition": [],
+        "option_action": ["execute_ai-standard21"]
+      }
+    ]
+  },
+  "ai-standard21": {
+    "condition": ["main-AI-standard"],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 당신은 대충 공부하다가 결국 시간만 보냈습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "ai-standard3": {
+    "condition": [],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " AI 해커톤이 열렸네요! 소마때문에 아무리 바쁘다지만 한번 참여해보는 것도 나쁘지 않을 것 같아요!",
+    "options": [
+      {
+        "option_text": "내 AI 실력을 보여주지!",
+        "option_condition": ["AI_3"],
+        "option_action": ["execute_ai-standard31"]
+      },
+      {
+        "option_text": "모르겠고..! 백엔드라도 열심히 짜자",
+        "option_condition": ["backend_3"],
+        "option_action": ["execute_ai-standard32"]
+      },
+      {
+        "option_text": "잘 모르겠으니까 열심히 해보자..!",
+        "option_condition": [],
+        "option_action": ["execute_ai-standard33"]
+      }
+    ]
+  },
+  "ai-standard31": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 당신은 소마에서 손에 꼽히는 AI인재! 그 실력이 어디 안가죠! 당신은 순식간에 학습해버리고 좋은 결과를 출력해버리는 멋진 AI를 만들고 제출해버립니다!\n\n 우승자는...! 바로 당신입니다!\n\n 당신은 우승 상금으로 소마코인을 잔뜩 받고 멋지게 떠났습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_coin_3"]
+      }
+    ]
+  },
+  "ai-standard32": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "rule-base",
+    "picture": "",
+    "body": " 백엔드를 잘하는 당신은 AI는 모르겠고 룰베이스로 그냥 많은 코드를 짜서 제출했습니다. 기대를 하나도 안하게 되네요!\n\n 두구두구...! 결과는 5등이었습니다!\n\n 놀라운 결과네요! AI가 사람을 비슷하게 본뜬거니까 사람이 직접 짠게 5등을 해도 안이상하죠! 당신은 소량의 소마코인을 받고 기분좋게 해커톤을 떠납니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_coin"]
+      }
+    ]
+  },
+  "ai-standard33": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 당신은 AI실력은 부족하지만 열정은 1등이죠. AI를 열심히 공부하고 온 것으로 만족합니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_AI"]
+      }
+    ]
+  }
+}

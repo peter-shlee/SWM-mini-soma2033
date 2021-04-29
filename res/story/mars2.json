@@ -90,7 +90,12 @@
 			{
 				"option_text": "도킹한다.",
 				"option_condition": [],
-				"option_action": ["del_marsufo", "add_marssleep", "execute_marsiss"]
+				"option_action": [
+					"del_marsufo",
+					"add_marssleep",
+					"add_isseventtrig",
+					"execute_marsiss"
+				]
 			}
 		]
 	}

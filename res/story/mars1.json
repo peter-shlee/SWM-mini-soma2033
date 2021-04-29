@@ -1,18 +1,4 @@
 {
-	"marsmain": {
-		"condition": ["main"],
-		"weight": 100,
-		"achieve": "",
-		"picture": "marsmain.jpg",
-		"body": "2021년 일론 머스크 멘토의 화성 갈끄니까 선언 이후 정확히 12년 뒤 인류의 화성 이주가 시작되었습니다. 저 멀리 달에는 시바견 얼굴이 보이고, 화성에는 수많은 건물과 농장이 건설되고 있습니다. 화성으로 갈 준비 되셨나요?",
-		"options": [
-			{
-				"option_text": "본과정에 참여한다.",
-				"option_condition": [],
-				"option_action": ["add_main-mars", "execute_marsstart"]
-			}
-		]
-	},
 	"marsstart": {
 		"condition": ["main-mars"],
 		"weight": 0,
@@ -34,7 +20,7 @@
 	},
 	"marscourse1": {
 		"condition": ["main-mars", "marscourse"],
-		"weight": 100,
+		"weight": 500,
 		"achieve": "",
 		"picture": "marscourse1.jpg",
 		"body": "이번 훈련은 우주 유영 훈련입니다. 우주정거장에서 비상 상황 발생 시 임무를 수행할 수 있습니다. 훈련에 참가할까요?",
@@ -53,7 +39,7 @@
 	},
 	"marscourse2": {
 		"condition": ["main-mars", "marscourse"],
-		"weight": 100,
+		"weight": 500,
 		"achieve": "",
 		"picture": "marscourse2.jpg",
 		"body": "이번 훈련은 중력가속도 내성 훈련 입니다. 체력을 길러 우주선에서 정신을 잃지 않을 수 있습니다. 훈련에 참가할까요?",

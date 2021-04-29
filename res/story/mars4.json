@@ -15,7 +15,7 @@
 	},
 	"marsstorycon1": {
 		"condition": ["main-mars", "marsstorymain"],
-		"weight": 100,
+		"weight": 500,
 		"achieve": "",
 		"picture": "marsstorycon1.jpg",
 		"body": "주변에 수많은 건물들과 농장들이 보입니다. 계속 넘어올 사람들을 위해 다들 분주히 움직이는 모습입니다.\n계속 걸어볼까요?",
@@ -29,7 +29,7 @@
 	},
 	"marsstorycon2": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
-		"weight": 50,
+		"weight": 100,
 		"achieve": "",
 		"picture": "marsstorycon2.jpg",
 		"body": "비트코인 가격이 낮아졌다는 소식입니다. 지금 매도할까요?",
@@ -48,7 +48,7 @@
 	},
 	"marsstorycon3": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
-		"weight": 100,
+		"weight": 300,
 		"achieve": "",
 		"picture": "marsstorycon3.jpg",
 		"body": "비트코인 가격이 높아졌다는 소식입니다. 지금 매도할까요?",
@@ -67,7 +67,7 @@
 	},
 	"marsstorycon4": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin2"],
-		"weight": 50,
+		"weight": 800,
 		"achieve": "",
 		"picture": "marsstorycon4.jpg",
 		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
@@ -95,7 +95,7 @@
 	},
 	"marsstoryfarm1": {
 		"condition": ["main-mars", "marsstorymain"],
-		"weight": 30,
+		"weight": 200,
 		"achieve": "",
 		"picture": "marsstoryfarm1.jpg",
 		"body": "이곳은 소마센터 화성지부 입니다. 그동안의 활동을 바탕으로 최종 평가를 받을 수 있습니다.\n인증자로 선발되면 일론 머스크 멘토가 은퇴할 때 테크노 킹 자리 후계자 목록에 오르게 됩니다.\n지금 최종 평가를 받을까요?",
@@ -142,7 +142,7 @@
 	},
 	"marsend11": {
 		"condition": ["main-mars", "marsendtrig", "mentor-musk"],
-		"weight": 100000000,
+		"weight": 1000000000,
 		"achieve": "techno-king",
 		"picture": "marsend11.jpg",
 		"body": "시간이 흘러 벌써 화성에 온지 3년이 흘렀다. 일론 머스크 멘토의 '화성 갈끄니까' 선언 이후 정확히 15년이 지났다.\n화성에 거주지를 건설하고 감자 농사도 짓는다. 진짜 화성에 갈 줄 누가 알았겠는가.\n작년에는 시바견 얼굴이 담긴 달을 화성에서 찍은 사진이 퓰리처상을 받았다.\n\n멘토님은 이제 은퇴하신다고 한다. '테크노 킹' 자리는 내가 물려받게 되었고, 이제 인류의 미래를 위해 내가 직접 노력해야 한다.\n만약 과거로 돌아가게 된다면 그때 비트코인을 사두는 것도 좋았을 것 같다.\n\n\n-소마2033을 플레이 해주셔서 감사합니다.-",
@@ -156,7 +156,7 @@
 	},
 	"marsend12": {
 		"condition": ["main-mars", "marsendtrig"],
-		"weight": 100,
+		"weight": 1000000,
 		"achieve": "mars-ending",
 		"picture": "marsend12.jpg",
 		"body": "시간이 흘러 벌써 화성에 온지 3년이 흘렀다. 일론 머스크 멘토의 '화성 갈끄니까' 선언 이후 정확히 15년이 지났다.\n화성에 거주지를 건설하고 감자 농사도 짓는다. 진짜 화성에 갈 줄 누가 알았겠는가.\n작년에는 시바견 얼굴이 담긴 달을 화성에서 찍은 사진이 퓰리처상을 받았다.\n\n멘토님은 이제 은퇴하신다고 한다. '테크노 킹' 자리를 내가 물려받지는 못했지만, 이제 인류의 미래를 위해 내가 직접 노력해야 한다.\n만약 과거로 돌아가게 된다면 그때 비트코인을 사두는 것도 좋았을 것 같다.\n\n\n-소마2033을 플레이 해주셔서 감사합니다.-",

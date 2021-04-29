@@ -58,6 +58,14 @@ router.post('/callback', async (req, res, next) => {
 
 	switch (value) {
 		case 'gotUserInfo':
+			// copied from libs/play/index.js
+			play.initUser(react_user_id, userInfos);	
+			// userInfos 저장
+			play.saveUserInfos(userInfos);
+			
+			// 처음부터 다시 시작
+			const start_block = block_kit.storyBlock(message.conversation_id, userInfos[react_user_id], stories["start"], "start");
+			libKakaoWork.sendMessage(start_block);
 			break;
 			
 		default:
