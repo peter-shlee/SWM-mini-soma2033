@@ -256,7 +256,7 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 			},
 			{
 				type: 'label',
-				text: '재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 이외의 경우 뒤로 가기를 눌러주세요.',
+				text: '오류 등으로 인해 재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 이외의 경우 뒤로 가기를 눌러주세요.',
 				markdown: true
 			}
 		],
