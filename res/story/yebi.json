@@ -23,7 +23,7 @@
       {
 				"option_text": "본과정 시작~!",
 				"option_condition": [],
-				"option_action": ["add_main", "del_start"]
+				"option_action": ["add_main", "add_need-device", "del_start"]
 			},
 			{
 				"option_text": "앗! 조금 있다가 시작할래요!",
@@ -52,7 +52,7 @@
 		]
 	},
   "yebi-ending": {
-    "condition": ["page_100", "start"],
+    "condition": ["page_30", "start"],
     "weight": 1000000000,
     "achieve": "yebi-ending",
     "picture": "yebi_ending.png",

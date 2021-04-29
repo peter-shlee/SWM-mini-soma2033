@@ -1,6 +1,6 @@
 {
 	"main-ai-start": {
-		"condition": ["main-AI"],
+		"condition": ["main", "main-AI"],
 		"weight": 100,
 		"achieve": "",
 		"picture": "",
@@ -118,8 +118,8 @@
 		]
 	},
 	"main-ai-siri": {
-		"condition": ["main-AI", "device-mac", "mentor-siri"],
-		"weight": 200,
+		"condition": ["main", "main-AI", "device-mac", "mentor-siri"],
+		"weight": 300,
 		"achieve": "",
 		"picture": "",
 		"body": " 시리 멘토님과 멘토링을 시작하였습니다. \n\n '이곳. 매우 중요. CNN은 지금 쓰레기.'\n\n 지루한 멘토링을 듣고 있었는데... 아! 생각해보니까 그전에 챙겼던 맥북이 있었지! 당신은 쉬는 시간에 시리 멘토님께 맥북을 보여드립니다. 시리 멘토님은 맥북을 잠시 쳐다보다가 자신과 연동을 하시기 시작했습니다. 연동이 끝난 후... 시리 멘토님의 말투와 인상이 완전히 바뀌셨네요!\n\n '어! 이거 내가 옛날에 만들었던거잖아? 요즘엔 가지고 싶어도 못 갖는건데! 고마워 ㅎㅎ'\n\n 시리 멘토님의 얼굴이 붉어집니다. 시리 멘토님이 이렇게 귀여우셨나...? 정신이 나간 당신은 급기야 시리 멘토님에게 감정을 느끼기 시작했습니다.",

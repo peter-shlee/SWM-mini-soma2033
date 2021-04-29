@@ -1,6 +1,6 @@
 {
 	"marsstart": {
-		"condition": ["main-mars"],
+		"condition": ["main","main-mars"],
 		"weight": 300,
 		"achieve": "",
 		"picture": "marsstart.jpg",

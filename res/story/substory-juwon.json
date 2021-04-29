@@ -18,7 +18,7 @@
 			}
 		]
 	},
-    "substory-juwon1": {
+	"substory-juwon1": {
 		"condition": ["team-juwon", "main"],
 		"weight": 100,
 		"achieve": "",
@@ -37,7 +37,7 @@
 			}
 		]
 	},
-    "substory-juwon2": {
+	"substory-juwon2": {
 		"condition": ["team-juwon", "main"],
 		"weight": 100,
 		"achieve": "",
@@ -52,7 +52,7 @@
 			{
 				"option_text": "소마홍보대사는 나랑 안맞아 안해",
 				"option_condition": [],
-				"option_action": ["del_coin_1","add_health_1"]
+				"option_action": ["del_coin_1", "add_health_1"]
 			}
 		]
 	}
