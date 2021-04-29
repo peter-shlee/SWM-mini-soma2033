@@ -176,7 +176,7 @@ exports.showUpdatedStatesAndAchieve = (
 		for (const st of Object.keys(deleted_states_dict)) {
 			blocks.push({
 				type: 'text',
-				text: `- ${st} ${deleted_states_dict[st]}개 잃었습니다.`,
+				text: `- ${stateInfos[st]} ${deleted_states_dict[st]}개 잃었습니다.`,
 				markdown: true,
 			});
 		}
@@ -184,7 +184,7 @@ exports.showUpdatedStatesAndAchieve = (
 		for (const st of Object.keys(added_states_dict)) {
 			blocks.push({
 				type: 'text',
-				text: `- ${st} ${added_states_dict[st]}개 얻었습니다.`,
+				text: `- ${stateInfos[st]} ${added_states_dict[st]}개 얻었습니다.`,
 				markdown: true,
 			});
 		}
