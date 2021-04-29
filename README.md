@@ -23,14 +23,19 @@
 <br>
 
 ## ✌️게임 규칙
+> 게임 종료 조건
 1. **health(❤️)가 0개인 경우, 게임 종료**
 2. **wifi(📡)가 0개인 경우, 게임 종료**
-3. **랜덤 스토리의 페이지 수가 많아지게 되면 게임 종료**<br>
+3. **랜덤 스토리의 페이지 수가 많아지게 되면 게임 종료**
+> 게임 진행 유의사항
+1. 모든 스토리 진행은 메세지로 진행됩니다. 
+2. 업적/상태 확인은 모달창으로 이뤄집니다.
+3. 사용자의 선택에 따라 랜덤으로 스토리가 등장합니다.
+  <br>- 스토리의 랜덤 선택은, 게임 내부의 weight에 따라 설정됩니다.
 <br><br>
 
 ## 미리보기👀
 <img width="246" alt="스크린샷 2021-04-30 오전 2 47 43" src="https://user-images.githubusercontent.com/48276633/116595590-70d59e80-a95e-11eb-8654-d58a84ee42e0.png">&nbsp;<img width="260" alt="스크린샷 2021-04-30 오전 2 56 51" src="https://user-images.githubusercontent.com/48276633/116596726-b777c880-a95f-11eb-87e2-be69ab6f5f04.png">&nbsp;<img width="260" alt="스크린샷 2021-04-30 오전 2 57 45" src="https://user-images.githubusercontent.com/48276633/116596833-d8d8b480-a95f-11eb-88e6-3cc2803265e7.png">
 <br><br><br>
-
 
 
