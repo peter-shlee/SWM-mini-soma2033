@@ -8,7 +8,7 @@
 		"options": [
 			{
 				"option_text": "태양전지판을 수리한다. (소마코인 +1)",
-				"option_condition": ["marsspaceswim"],
+				"option_condition": [],
 				"option_action": ["add_coin_1", "execute_marsiss"]
 			}
 		],
@@ -22,7 +22,7 @@
 		"options": [
 			{
 				"option_text": "숙면을 취한다. (체력 +1)",
-				"option_condition": ["marssleep"],
+				"option_condition": [],
 				"option_action": [
 					"del_marssleep",
 					"add_marssleep2",
@@ -46,7 +46,7 @@
 		"options": [
 			{
 				"option_text": "요다를 만난다.",
-				"option_condition": [""],
+				"option_condition": [],
 				"option_action": ["execute_marsyoda"]
 			}
 		]

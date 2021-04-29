@@ -42,7 +42,7 @@
 			{
 				"option_text": "조금 더 기다린다.",
 				"option_condition": [],
-				"option_action": [""]
+				"option_action": []
 			}
 		]
 	},
