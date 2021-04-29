@@ -41,7 +41,6 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 		console.log({story_id: story_id, errorMsg: "body length 500 exceeded"});
 		story_json.body = story_json.body.slice(0, 500);
 	}
-	
 	ret_object = {
 		conversationId: conversation_id,
 		text: 'SOMA 2033 test',
@@ -114,7 +113,7 @@ exports.stateUpdateBlock = (conversation_id, user_json, state) => {
 			},
 			{
 				type: 'text',
-				text: '상태 ' + state + '획득!',
+				text: '상태 ' + state + ' 획득!',
 				markdown: true,
 			},
 			{
@@ -146,7 +145,7 @@ exports.achieveUpdateBlock = (conversation_id, user_json, achieve) => {
 			},
 			{
 				type: 'text',
-				text: '업적 ' + achieve + '획득!',
+				text: '업적 ' + achieve + ' 획득!',
 				markdown: true,
 			},
 			{
@@ -202,8 +201,13 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 				type: 'label',
 				text: txt_achieve,
 				markdown: true,
+			},
+			{
+				type: 'label',
+				text: "\n\n뒤로 가기를 눌러주세요.",
+				markdown: true,
 			}
 		],
-	};
+	}; 
 	return ret_object;
 };
