@@ -1,0 +1,16 @@
+{
+	"substory1": {
+		"condition": ["main"],
+		"weight": 10,
+		"achieve": "",
+		"picture": "",
+		"body": "",
+		"options": [
+			{
+				"option_text": "",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	}
+}
