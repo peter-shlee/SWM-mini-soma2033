@@ -1,18 +1,4 @@
 {
-	"marsmain": {
-		"condition": ["main"],
-		"weight": 100,
-		"achieve": "",
-		"picture": "marsmain.jpg",
-		"body": "2021년 일론 머스크 멘토의 화성 갈끄니까 선언 이후 정확히 12년 뒤 인류의 화성 이주가 시작되었습니다. 저 멀리 달에는 시바견 얼굴이 보이고, 화성에는 수많은 건물과 농장이 건설되고 있습니다. 화성으로 갈 준비 되셨나요?",
-		"options": [
-			{
-				"option_text": "본과정에 참여한다.",
-				"option_condition": [],
-				"option_action": ["add_main-mars", "execute_marsstart"]
-			}
-		]
-	},
 	"marsstart": {
 		"condition": ["main-mars"],
 		"weight": 0,
