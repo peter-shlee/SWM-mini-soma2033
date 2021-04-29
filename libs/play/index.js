@@ -90,7 +90,7 @@ exports.getPlayableStories = (stories, user) => {
 }
 
 // 다음으로 나올 수 있는 스토리들의 story_id들이 담긴 배열을 받은 뒤, 그 스토리들중 하나를 랜덤하게 선택해 리턴하는 함수
-exports.getNextStoryId = (stories, user, executes) => {/////////////////////////////////////////////////////////////
+exports.getNextStoryId = (stories, user, executes) => {
 	if (executes.length != 0) // 다음에 실행할 스토리가 정해져 있는 경우
 		return executes[0]
 	
@@ -358,13 +358,6 @@ exports.parseButtonValue = (value) => {
 	values = value.split("_");
 	return [values[0], parseInt(values[1])];
 }
-
-// exports.addAchieves = (new_achieves, user_id, userInfos) => {
-// 	if (new_achieves.length == 0) return;
-	
-// 	const concated_achieves = userInfos[user_id].achieves.concat(new_achieves);
-// 	userInfos[user_id].achieves = concated_achieves;
-// }
 
 exports.addAchieve = (new_achieve, user_id, userInfos) => {
 	if (new_achieve == "") return;

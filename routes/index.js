@@ -1,5 +1,4 @@
 // routes/index.js
-// leeez : https://swm-mini-soma2033-hvbpc.run.goorm.io
 const express = require('express');
 const router = express.Router();
 const imageUrl = 'https://drive.google.com/uc?id=';
@@ -51,7 +50,7 @@ router.get('/', async (req, res, next) => {
 			new_users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
 		);
 		
-		conversations.forEach((conversation, i) => conv2user[conversation.id] = new_users[i].id); // conversation과 user가 서로 match되는게 맞는지 확인해야 함
+		conversations.forEach((conversation, i) => conv2user[conversation.id] = new_users[i].id);
 
 		// 생성된 채팅방에 메세지 전송 (3)
 		messages = await Promise.all([
@@ -77,64 +76,8 @@ router.post('/request', async (req, res, next) => {
 			const modal_block = block_kit.userInfoBlock(userInfos[react_user_id], states, achievements);
 			return res.json({view: modal_block});
 			break;
-		case 'cafe_survey':
-			// 설문조사용 모달 전송
-			return res.json({
-				view: {
-					title: '설문조사',
-					accept: '설문조사 전송하기',
-					decline: '취소',
-					value: 'cafe_survey_results',
-					blocks: [
-						{
-							type: 'label',
-							text: '카페 평점을 알려주세요',
-							markdown: false,
-						},
-						{
-							type: 'select',
-							name: 'rating',
-							required: true,
-							options: [
-								{
-									text: '1점',
-									value: '1',
-								},
-								{
-									text: '2점',
-									value: '2',
-								},
-								{
-									text: '3점',
-									value: '3',
-								},
-								{
-									text: '4점',
-									value: '4',
-								},
-								{
-									text: '5점',
-									value: '5',
-								},
-							],
-							placeholder: '평점',
-						},
-						{
-							type: 'label',
-							text: '바라는 점이 있다면 알려주세요!',
-							markdown: false,
-						},
-						{
-							type: 'input',
-							name: 'wanted',
-							required: false,
-							placeholder: 'ex) 와플을 팔면 좋겠습니다',
-						},
-					],
-				},
-			});
-			break;
 		default:
+			console.log("여기에 오면 안되는데...")
 	}
 
 	res.json({});
