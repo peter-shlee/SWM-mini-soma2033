@@ -1,5 +1,8 @@
 <h3 align= "center"> SW Maestro 미니프로젝트 13팀 </h3>
 <h1 align= "center"> '소마 2033' </h1>
+<p align="center">
+<img src="https://camo.githubusercontent.com/929eedf61647aab4e6d304fb3683005540051070d83d1aaae9b834beec7c21c0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6f64652d7631302e31362e332d677265656e3f7374796c653d666c61742d737175617265" alt="node" data-canonical-src="https://img.shields.io/badge/node-v10.16.3-green?style=flat-square" style="max-width:100%;"><img src="https://camo.githubusercontent.com/6140a0d4140d4a66c920ba05527411b7f6400fa4bd94386287ff6340f2a3c3f3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e706d2d76362e31312e332d677265656e3f7374796c653d666c61742d737175617265" alt="npm" data-canonical-src="https://img.shields.io/badge/npm-v6.11.3-lightgray?style=flat-square" style="max-width:100%;"><img src="https://camo.githubusercontent.com/47c8d1848e1747b0c130948de14b851d0c420305e29e88add0975b267ddca0a9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f676f6f726d4944452d626c75653f7374796c653d666c61742d737175617265" alt="goormIDE" data-canonical-src="https://img.shields.io/badge/goormIDE-blue?style=flat-square" style="max-width:100%;"><img src="https://camo.githubusercontent.com/f88799ed072b7884e6196d4b53a70da16da2375b91818370932c4fd9f0a0c997/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6b616b616f576f726b2d79656c6c6f773f7374796c653d666c61742d737175617265" alt="kakaowork" data-canonical-src="https://img.shields.io/badge/kakaoWork-yellow?style=flat-square" style="max-width:100%;">
+</p>
 
 <p align="center"> 
 <img width="500" alt="스크린샷 2021-04-30 오전 3 47 14" src="https://user-images.githubusercontent.com/48276633/116602488-c1e99080-a966-11eb-8ff0-37a4c3b1d18a.png">
@@ -23,15 +26,20 @@
 <br>
 
 ## ✌️게임 규칙
-> 게임 종료 조건
+### ✅ 게임 종료 조건
 1. **health(❤️)가 0개인 경우, 게임 종료**
 2. **wifi(📡)가 0개인 경우, 게임 종료**
 3. **랜덤 스토리의 페이지 수가 많아지게 되면 게임 종료**
-> 게임 진행 유의사항
+### ✅ 게임 진행 유의사항
 1. 모든 스토리 진행은 메세지로 진행됩니다. 
 2. 업적/상태 확인은 모달창으로 이뤄집니다.
 3. 사용자의 선택에 따라 랜덤으로 스토리가 등장합니다.
-  <br>- 스토리의 랜덤 선택은, 게임 내부의 weight에 따라 설정됩니다.
+  <br>- 스토리의 랜덤 선택은, 게임 내부의 **weight**에 따라 설정됩니다.
+
+### ✅ **게임 재시작 방법**❗️
+```
+👉 업적/상태 확인을 위한 모달창에 들어가서 '재시작'을 입력해주세요!
+```
 <br><br>
 
 ## 미리보기👀

@@ -7,9 +7,9 @@
 		"body": "이곳은 스페이스x 우주정거장입니다. 우주선 점검을 마칠때까지 이곳에 머물게 됩니다. 무엇을 할까요?",
 		"options": [
 			{
-				"option_text": "태양전지판을 수리한다. (소마코인 +1)",
+				"option_text": "태양전지판을 수리한다. (우주기술 +1)",
 				"option_condition": ["isseventtrig"],
-				"option_action": ["add_coin_1", "del_isseventtrig", "execute_marsiss"]
+				"option_action": ["add_space_1", "del_isseventtrig", "execute_marsiss"]
 			}
 		],
 		"options": [

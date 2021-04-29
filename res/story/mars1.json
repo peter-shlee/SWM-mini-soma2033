@@ -26,9 +26,14 @@
 		"body": "이번 훈련은 우주 유영 훈련입니다. 우주정거장에서 비상 상황 발생 시 임무를 수행할 수 있습니다. 훈련에 참가할까요?",
 		"options": [
 			{
-				"option_text": "참가한다.(체력 -1)",
+				"option_text": "참가한다.(체력 -1,우주기술 +1)",
 				"option_condition": [],
-				"option_action": ["add_marsspaceswim", "del_health_1", "execute_preparerocket"]
+				"option_action": [
+					"add_marsspaceswim",
+					"add_space_1",
+					"del_health_1",
+					"execute_preparerocket"
+				]
 			},
 			{
 				"option_text": "참가하지 않는다.",
@@ -45,9 +50,14 @@
 		"body": "이번 훈련은 중력가속도 내성 훈련 입니다. 체력을 길러 우주선에서 정신을 잃지 않을 수 있습니다. 훈련에 참가할까요?",
 		"options": [
 			{
-				"option_text": "참가한다.(체력 -1)",
+				"option_text": "참가한다.(체력 -1,우주기술 +1)",
 				"option_condition": [],
-				"option_action": ["add_marsgravity", "del_health_1", "execute_preparerocket"]
+				"option_action": [
+					"add_marsgravity",
+					"add_space_1",
+					"del_health_1",
+					"execute_preparerocket"
+				]
 			},
 			{
 				"option_text": "참가하지 않는다.",
