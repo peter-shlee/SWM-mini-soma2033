@@ -2,5 +2,19 @@
 	"AI": "AI기술",
 	"backend": "백엔드기술",
 	"frontend": "프론트엔드기술",
-	"space": "우주기술"
+	"space": "우주기술",
+	"health": "체력",
+	"wifi": "통신",
+	"coin": "코인",
+	"team-jaehong": "팀원-재홍",
+	"team-suhwan": "팀원-수환",
+	"team-seunghyun": "팀원-승현",
+	"team-joonghoon": "팀원-중훈",
+	"team-juwon": "팀원-주원",
+	"mentor-siri": "멘토-시리",
+	"mentor-musk": "멘토-일론머스크",
+	"mentor-mark": "멘토-마크주커버그",
+	"main-AI": "주제-AI로봇",
+	"main-mars": "주제-화성",
+	"main-facebook": "주제-페이스북"
 }
