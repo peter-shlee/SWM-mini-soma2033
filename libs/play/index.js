@@ -308,6 +308,11 @@ exports.onButtonClicked = async (value, react_user_id, userInfos, stories, conve
 	
 	// new-start도 처리해야 함
 	if (divided_option_action.new_start) {
+		
+		// const user_rank = await play.getUserRank(userInfos);
+		// const rank_block_kit = block_kit.rankingBlock(user_rank);
+		// libKakaoWork.sendMessage(rank_block_kit);
+		
 		// user states 초기화
 		play.initUser(react_user_id, userInfos);
 		
