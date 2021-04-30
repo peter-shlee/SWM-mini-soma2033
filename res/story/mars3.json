@@ -14,7 +14,7 @@
 		],
 		"options": [
 			{
-				"option_text": "송신기를 수리한다. (wifi +1)",
+				"option_text": "송신기를 수리한다. (통신 +1)",
 				"option_condition": ["marsspaceswim", "marsbroken1"],
 				"option_action": ["add_wifi_1", "execute_marsiss"]
 			}
