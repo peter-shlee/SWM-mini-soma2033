@@ -47,11 +47,7 @@
 			{
 				"option_text": "다음",
 				"option_condition": [],
-				"option_action": [
-					"del_need-subject",
-					"add_subject",
-					"add_main-mars"
-				]
+				"option_action": ["del_need-subject", "add_subject", "add_main-mars"]
 			}
 		]
 	}
