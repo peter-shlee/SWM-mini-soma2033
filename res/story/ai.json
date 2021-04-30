@@ -53,7 +53,7 @@
 	},
 	"main-kingdom": {
 		"condition": ["main-AI-kingdom"],
-		"weight": 50,
+		"weight": 100,
 		"achieve": "",
 		"picture": "",
 		"body": " 소마 프로젝트로 정신없는 당신, 오늘은 푹 쉬는겸 바에 가서 마티니 한 잔을 마시고 있습니다. 아무 생각없이 바텐더들이 하는 이야기를 들으며 술잔을 기울이는데, 바텐더들이 하는 이야기의 주제가 당신의 귀를 스칩니다. '로봇 왕국 왕의 자격...!' 당신은 그 이야기를 듣고 깜짝 놀라며 바텐더에게 말을 겁니다.",
@@ -118,7 +118,7 @@
 		]
 	},
 	"main-ai-siri": {
-		"condition": ["main", "main-AI", "device-mac", "mentor-siri"],
+		"condition": ["main", "main-AI", "device-mac", "mentor-siri", "main-AI-need"],
 		"weight": 300,
 		"achieve": "",
 		"picture": "",
@@ -149,6 +149,7 @@
 				"option_action": [
 					"del_wifi",
 					"del_AI_5",
+					"del_main-AI-need",
 					"add_siri",
 					"add_main-AI-siri",
 					"add_need-apple"

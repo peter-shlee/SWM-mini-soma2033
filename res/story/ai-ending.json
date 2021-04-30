@@ -50,7 +50,7 @@
     "options": [
       {
         "option_text": "너무 떨려..! 하지만 오늘이야.",
-        "option_condition": [""],
+        "option_condition": [],
         "option_action": ["execute_siri-ffinal", "add_time"]
       }
     ]
@@ -63,8 +63,8 @@
     "body": "시리가 말을 겁니다.\n\n '오늘 멘토링은 어떻게 할까?'\n\n 당신은 수줍게 애플 워치를 건내줍니다.\n\n '아니 이 귀한걸 어떻게...! 계속해서 날 생각해준거야?'\n\n -> 당연히 생각했죠... 맥북과 동기화하는 모습이 세상에서 가장 행복해보였는걸요?\n\n '이 애플 워치, 나에게 굉장히 소중했던거야. 너무 고마워'\n\n -> 그래서 그런데...",
     "options": [
       {
-        "option_text": "멘토링 끝나고 저와 데이트 해주세요!",
-        "option_condition": [""],
+        "option_text": "저와 데이트 해주세요!",
+        "option_condition": [],
         "option_action": ["execute_ai-ending4"]
       }
     ]
