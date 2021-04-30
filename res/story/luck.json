@@ -1,0 +1,143 @@
+{
+	"luck1": {
+		"condition": [],
+		"weight": 50,
+		"achieve": "",
+		"picture": "",
+		"body": " 길을 가다가 미끄러져서 넘어지기 직전이네요! 안돼!",
+		"options": [
+      {
+        "option_text": "도와줘 로봇 개!",
+        "option_condition": ["robo-dog"],
+        "option_action": ["execute_luck11"]
+      },
+			{
+				"option_text": "아야!!!",
+				"option_condition": [],
+				"option_action": ["execute_luck12"]
+			}
+		]
+	},
+  "luck11": {
+    "condition": [],
+    "weight": 50,
+    "achieve": "",
+    "picture": "",
+    "body": " 휴 겨우 살았네요. 당신은 로봇개를 칭찬해주고 가던 길을 갑니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "luck12": {
+    "condition": [],
+    "weight": 50,
+    "achieve": "",
+    "picture": "",
+    "body": " 결국 넘어져서 다쳤습니다. 운이 안좋은 날이네요.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_health"]
+      }
+    ]
+  },
+  "luck2": {
+    "condition": [],
+    "weight": 50,
+    "achieve": "",
+    "picture": "",
+    "body": " 오늘은 통신이 잘 안터지는 날이네요. 정말 별로인 날인 것 같습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_wifi"]
+      }
+    ]
+  },
+  "luck3": {
+    "condition": [],
+    "weight": 30,
+    "achieve": "",
+    "picture": "",
+    "body": " 앗! 뜬금없지만 갑자기 통신사에서 버그에 대한 보상을 해준다고 하네요! 가끔 이런 날이 있지 않나요? 당신은 업그레이드된 요금제를 확인하고 기분이 좋아졌습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_wifi"]
+      }
+    ]
+  },
+  "luck4": {
+    "condition": [],
+    "weight": 30,
+    "achieve": "",
+    "picture": "",
+    "body": " 길을 가다가 어떤 할아버지를 만났어요. 무섭게 생기셨지만...! 당신에게 말을 겁니다.\n\n '이것좀 먹어봐..! 맛있어 정말!'\n\n 이게 뭐죠...? 개불처럼 생겼는데 또 한편으로는 홍삼처럼 생긴 식물인가요? 심지어 꿈틀대고있습니다!",
+    "options": [
+      {
+        "option_text": "믿고 먹어본다",
+        "option_condition": [],
+        "option_action": ["execute_luck41"]
+      },
+      {
+        "option_text": "지나간다",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "luck41": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 이상한 식물을 입에서 씹으니 더 꿈틀거리네요! 으으!\n\n 하지만 당신은 꾹 참고 끝까지 먹은 결과, 체력이 모두 회복되었습니다. 운이 좋았네요!",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_health_3"]
+      }
+    ]
+  },
+  "luck5": {
+    "condition": [],
+    "weight": 30,
+    "achieve": "",
+    "picture": "",
+    "body": " 길을 가다가 어떤 할아버지를 만났어요. 무섭게 생기셨지만...! 당신에게 말을 겁니다.\n\n '이것좀 먹어봐..! 맛있어 정말!'\n\n 이게 뭐죠...? 개불처럼 생겼는데 또 한편으로는 홍삼처럼 생긴 식물인가요? 심지어 꿈틀대고있습니다!",
+    "options": [
+      {
+        "option_text": "믿고 먹어본다",
+        "option_condition": [],
+        "option_action": ["execute_luck51"]
+      },
+      {
+        "option_text": "지나간다",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "luck51": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 이상한 식물을 입에서 씹으니 더 꿈틀거리네요! 으으! 근데 이거 상한거 아닌가요? 맛이 너무 이상한데요?\n\n 당신은 꾹 참고 끝까지 먹었고, 죽을 것 같은 복통에 업친 데 덮친 격으로 할아버지가 고통스러워하고있는 당신에게서 핸드폰까지 빼앗아 도망쳐버렸습니다! 정말 운이 안좋은 날이네요.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_health", "del_wifi"]
+      }
+    ]
+  }
+}
