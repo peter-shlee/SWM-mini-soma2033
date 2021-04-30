@@ -24,7 +24,7 @@ userExample = {
 	achieves: []
 }
 
-router.get('/', async (req, res, next) => {
+router.get('/chatbot', async (req, res, next) => {
 	// 유저 목록 갱신
 	const responses = await chatToAllNewUsers(userInfos);
 	const users = responses[0];

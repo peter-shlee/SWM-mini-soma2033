@@ -1,4 +1,4 @@
-const imgUrl = 'https://swm-mini-soma2033-rnqma.run.goorm.io/request/img';
+const imgUrl = 'https://swm-chatbot-46uclz-yobetp.run.goorm.io/request/img';
 const resIO = require('../resIO');
 const play = require('../play');
 const suffix = ' (SOMA 2033)'
