@@ -20,7 +20,7 @@
 	},
   "luck11": {
     "condition": [],
-    "weight": 50,
+    "weight": 0,
     "achieve": "",
     "picture": "",
     "body": " 휴 겨우 살았네요. 당신은 로봇개를 칭찬해주고 가던 길을 갑니다.",
@@ -34,7 +34,7 @@
   },
   "luck12": {
     "condition": [],
-    "weight": 50,
+    "weight": 0,
     "achieve": "",
     "picture": "",
     "body": " 결국 넘어져서 다쳤습니다. 운이 안좋은 날이네요.",

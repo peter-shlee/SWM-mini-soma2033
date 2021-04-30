@@ -226,7 +226,7 @@
 		"weight": 0,
 		"achieve": "facebook-ending",
 		"picture": "facebook-ending.jpeg",
-		"body": "오우와~!! 당신은 멘토님과 찰떡궁합이에요!! 덕분에 소마과정을 통해 2033년 페이스북을 다시 부활시켰네요.\n부활시킨지 한 달만에 사용자수가 50억명이네요.. 엄청나요❗️\n\n멘토님께서는 앞으로도 당신이 세계 부자가 될 수 있는 서비스를 만드는데에 커다란 도움을 주실거예요!\n더욱 승승장구 해서 소마를 널리 알려주세요!\n\nTHE END",
+		"body": "오우와~!! 당신은 멘토님과 찰떡궁합이에요!! 덕분에 소마과정을 통해 2033년 페이스북을 다시 부활시키고 인증까지 받았네요.\n부활시킨지 한 달만에 사용자수가 50억명이네요.. 엄청나요❗️\n\n멘토님께서는 앞으로도 당신이 세계 부자가 될 수 있는 서비스를 만드는데에 커다란 도움을 주실거예요!\n더욱 승승장구 해서 소마를 널리 알려주세요!\n\nTHE END",
 		"options": [
 			{
 				"option_text": "다시 시작하기",
@@ -235,12 +235,26 @@
 			}
 		]
 	},
-    "subject-facebook-badending": {
-		"condition": ["page_60", "mentor-mark"],
+  "subject-facebook-badending": {
+		"condition": ["page_60", "mentor-mark", "frontend_3"],
 		"weight": 100000000,
 		"achieve": "facebook-badending",
 		"picture": "",
-		"body": "이미 충분히 공부했어요.. 많이 돌아왔네요 수고했어요!\n\n당신의 학습량에 감탄을 보냅니다.👏\n 게임을 새로 시작하고 싶으시면 아래 버튼을 눌러주세요!",
+		"body": "이제 그만...! 이미 충분히 공부했어요.. 많이 돌아왔네요. 수고했어요! 당신은 인증은 못받았지만 이 구역 책벌레로 유명해졌습니다.\n\n당신의 학습량에 감탄을 보냅니다.👏\n 게임을 새로 시작하고 싶으시면 아래 버튼을 눌러주세요!",
+		"options": [
+			{
+				"option_text": "다시 시작하기",
+				"option_condition": [],
+				"option_action": ["new-start"]
+			}
+		]
+	},
+  "subject-facebook-badending": {
+		"condition": ["page_60", "mentor-mark"],
+		"weight": 10000,
+		"achieve": "facebook-badending2",
+		"picture": "",
+		"body": "당신에게 실망한 주커버그 선생님은 이제는 더이상 당신의 멘토가 아닙니다. 멘토를 잃고 관련 공부도 안한 당신은 소마에서 실망스러운 프로젝트로 겨우겨우 수료정도 했습니다. 우울하네요...\n\n 다음엔 더 신중하게 잘 해보자구요! 다시 시작하고 싶으시면 아래 버튼을 눌러주세요!",
 		"options": [
 			{
 				"option_text": "다시 시작하기",
