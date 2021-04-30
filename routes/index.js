@@ -1,4 +1,5 @@
 // routes/index.js
+const Config = require('config');
 const express = require('express');
 const router = express.Router();
 const imageUrl = 'https://drive.google.com/uc?id=';
@@ -84,11 +85,17 @@ router.get('/request/img', async (req, res, next) => {
 })
 
 router.get('/request/init', async (req, res, next) => {
-	userInfos = {}
-	const responses = await chatToAllNewUsers(userInfos);
-	const users = responses[0];
-	const conversations = responses[1];
-	const messages = responses[2];
+	var users;
+	var conversations;
+	var messages;
+	
+	if (req.query.passwd == Config.passwd) {
+		userInfos = {}
+		const responses = await chatToAllNewUsers(userInfos);
+		users = responses[0];
+		conversations = responses[1];
+		messages = responses[2];
+	}
 	
 	res.json({
 		users,
