@@ -1,7 +1,7 @@
 {
 	"marsstart": {
 		"condition": ["main", "main-mars"],
-		"weight": 0,
+		"weight": 1000,
 		"achieve": "",
 		"picture": "marsstart.jpg",
 		"body": "우주비행사 훈련을 완료하면 개척자 자격으로 우주 활동이 가능합니다. 어떤 훈련이 등장할지 모르고, 각 훈련마다 체력이 1씩 소모됩니다. 훈련에 참가할까요?",
@@ -81,7 +81,7 @@
 		"weight": 100000,
 		"achieve": "",
 		"picture": "marsescape.jpg",
-		"body": "이주민 자격으로 우주에 갈 수 있게 되었다. 이제 우주로 츨발하자!",
+		"body": "이주민 자격으로 우주에 갈 수 있게 되었다. 이제 우주로 출발하자!",
 		"options": [
 			{
 				"option_text": "우주선에 탑승한다.",
