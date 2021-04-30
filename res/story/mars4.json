@@ -15,7 +15,7 @@
 	},
 	"marsstorycon1": {
 		"condition": ["main-mars", "marsstorymain"],
-		"weight": 500,
+		"weight": 1000,
 		"achieve": "",
 		"picture": "marsstorycon1.jpg",
 		"body": "주변에 수많은 건물들과 농장들이 보입니다. 계속 넘어올 사람들을 위해 다들 분주히 움직이는 모습입니다.\n계속 걸어볼까요?",
@@ -29,7 +29,7 @@
 	},
 	"marsstorycon2": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
-		"weight": 100,
+		"weight": 300,
 		"achieve": "",
 		"picture": "marsstorycon2.jpg",
 		"body": "비트코인 가격이 낮아졌다는 소식입니다. 지금 매도할까요?",
@@ -48,7 +48,7 @@
 	},
 	"marsstorycon3": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
-		"weight": 300,
+		"weight": 600,
 		"achieve": "",
 		"picture": "marsstorycon3.jpg",
 		"body": "비트코인 가격이 높아졌다는 소식입니다. 지금 매도할까요?",
@@ -67,7 +67,7 @@
 	},
 	"marsstorycon4": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin2"],
-		"weight": 800,
+		"weight": 1500,
 		"achieve": "",
 		"picture": "marsstorycon4.jpg",
 		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
@@ -95,7 +95,7 @@
 	},
 	"marsstoryfarm1": {
 		"condition": ["main-mars", "marsstorymain"],
-		"weight": 200,
+		"weight": 500,
 		"achieve": "",
 		"picture": "marsstoryfarm1.jpg",
 		"body": "이곳은 소마센터 화성지부 입니다. 그동안의 활동을 바탕으로 최종 평가를 받을 수 있습니다.\n인증자로 선발되면 일론 머스크 멘토가 은퇴할 때 테크노 킹 자리 후계자 목록에 오르게 됩니다.\n지금 최종 평가를 받을까요?",
