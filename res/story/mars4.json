@@ -29,7 +29,7 @@
 	},
 	"marsstorycon2": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
-		"weight": 300,
+		"weight": 500,
 		"achieve": "",
 		"picture": "marsstorycon2.jpg",
 		"body": "비트코인 가격이 낮아졌다는 소식입니다. 지금 매도할까요?",
@@ -40,7 +40,7 @@
 				"option_action": ["add_coin_1", "del_marsbitcoin"]
 			},
 			{
-				"option_text": "조금 더 기다린다.",
+				"option_text": "조금 더 기다린다. 다시 오르지 않을까?",
 				"option_condition": [],
 				"option_action": []
 			}
@@ -48,7 +48,7 @@
 	},
 	"marsstorycon3": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin"],
-		"weight": 600,
+		"weight": 1000,
 		"achieve": "",
 		"picture": "marsstorycon3.jpg",
 		"body": "비트코인 가격이 높아졌다는 소식입니다. 지금 매도할까요?",
@@ -59,7 +59,7 @@
 				"option_action": ["add_coin_2", "del_marsbitcoin"]
 			},
 			{
-				"option_text": "조금 더 기다린다.",
+				"option_text": "조금 더 기다려본다. 더 오르지 않을까?",
 				"option_condition": [],
 				"option_action": ["del_marsbitcoin", "add_marsbitcoin2"]
 			}
@@ -67,7 +67,7 @@
 	},
 	"marsstorycon4": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin2"],
-		"weight": 800,
+		"weight": 1000,
 		"achieve": "",
 		"picture": "marsstorycon4.jpg",
 		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
