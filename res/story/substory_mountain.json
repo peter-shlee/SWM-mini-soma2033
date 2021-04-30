@@ -1,0 +1,131 @@
+{
+	"substory-mountain000": {
+		"condition": ["main-facebook"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "매일 컴퓨터 앞에 앉아서 코딩만 했더니 체력이 많이 떨어진 거 같아요. 오랜만에 등산⛰️을 해보는건 어떨까요??",
+		"options": [
+			{
+				"option_text": "광교산으로 등산하러 가자!",
+				"option_condition": [],
+				"option_action": ["execute_substory-mountain0-1"]
+			},
+			{
+				"option_text": "싫어요. 수면방에 누워있을래요.",
+				"option_condition": [],
+				"option_action": ["del_health"]
+			}
+		]
+	},
+	"substory-mountain00": {
+		"condition": ["main-AI"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "매일 컴퓨터 앞에 앉아서 코딩만 했더니 체력이 많이 떨어진 거 같아요. 오랜만에 등산⛰️을 해보는건 어떨까요??",
+		"options": [
+			{
+				"option_text": "광교산으로 등산하러 가자!",
+				"option_condition": [],
+				"option_action": ["execute_substory-mountain0-1"]
+			},
+			{
+				"option_text": "싫어요. 수면방에 누워있을래요.",
+				"option_condition": [],
+				"option_action": ["del_health"]
+			}
+		]
+	},
+	"substory-mountain0-1": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "광교산⛰️에 도착했습니다. 등산로 입구에서 맛있어보이는 것들을 많이 팔고있어요. 무엇을 먹을까요?",
+		"options": [
+			{
+				"option_text": "닭볶음탕을 먹자! (-2 코인)",
+				"option_condition": [],
+				"option_action": ["del_coin_2", "add_health_2", "execute_substory-mountain0-2"]
+			},
+			{
+				"option_text": "어묵이나 먹어야지 (-1 코인)",
+				"option_condition": [],
+				"option_action": ["del_coin_1", "add_health_1", "execute_substory-mountain0-2"]
+			},
+			{
+				"option_text": "돈이 없어 못사먹겠네 ㅠㅠ",
+				"option_condition": [],
+				"option_action": ["execute_substory-mountain0-2"]
+			}
+		]
+	},
+	"substory-mountain0-2": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "산⛰️에 올라가던 중 앞에 가던 아저씨가 비명을 질러 자세히 보니 바닥에 뱀🐍이 기어가고 있었다 어떻게 할까?",
+		"options": [
+			{
+				"option_text": "뱀🐍을 밟아서 제압한다💪",
+				"option_condition": [],
+				"option_action": ["del_health_1", "execute_substory-mountain0-3"]
+			},
+			{
+				"option_text": "으악‼️ 도망쳐‼️‼️",
+				"option_condition": [],
+				"option_action": ["execute_substory-mountain0-4"]
+			}
+		]
+	},
+	"substory-mountain0-3": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "정신을 차려보니 병원🏥이었다...",
+		"options": [
+			{
+				"option_text": "병원에서 푹 쉬었더니 +2 체력(?)",
+				"option_condition": [],
+				"option_action": ["add_health_2"]
+			}
+		]
+	},
+	"substory-mountain0-4": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "",
+		"picture": "",
+		"body": "무사히 도먕쳤다. 휴~~",
+		"options": [
+			{
+				"option_text": "이대로 정상까지 파이팅!",
+				"option_condition": [],
+				"option_action": ["execute_substory-mountain0-5"]
+			},
+			{
+				"option_text": "힘들다...😫 하산하자",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+	"substory-mountain0-5": {
+		"condition": [],
+		"weight": 0,
+		"achieve": "mountain",
+		"picture": "",
+		"body": "드디어 정상⛰️에 도착했다!!! 정상에 오니 사방이 탁 트이고, 멋진 풍경이 눈앞에 펼쳐져... 어? 저게 뭐지?",
+		"options": [
+			{
+				"option_text": "산 정상에서 코인 3개를 주웠다!",
+				"option_condition": [],
+				"option_action": ["add_coin_3"]
+			}
+		]
+	}
+}
+	

@@ -13,7 +13,7 @@
 			}
 		]
 	},
-    "substory-seunghyun1": {
+	"substory-seunghyun1": {
 		"condition": ["team-seunghyun", "main"],
 		"weight": 100,
 		"achieve": "",
@@ -25,14 +25,14 @@
 				"option_condition": [],
 				"option_action": ["del_coin_2", "add_wifi_2"]
 			},
-            {
+			{
 				"option_text": "가성비 민박",
 				"option_condition": [],
 				"option_action": ["del_coin_1", "add_wifi_1"]
 			}
 		]
 	},
-    "substory-seunghyun2": {
+	"substory-seunghyun2": {
 		"condition": ["team-seunghyun", "main"],
 		"weight": 100,
 		"achieve": "",
