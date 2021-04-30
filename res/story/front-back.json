@@ -1,0 +1,168 @@
+{
+  "fb1": {
+    "condition": [],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 다른날과 다르지 않게 공부를 하던 당신은 창업한 친구로부터 연락이 옵니다. \n\n '야 너 프론트엔드 좀 할 줄 아냐? 도와주면 내가 돈좀 보내줄게!'",
+    "options": [
+      {
+        "option_text": "도와줄게!",
+        "option_condition": ["frontend"],
+        "option_action": ["add_coin"]
+      },
+      {
+        "option_text": "그런거 잘 몰라..",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "fb2": {
+    "condition": [],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 할 일을 마치고 소마센터를 나오는데 행정실 선임님이 당신을 부릅니다. \n\n '연수생분 혹시 백엔드 개발 좀 하실 줄 아시나요? 도와주시면 맛있는거 사드릴게요.'",
+    "options": [
+      {
+        "option_text": "당연히 도와드려야죠",
+        "option_condition": ["backend"],
+        "option_action": ["add_health"]
+      },
+      {
+        "option_text": "죄송합니다.",
+        "option_condition": [],
+        "option_action": []
+      }
+    ]
+  },
+  "fb3": {
+    "condition": [],
+    "weight": 100,
+    "achieve": "",
+    "picture": "",
+    "body": " 오늘은 비가 엄청 오네요! 그런데 아뿔싸! 생각해보니 당신의 서버창고 중 하나의 문을 제대로 닫지 않았던 것이 기억이 납니다! \n\n 백엔드 기술이 있으면 서버를 잘 처리할 수 있을 것 같은데... 만약 서버가 죽는다면 통신에 큰 문제가 생길 수 있습니다.",
+    "options": [
+      {
+        "option_text": "앗! 빨리 고치자!",
+        "option_condition": ["backend"],
+        "option_action": []
+      },
+      {
+        "option_text": "바로 외주맞기자!",
+        "option_condition": ["coin"],
+        "option_action": ["del_coin"]
+      },
+      {
+        "option_text": "통신을 포기한다.",
+        "option_condition": [],
+        "option_action": ["del_wifi_2"]
+      }
+    ]
+  },
+  "fb4": {
+    "condition": [],
+    "weight": 70,
+    "achieve": "",
+    "picture": "",
+    "body": " 2033년 어플리케이션 만들기 컨테스트가 다시 열렸습니다! 당신은 경험삼아라도 이런 대회를 나가는 것이 중요하다고 생각해서 바로 참여했어요!\n\n 당신의 능력에 따라서 전략을 선택할 수 있는 것 같은데... 어떤 전략을 선택할까요?",
+    "options": [
+      {
+        "option_text": "프론트와 백엔드의 끝판왕",
+        "option_condition": ["backend_3", "frontend_3"],
+        "option_action": ["execute_fb41"]
+      },
+      {
+        "option_text": "프론트와 백엔드의 조화",
+        "option_condition": ["backend", "frontend"],
+        "option_action": ["execute_fb42"]
+      },
+      {
+        "option_text": "프론트위주의 작품",
+        "option_condition": ["frontend"],
+        "option_action": ["execute_fb43"]
+      },
+      {
+        "option_text": "백엔드 위주의 구성",
+        "option_condition": ["backend"],
+        "option_action": ["execute_fb44"]
+      },
+      {
+        "option_text": "아무고토 못한다.",
+        "option_condition": [],
+        "option_action": ["execute_fb45"]
+      }
+    ]
+  },
+  "fb41": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "fullstack",
+    "picture": "",
+    "body": " 당신은 멋진 능력으로 프론트엔드와 백엔드 모두 완벽한 작품을 만들어냈습니다! 정말 지나가는 모든 사람들이 탐낼만한 로봇 고양이 관리 어플인 것 같아요.\n\n 당신은 다방면으로 돈을 썼지만 다 못 쓰고 저축까지 합니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_health", "add_wifi", "add_coin"]
+      }
+    ]
+  },
+  "fb42": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 오~ 꽤 잘 만들어진 작품이네요! 당신은 5등을 하였고 상금으로 로봇 개를 한마리 받았습니다!",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_robo-dog"]
+      }
+    ]
+  },
+  "fb43": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 음... 적당히 괜찮은 작품이네요! 당신은 장려상으로 레스토랑 이용권을 받고 맛있는 한끼를 먹었습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_health"]
+      }
+    ]
+  },
+  "fb44": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 음... 적당히 괜찮은 작품이네요! 당신은 장려상으로 통신사 요금제 업그레이드를 받았습니다.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["add_wifi"]
+      }
+    ]
+  },
+  "fb45": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "",
+    "picture": "",
+    "body": " 음.. 기술이 없다는건 슬픈거네요 ㅠㅠ 당신의 초라한 작품을 사람들이 놀려대기 시작했고, 그 장소에서 벗어나기 위해 뛰어다니던 당신은 넘어져서 발목까지 삐고 말았습니다.\n\n 정말 최악의 날이네요.",
+    "options": [
+      {
+        "option_text": "다음",
+        "option_condition": [],
+        "option_action": ["del_health"]
+      }
+    ]
+  }
+}
