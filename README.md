@@ -7,7 +7,14 @@
 <p align="center"> 
 <img width="500" alt="mainLogo" src="https://user-images.githubusercontent.com/48276633/116639955-aa30fd00-a9a4-11eb-8acf-b910fb19301b.jpeg">
 <h5 align = "center">소마2033은 메트로2033에서 영감을 받은 서울2033에서 영감을 받아서 제작되었습니다.</h5>
-</p><br>
+</p><br><br>
+
+**👉 10가지가 넘는 엔딩❕<br><br>
+👉 20개가 넘는 업적들❕<br><br>
+👉 100여개가 넘는 스토리들❕<br><br>
+👉 로맨스, 우주정복, 로봇의 왕, 액션, 운!<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;모두 ❗️당신의 손끝❗️에서 결정납니다!<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;멋진 선택으로 소프트웨어 마에스트로 프로젝트를 성공적으로 끝마쳐보세요!**<br><br><br>
 
 ## 스토리📚
 🔥전세계가 주목하는 소마2033🔥<br>
