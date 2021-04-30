@@ -106,6 +106,11 @@
 				"option_action": ["add_marsfinal", "del_marsstorymain", "execute_marsstoryfin1"]
 			},
 			{
+				"option_text": "평가를 받는다.",
+				"option_condition": ["marsimig"],
+				"option_action": ["add_marsfinal", "del_marsstorymain", "execute_marsstoryfin2"]
+			},
+			{
 				"option_text": "일단 지나간다.",
 				"option_condition": [],
 				"option_action": ["execute_marsstorycon1"]
