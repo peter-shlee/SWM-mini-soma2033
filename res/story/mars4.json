@@ -67,7 +67,7 @@
 	},
 	"marsstorycon4": {
 		"condition": ["main-mars", "marsstorymain", "marsbitcoin2"],
-		"weight": 1500,
+		"weight": 800,
 		"achieve": "",
 		"picture": "marsstorycon4.jpg",
 		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
