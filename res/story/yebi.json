@@ -6,10 +6,15 @@
 		"picture": "",
 		"body": " 소마2033에 오신걸 환영합니다! 소프트웨어 마에스트로는 예비과정, 본과정을 통해서 당신의 개발 역량을 키워줄 것입니다.\n\n 이제 예비과정부터 시작하게 되는 당신은, 본과정에 앞서서 팀원 1명, 멘토 1명, 주제 1개를 정하셔야합니다. 특정 기한안에 정하지 못하시면 탈락하시게 되니까 꼭 모두 선택해주시기를 바랄게요!",
 		"options": [
-      {
+			{
 				"option_text": "예비과정 시작!",
 				"option_condition": [],
-				"option_action": ["add_start", "add_need-team", "add_need-mentor", "add_need-subject"]
+				"option_action": [
+					"add_start",
+					"add_need-team",
+					"add_need-mentor",
+					"add_need-subject"
+				]
 			}
 		]
 	},
@@ -20,10 +25,10 @@
 		"picture": "",
 		"body": " 이야!!! 드디어 예비 과정이 끝나고 본과정이 시작되네요! 든든한 팀원, 멘토, 주제 잘 고르셨나요?\n\n본 과정에서 당신이 얼마나 프로젝트를 잘 수행하는지에 따라서 엔딩이 달라지니 더욱더 신중하게 선택하시길 바랄게요! 당신의 인생을 좌지우지할 소프트웨어 마에스트로 2033! 본 과정 출발해볼까요!?",
 		"options": [
-      {
+			{
 				"option_text": "본과정 시작~!",
 				"option_condition": [],
-				"option_action": ["add_main", "add_need-device", "del_start"]
+				"option_action": ["add_main", "add_need-device", "del_start", "add_marsmaintrig"]
 			},
 			{
 				"option_text": "앗! 조금 있다가 시작할래요!",
@@ -39,10 +44,10 @@
 		"picture": "",
 		"body": " 시작하시지 않으시겠다구요?\n\n 빨리 시작하시지 않으시면 소마 본과정도 못가보고 탈락하실 수도 있으십니다!",
 		"options": [
-      {
+			{
 				"option_text": "어쩔수없지.. 본과정 시작~!",
 				"option_condition": [],
-				"option_action": ["add_main", "add_need-device", "del_start"]
+				"option_action": ["add_main", "add_need-device", "del_start", "add_marsmaintrig"]
 			},
 			{
 				"option_text": "그래도 준비를 더하고 시작하겠습니다.",
@@ -51,18 +56,18 @@
 			}
 		]
 	},
-  "yebi-ending": {
-    "condition": ["page_30", "start"],
-    "weight": 1000000000,
-    "achieve": "yebi-ending",
-    "picture": "yebi_ending.png",
-    "body": " 이런! 제가 시작할 때 본과정에 들어가기 전에 팀원, 멘토, 주제를 골라야한다고 말씀드리지 않았나요? 당신은 예비과정이 끝날 때까지 필요사항을 채우지 못하거나 본과정을 시작하지 않아서 연수생 자격을 박탈당했습니다!\n\n 아쉽지만 다음에 다시 도전해보자구요~!",
-    "options": [
-      {
-        "option_text": "새로 시작하기",
-        "option_condition": [],
-        "option_action": ["new-start"]
-      }
-    ]
-  }
+	"yebi-ending": {
+		"condition": ["page_30", "start"],
+		"weight": 1000000000,
+		"achieve": "yebi-ending",
+		"picture": "yebi_ending.png",
+		"body": " 이런! 제가 시작할 때 본과정에 들어가기 전에 팀원, 멘토, 주제를 골라야한다고 말씀드리지 않았나요? 당신은 예비과정이 끝날 때까지 필요사항을 채우지 못하거나 본과정을 시작하지 않아서 연수생 자격을 박탈당했습니다!\n\n 아쉽지만 다음에 다시 도전해보자구요~!",
+		"options": [
+			{
+				"option_text": "새로 시작하기",
+				"option_condition": [],
+				"option_action": ["new-start"]
+			}
+		]
+	}
 }
