@@ -112,7 +112,7 @@
 			},
 			{
 				"option_text": "우주기술 업적을 획득한다.",
-				"option_condition": ["space_3"],
+				"option_condition": ["space_4"],
 				"option_action": ["execute_marsspaceach"]
 			}
 		]
