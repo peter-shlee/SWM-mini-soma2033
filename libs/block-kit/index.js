@@ -1,6 +1,7 @@
 const imgUrl = 'https://swm-mini-soma2033-rnqma.run.goorm.io/request/img';
 const resIO = require('../resIO');
 const play = require('../play');
+const suffix = ' (SOMA 2033)'
 
 getImageUrl = (imgName) => {
 	return imgUrl + '?name=' + imgName;
@@ -32,7 +33,7 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 	}
 	const ret_object = {
 		conversationId: conversation_id,
-		text: '새로운 이야기가 도착했어요!',
+		text: '새로운 이야기가 도착했어요!' + suffix,
 		blocks: [
 			{
 				type: 'header',
@@ -183,7 +184,7 @@ exports.showUpdatedStatesAndAchieve = (
 	if (blocks.length > 0) {
 		blocks.push({
 			type: 'button',
-			text: '업적/상태 확인하기',
+			text: '업적/상태 확인하기' + suffix,
 			action_type: 'call_modal',
 			action_name: 'AcTioN nAmE',
 			value: 'getUserInfo',
