@@ -7,7 +7,7 @@
 <p align="center"> 
 <img width="500" alt="mainLogo" src="https://user-images.githubusercontent.com/48276633/116639955-aa30fd00-a9a4-11eb-8acf-b910fb19301b.jpeg">
 <h5 align = "center">소마2033은 메트로2033에서 영감을 받은 서울2033에서 영감을 받아서 제작되었습니다.</h5>
-</p>
+</p><br>
 
 ## 스토리📚
 🔥전세계가 주목하는 소마2033🔥<br>
