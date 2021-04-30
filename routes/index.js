@@ -30,7 +30,7 @@ router.get('/chatbot', async (req, res, next) => {
 	const users = responses[0];
 	const conversations = responses[1];
 	const messages = responses[2];
-
+	play.saveUserInfos(userInfos);
 	// 응답값은 자유롭게 작성하셔도 됩니다.
 	res.json({
 		users,
@@ -95,6 +95,7 @@ router.get('/request/init', async (req, res, next) => {
 		users = responses[0];
 		conversations = responses[1];
 		messages = responses[2];
+		play.saveUserInfos(userInfos);
 	}
 	
 	res.json({
@@ -165,4 +166,4 @@ async function chatToAllNewUsers(userInfos) {
 function deepcopy(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
-
+ 
