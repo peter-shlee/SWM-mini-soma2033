@@ -1,0 +1,59 @@
+{
+	"substory-joonghoon0": {
+		"condition": ["team-joonghoon", "main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "어라?.. 중훈님이 회의에 늦고 있어요... 무슨 일이 있는 걸까요??\n\n ☎️뚜르르...\n\n 이런.. 중훈님이 교통비가 없어서 출발을 못하고 있다고 합니다. 당신이 도와주세요!\n당신이 대신 교통비로 소마코인을 2개를 지불하시겠습니까???",
+		"options": [
+			{
+				"option_text": "그럼요!",
+				"option_condition": [],
+				"option_action": ["del_coin_2"]
+			},
+			{
+				"option_text": "싫 어 요",
+				"option_condition": [],
+				"option_action": []
+			}
+		]
+	},
+    "substory-joonghoon1": {
+		"condition": ["team-joonghoon", "main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "팀쿡 멘토님과의 자유멘토링 시간이에요. 2시간째 진행 중인데 어?....\n\n😬꼬르륵......\n     꼬르륵...\n\n팀원 중 누군가의 배에서 신호를 보냈습니다. 중훈님이 슬쩍 멘토님의 눈치를 보네요.. (잡았다 요놈❗️)\n\n😳팀쿡 멘토님께서 치킨을 사주셨어요!! 와악!!!!! ❗️인당 한마리씩이라니❗️\n\n이걸 안먹을 수는 없겠죠?? 먹으면 체력이 +1돼요! 그치만.. 먹으면 졸려서 멘토님과의 멘토링 시간에 문제가 생길 게 분명해요.. 안먹으면 통신이 +1됩니다!\n\n어떻게 하시겠어요?!??? ",
+		"options": [
+			{
+				"option_text": "안먹고는 못배기지 무조건 먹음",
+				"option_condition": [],
+				"option_action": ["add_health_1"]
+			},
+			{
+				"option_text": "안먹고 멘토링에 집중할래~",
+				"option_condition": [],
+				"option_action": ["add_wifi_1"]
+			}
+		]
+	},
+    "substory-joonghoon2": {
+		"condition": ["team-joonghoon", "main"],
+		"weight": 100,
+		"achieve": "",
+		"picture": "",
+		"body": "중훈님이 당신에게 며칠 뒤 열리는 소마 컨퍼런스에서 당일치기 소마 홍보 대사를 하자고 조릅니다! 소마코인 +1이 되는 소정의 페이를 받을 수 있어요. 그렇지만 체력은 -1이 되겠죠..\n한편, 이에 응하지 않고 그 시간에 당신은 밥을 사먹게 되므로 소마코인 -1를 지불하는 상황이 옵니다. 대신 체력은 +1이 되겠죠! 어떤 선택을 하시겠어요??",
+		"options": [
+			{
+				"option_text": "소마홍보대사에 참여할래",
+				"option_condition": [],
+				"option_action": ["add_coin_1", "del_health_1"]
+			},
+			{
+				"option_text": "소마홍보대사는 나랑 안맞아 안해",
+				"option_condition": [],
+				"option_action": ["del_coin_1","add_health_1"]
+			}
+		]
+	}
+}
