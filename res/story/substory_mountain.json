@@ -1,7 +1,7 @@
 {
 	"substory-mountain000": {
 		"condition": ["main-facebook"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "",
 		"body": "매일 컴퓨터 앞에 앉아서 코딩만 했더니 체력이 많이 떨어진 거 같아요. 오랜만에 등산⛰️을 해보는건 어떨까요??",
@@ -20,7 +20,7 @@
 	},
 	"substory-mountain00": {
 		"condition": ["main-AI"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "",
 		"body": "매일 컴퓨터 앞에 앉아서 코딩만 했더니 체력이 많이 떨어진 거 같아요. 오랜만에 등산⛰️을 해보는건 어떨까요??",
