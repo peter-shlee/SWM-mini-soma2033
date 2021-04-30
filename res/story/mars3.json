@@ -8,7 +8,7 @@
 		"options": [
 			{
 				"option_text": "태양전지판을 수리한다. (우주기술 +1)",
-				"option_condition": ["isseventtrig"],
+				"option_condition": [],
 				"option_action": ["add_space_1", "del_isseventtrig", "execute_marsiss"]
 			}
 		],

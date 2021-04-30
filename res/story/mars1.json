@@ -2,14 +2,19 @@
 	"marsstart": {
 		"condition": ["main", "main-mars", "marsmaintrig"],
 		"weight": 100000,
-		
+
 		"picture": "marsstart.jpg",
 		"body": "우주비행사 훈련을 완료하면 개척자 자격으로 우주 활동이 가능합니다.\n본과정 시작을 기다리며 충분히 휴식을 취했으니 잘 해낼 수 있으리라 기대합니다. 훈련에 참가할까요?",
 		"options": [
 			{
 				"option_text": "참가한다. (체력 +2)",
 				"option_condition": [],
-				"option_action": ["del_marsmaintrig", "add_health_2", "execute_marscourse1", "add_marscourse"]
+				"option_action": [
+					"del_marsmaintrig",
+					"add_health_2",
+					"execute_marscourse1",
+					"add_marscourse"
+				]
 			},
 			{
 				"option_text": "참가하지 않는다. (체력 +2)",
