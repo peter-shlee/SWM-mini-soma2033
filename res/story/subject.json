@@ -50,8 +50,7 @@
 				"option_action": [
 					"del_need-subject",
 					"add_subject",
-					"add_main-mars",
-					"execute_marsstart"
+					"add_main-mars"
 				]
 			}
 		]
