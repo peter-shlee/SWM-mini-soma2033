@@ -139,7 +139,7 @@ exports.showUpdatedStatesAndAchieve = (
 	if (achieve != '') {
 		blocks.push({
 			type: 'text',
-			text: `☆ 업적 획득 ☆`,
+			text: `*☆ 업적 획득 ☆*`,
 			markdown: true,
 		});
 
@@ -159,7 +159,7 @@ exports.showUpdatedStatesAndAchieve = (
 	if (states_exist) {
 		blocks.push({
 			type: 'text',
-			text: `☆ 상태 변경 ☆`,
+			text: `*☆ 상태 변경 ☆*`,
 			markdown: true,
 		});
 
@@ -201,7 +201,7 @@ exports.showUpdatedStatesAndAchieve = (
 };
 
 exports.userInfoBlock = (user_json, states, achieves) => {
-	txt_state = '[ 상태 ]\n';
+	txt_state = '*[ 상태 ]*\n';
 	for (state of user_json.states) {
 		tmp = state.split('_');
 		state = states[tmp[0]];
@@ -213,7 +213,7 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 				txt_state += ' - ' + state + ' ' + tmp[1] + '\n';
 		}
 	}
-	txt_achieve = '[ 업적 ]\n';
+	txt_achieve = '*[ 업적 ]*\n';
 	for (achieve of user_json.achieves) {
 		achieve = achieves[achieve];
 		if (achieve != undefined && achieve != null && achieve != '')
