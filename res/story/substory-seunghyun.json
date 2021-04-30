@@ -21,12 +21,12 @@
 		"body": "승현님과 당신은 친목도모를 위해 제주도로 놀러가기로 했어요. 승현님이 당신의 비행기값까지 다 내주셨네요!! 그럼 당신이 숙박비를 내면 되겠어요!\n\n갖고 있는 소마코인 수를 적절히 활용해서 숙박비를 결제하고, 승현님의 호감도를 얻어 팀의 결합력을 높여보세요!",
 		"options": [
 			{
-				"option_text": "킹왕짱 호텔",
+				"option_text": "킹왕짱 호텔(코인-2, 통신+2)",
 				"option_condition": [],
 				"option_action": ["del_coin_2", "add_wifi_2"]
 			},
 			{
-				"option_text": "가성비 민박",
+				"option_text": "가성비 민박(코인-1, 통신+1)",
 				"option_condition": [],
 				"option_action": ["del_coin_1", "add_wifi_1"]
 			}
