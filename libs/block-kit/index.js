@@ -184,7 +184,7 @@ exports.showUpdatedStatesAndAchieve = (
 	if (blocks.length > 0) {
 		blocks.push({
 			type: 'button',
-			text: '업적/상태 확인하기' + suffix,
+			text: '업적/상태 확인하기',
 			action_type: 'call_modal',
 			action_name: 'AcTioN nAmE',
 			value: 'getUserInfo',
@@ -194,7 +194,7 @@ exports.showUpdatedStatesAndAchieve = (
 
 	ret_object = {
 		conversationId: conversation_id,
-		text: '상태/업적이 변경되었어요!',
+		text: '상태/업적이 변경되었어요!' + suffix,
 		blocks: blocks,
 	};
 
@@ -220,6 +220,7 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 		if (achieve != undefined && achieve != null && achieve != '')
 			txt_achieve += ' - ' + achieve + '\n';
 	}
+	txt_achieve += '\n';
 	// text length 200 limitation
 	if (txt_state.length > 200) {
 		console.log({ txt_state: txt_state, errorMsg: 'length 200 exceeded' });
@@ -253,7 +254,7 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 			},
 			{
 				type: 'label',
-				text: '오류 등으로 인해 재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 이외의 경우 뒤로 가기를 눌러주세요.',
+				text: '오류 등으로 인해 재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 재시작할 경우 업적을 제외한 모든 데이터가 초기화됩니다. 이외의 경우 뒤로 가기를 눌러주세요.',
 				markdown: true
 			}
 		],
