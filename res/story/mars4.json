@@ -40,7 +40,7 @@
 				"option_action": ["add_coin_1", "del_marsbitcoin"]
 			},
 			{
-				"option_text": "조금 더 기다린다.",
+				"option_text": "조금 더 기다린다. 다시 오르지 않을까?",
 				"option_condition": [],
 				"option_action": []
 			}
@@ -59,7 +59,7 @@
 				"option_action": ["add_coin_2", "del_marsbitcoin"]
 			},
 			{
-				"option_text": "조금 더 기다린다.",
+				"option_text": "조금 더 기다려본다. 더 오르지 않을까?",
 				"option_condition": [],
 				"option_action": ["del_marsbitcoin", "add_marsbitcoin2"]
 			}
