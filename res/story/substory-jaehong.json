@@ -36,24 +36,5 @@
 				"option_action": ["add_wifi_1"]
 			}
 		]
-	},
-    "substory-jaehong2": {
-		"condition": ["team-jaehong", "main"],
-		"weight": 100,
-		"achieve": "",
-		"picture": "",
-		"body": "재홍님은 맥북을 사용하지 않아요. 이 점이 당신과는 조금 다르네요. 하지만 괜찮아요! 재홍님과 함께 애플스토어에 방문해서 구경해보기로 했어요!! \n\n띠용... 애플스토어에서 이벤트를 진행중이네요!\n❗️대박!! 당신이 맥북 50%할인권에 당첨됐어요! 재홍님이 소정의 금액과 교환하자고 하시네요! 어떻게 하시겠어요???",
-		"options": [
-			{
-				"option_text": "난 이미 있으니 재홍님 쓰세요!",
-				"option_condition": [],
-				"option_action": ["add_coin_2"]
-			},
-			{
-				"option_text": "새 맥북을.. 제가 사고싶어요..",
-				"option_condition": [],
-				"option_action": ["del_wifi_1"]
-			}
-		]
 	}
 }
