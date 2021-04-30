@@ -69,10 +69,10 @@
 		"body": "선회 제동 도중 정신을 잃어버렸다. 다행히 정면 충돌은 피했지만 수신기 일부가 파손되었다.\n지구로 돌아가면 중력가속도 내성 훈련을 받도록 하자.",
 		"options": [
 			{
-				"option_text": "(wifi -1)",
+				"option_text": "(통신 -1)",
 				"option_condition": [],
 				"option_action": [
-					"add_wifi_1",
+					"del_wifi_1",
 					"del_marsufo",
 					"add_marsbroken1",
 					"execute_marsgotoiss"
