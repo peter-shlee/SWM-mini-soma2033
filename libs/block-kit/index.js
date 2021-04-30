@@ -1,6 +1,7 @@
 const imgUrl = 'https://swm-mini-soma2033-rnqma.run.goorm.io/request/img';
 const resIO = require('../resIO');
 const play = require('../play');
+const suffix = ' (SOMA 2033)'
 
 getImageUrl = (imgName) => {
 	return imgUrl + '?name=' + imgName;
@@ -24,27 +25,15 @@ getStatusBar = (a, b, c) => {
 
 // 스토리 블록킷을 넘겨줍니다.
 exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
-	userBaseState = ['', '', ''];
-	for (state of user_json.states) {
-		first = state.split('_')[0];
-		if (first == 'health') {
-			userBaseState[0] = state.split('_')[1];
-		}
-		if (first == 'wifi') {
-			userBaseState[1] = state.split('_')[1];
-		}
-		if (first == 'coin') {
-			userBaseState[2] = state.split('_')[1];
-		}
-	}
+	const state_dict = play.statesList2dict(user_json.states);
 	// text length 500 limitation
 	if (story_json.body.length > 500) {
 		console.log({ story_id: story_id, errorMsg: 'body length 500 exceeded' });
 		story_json.body = story_json.body.slice(0, 500);
 	}
-	ret_object = {
+	const ret_object = {
 		conversationId: conversation_id,
-		text: '새로운 이야기가 도착했어요!',
+		text: '새로운 이야기가 도착했어요!' + suffix,
 		blocks: [
 			{
 				type: 'header',
@@ -52,9 +41,9 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 				style: 'blue',
 			},
 			getStatusBar(
-				parseInt(userBaseState[0]),
-				parseInt(userBaseState[1]),
-				parseInt(userBaseState[2])
+				state_dict["health"],
+				state_dict["wifi"],
+				state_dict["coin"]
 			),
 			{
 				type: 'text',
@@ -73,16 +62,18 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 		};
 		ret_object.blocks.splice(2, 0, imgBlock);
 	}
-	cnt = -1;
-	user_states = [];
-	for (state of user_json.states) {
-		user_states.push(state.split('_')[0]);
-	}
-	for (option of story_json.options) {
+	var cnt = -1;
+	for (const option of story_json.options) {
 		cnt++;
-		flag = 0;
-		for (op of option.option_condition) {
-			if (!user_states.includes(op)) {
+		var flag = 0;
+		const option_condition_dict = play.statesList2dict(option.option_condition);
+		for (const op of Object.keys(option_condition_dict)) {
+			if (!Object.keys(state_dict).includes(op)) {
+				flag = 1;
+				break;
+			}
+			
+			if (state_dict[op] < option_condition_dict[op]) {
 				flag = 1;
 				break;
 			}
@@ -149,7 +140,7 @@ exports.showUpdatedStatesAndAchieve = (
 	if (achieve != '') {
 		blocks.push({
 			type: 'text',
-			text: `☆ 업적 획득 ☆`,
+			text: `*☆ 업적 획득 ☆*`,
 			markdown: true,
 		});
 
@@ -169,7 +160,7 @@ exports.showUpdatedStatesAndAchieve = (
 	if (states_exist) {
 		blocks.push({
 			type: 'text',
-			text: `☆ 상태 변경 ☆`,
+			text: `*☆ 상태 변경 ☆*`,
 			markdown: true,
 		});
 
@@ -203,7 +194,7 @@ exports.showUpdatedStatesAndAchieve = (
 
 	ret_object = {
 		conversationId: conversation_id,
-		text: '상태/업적이 변경되었어요!',
+		text: '상태/업적이 변경되었어요!' + suffix,
 		blocks: blocks,
 	};
 
@@ -211,7 +202,7 @@ exports.showUpdatedStatesAndAchieve = (
 };
 
 exports.userInfoBlock = (user_json, states, achieves) => {
-	txt_state = '[ 상태 ]\n';
+	txt_state = '*[ 상태 ]*\n';
 	for (state of user_json.states) {
 		tmp = state.split('_');
 		state = states[tmp[0]];
@@ -223,12 +214,13 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 				txt_state += ' - ' + state + ' ' + tmp[1] + '\n';
 		}
 	}
-	txt_achieve = '[ 업적 ]\n';
+	txt_achieve = '*[ 업적 ]*\n';
 	for (achieve of user_json.achieves) {
 		achieve = achieves[achieve];
 		if (achieve != undefined && achieve != null && achieve != '')
 			txt_achieve += ' - ' + achieve + '\n';
 	}
+	txt_achieve += '\n';
 	// text length 200 limitation
 	if (txt_state.length > 200) {
 		console.log({ txt_state: txt_state, errorMsg: 'length 200 exceeded' });
@@ -262,7 +254,7 @@ exports.userInfoBlock = (user_json, states, achieves) => {
 			},
 			{
 				type: 'label',
-				text: '오류 등으로 인해 재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 이외의 경우 뒤로 가기를 눌러주세요.',
+				text: '오류 등으로 인해 재시작을 원할 경우 위에 \"재시작\"을 입력하고 아래 \"확인\"을 눌러주세요. 재시작할 경우 업적을 제외한 모든 데이터가 초기화됩니다. 이외의 경우 뒤로 가기를 눌러주세요.',
 				markdown: true
 			}
 		],

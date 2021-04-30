@@ -18,7 +18,7 @@
 			}
 		]
 	},
-	"subject-facekbook01": {
+	"subject-facebook01": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -32,7 +32,7 @@
 			}
 		]
 	},
-	"subject-facekbook02": {
+	"subject-facebook02": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -46,7 +46,7 @@
 			}
 		]
 	},
-	"subject-facekbook1": {
+	"subject-facebook1": {
 		"condition": ["mentor-mark", "subject-facebook1"],
 		"weight": 200,
 		"achieve": "",
@@ -70,7 +70,7 @@
 			}
 		]
 	},
-	"subject-facekbook11": {
+	"subject-facebook11": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -84,7 +84,7 @@
 			}
 		]
 	},
-	"subject-facekbook12": {
+	"subject-facebook12": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -98,7 +98,7 @@
 			}
 		]
 	},
-	"subject-facekbook2": {
+	"subject-facebook2": {
 		"condition": ["mentor-mark", "subject-facebook2"],
 		"weight": 200,
 		"achieve": "",
@@ -122,7 +122,7 @@
 			}
 		]
 	},
-	"subject-facekbook21": {
+	"subject-facebook21": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -136,7 +136,7 @@
 			}
 		]
 	},
-	"subject-facekbook22": {
+	"subject-facebook22": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -150,7 +150,7 @@
 			}
 		]
 	},
-	"subject-facekbook3": {
+	"subject-facebook3": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -169,7 +169,7 @@
 			}
 		]
 	},
-	"subject-facekbook31": {
+	"subject-facebook31": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -183,7 +183,7 @@
 			}
 		]
 	},
-	"subject-facekbook32": {
+	"subject-facebook32": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "",
@@ -197,7 +197,7 @@
 			}
 		]
 	},
-	"subject-facekbook4": {
+	"subject-facebook4": {
 		"condition": ["mentor-mark", "subject-facebook4"],
 		"weight": 200,
 		"achieve": "",
@@ -221,7 +221,7 @@
 			}
 		]
 	},
-	"subject-facekbook5": {
+	"subject-facebook5": {
 		"condition": ["mentor-mark"],
 		"weight": 0,
 		"achieve": "facebook-ending",

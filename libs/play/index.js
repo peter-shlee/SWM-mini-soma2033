@@ -14,7 +14,7 @@ exports.divideOptionsByTypeOfAction = (option_action) => {
 	var new_start = false
 	
 	for (action of option_action) {
-		splited_action = action.split("_")
+		splited_action = action.split(/_(.+)/);
 		switch (splited_action[0]) {
 			case "execute":
 				execute_actions.push(splited_action[1]);
@@ -272,6 +272,7 @@ exports.onButtonClicked = async (value, react_user_id, userInfos, stories, conve
 	const states_to_add = play.statesList2dict(divided_option_action["add"]);
 	// add_page -> page 수 하나씩 추가해야 함
 	states_to_add["page"] = 1;
+	console.log(divided_option_action)
 	
 	for (var st of Object.keys(states_to_add)) {
 		play.addState(react_user_id, userInfos, st, states_to_add[st]);
@@ -284,8 +285,14 @@ exports.onButtonClicked = async (value, react_user_id, userInfos, stories, conve
 	}
 	
 	const states_to_delete = play.statesList2dict(divided_option_action["del"]);
-	for (state of Object.keys(states_to_delete)) {
-		play.deleteState(react_user_id, userInfos, state, states_to_delete[state]);
+	for (var st of Object.keys(states_to_delete)) {
+		play.deleteState(react_user_id, userInfos, st, states_to_delete[st]);
+		
+		st = st.split("_")[0]
+		st = stateInfos[st]
+		if (st != undefined && st != null && st != "") {
+				statusOrAchieveChanged = true;
+		}
 	}
 	
 	// essentials 갱신
