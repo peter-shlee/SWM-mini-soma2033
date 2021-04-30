@@ -99,6 +99,38 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 	}
 	return ret_object;
 };
+exports.rankingBlock = (conversation_id, ranking) => {
+	// text length 500 limitation
+	txt = ''
+	for(i in ranking){
+		txt += String(parseInt(i) + 1)  + "위. " + ranking[i][0] + ": 업적 " + ranking[i][1] + "개 달성" + '\n';
+	}
+	txt += '랭킹은 달성한 업적 개수 순으로 결정됩니다.'
+	if (txt.length > 500) {
+		console.log({ txt: txt, errorMsg: 'body length 500 exceeded' });
+		txt = txt.slice(0, 500);
+	}
+	const ret_object = {
+		conversationId: conversation_id,
+		text: '랭킹 확인!' + suffix,
+		blocks: [
+			{
+				type: 'header',
+				text: 'SOMA 2033 랭킹',
+				style: 'orange',
+			},
+			{
+				type: 'text',
+				text: txt,
+				markdown: true,
+			},
+			{
+				type: 'divider',
+			},
+		],
+	};
+	return ret_object;
+};
 
 exports.showUpdatedStatesAndAchieve = (
 	conversation_id,
