@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"> 
-<img width="500" alt="스크린샷 2021-04-30 오전 3 47 14" src="https://user-images.githubusercontent.com/48276633/116602488-c1e99080-a966-11eb-8ff0-37a4c3b1d18a.png">
+<img width="500" alt="mainLogo" src="https://user-images.githubusercontent.com/48276633/116639955-aa30fd00-a9a4-11eb-8acf-b910fb19301b.jpeg">
 </p>
 
 ## 스토리📚
