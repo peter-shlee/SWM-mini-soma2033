@@ -1,5 +1,5 @@
 {
-	"subject-facekbook0": {
+	"subject-facebook0": {
 		"condition": ["main", "mentor-mark", "main-facebook", "facebook-first"],
 		"weight": 100,
 		"achieve": "",
@@ -9,12 +9,12 @@
 			{
 				"option_text": "초록색",
 				"option_condition": [],
-				"option_action": ["del_facebook-first", "del_health_1", "del_coin_1", "execute_subject-facekbook01"]
+				"option_action": ["del_facebook-first", "del_health_1", "del_coin_1", "execute_subject-facebook01"]
 			},
 			{
 				"option_text": "노란색",
 				"option_condition": [],
-				"option_action": ["del_facebook-first", "execute_subject-facekbook02"]
+				"option_action": ["del_facebook-first", "execute_subject-facebook02"]
 			}
 		]
 	},
@@ -235,7 +235,7 @@
 			}
 		]
 	},
-    "subject-facekbook-badending": {
+    "subject-facebook-badending": {
 		"condition": ["page_60", "mentor-mark"],
 		"weight": 100000000,
 		"achieve": "facebook-badending",
