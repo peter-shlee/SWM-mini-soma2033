@@ -1,6 +1,6 @@
 {
 	"ai-ending1": {
-		"condition": ["page_80", "main-AI", "main-AI-standard", "AI_5"],
+		"condition": ["page_100", "main-AI", "main-AI-standard", "AI_5"],
 		"weight": 100000000,
 		"achieve": "ai-ending1",
 		"picture": "",
@@ -14,7 +14,7 @@
 		]
 	},
   "ai-ending2": {
-		"condition": ["page_80", "main-AI"],
+		"condition": ["page_100", "main-AI"],
 		"weight": 10000,
 		"achieve": "ai-ending2",
 		"picture": "",
