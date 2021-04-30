@@ -1,7 +1,7 @@
 {
 	"all-prepared": "예비과정 준비완료!",
 	"yebi-ending": "예비과정 탈락엔딩...",
-	"health-ending": "나는 더이상 진행할 수 있는 체력이 없어...",
+	"health-ending": "차라리 죽여줘...",
 	"wifi-ending": "2033년에 통신망이 없다니!",
 	"help-open": "신중한 소마인",
 	"techno-king": "테크노 킹",
@@ -9,10 +9,11 @@
 	"facebook-badending": "그만 공부 해도 돼... 이미 공부왕~..",
 	"ai-ending1": "로봇인들의 마틴루터킹",
 	"ai-ending2": "2033년 최악의 직업 공무원",
-	"ai-ending3": "로봇 왕국의 영원한 왕",
+	"ai-ending3": "전지전능 풀스택의 왕",
 	"ai-ending4": "시리의 평생 동반자",
 	"bitcoin-master": "가즈아",
 	"mars-ending": "마션 컴플리트",
 	"rule-base": "미친 룰베이스 백엔드 개발자",
-	"space-king": "우주 정복 완료"
+	"space-king": "우주 정복 완료",
+	"crazy-love": "사랑에 몸을 던지다"
 }

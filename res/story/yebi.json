@@ -42,7 +42,7 @@
       {
 				"option_text": "어쩔수없지.. 본과정 시작~!",
 				"option_condition": [],
-				"option_action": ["add_main", "del_start"]
+				"option_action": ["add_main", "add_need-device", "del_start"]
 			},
 			{
 				"option_text": "그래도 준비를 더하고 시작하겠습니다.",

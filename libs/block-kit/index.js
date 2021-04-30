@@ -1,4 +1,4 @@
-const imgUrl = 'https://swm-mini-soma2033-girbv.run.goorm.io/request/img';
+const imgUrl = 'https://swm-mini-soma2033-rnqma.run.goorm.io/request/img';
 const resIO = require('../resIO');
 const play = require('../play');
 
@@ -203,9 +203,15 @@ exports.showUpdatedStatesAndAchieve = (
 exports.userInfoBlock = (user_json, states, achieves) => {
 	txt_state = '[ 상태 ]\n';
 	for (state of user_json.states) {
-		state = state.split('_')[0];
-		state = states[state];
-		if (state != undefined && state != null && state != '') txt_state += ' - ' + state + '\n';
+		tmp = state.split('_');
+		state = states[tmp[0]];
+		if (state != undefined && state != null && state != '') {
+			tmp[0] = tmp[0].split('-')[0];
+			if(tmp[0] == 'team' || tmp[0] == 'mentor' || tmp[0] == 'main')
+				txt_state += ' - ' + state + '\n';
+			else
+				txt_state += ' - ' + state + ' ' + tmp[1] + '\n';
+		}
 	}
 	txt_achieve = '[ 업적 ]\n';
 	for (achieve of user_json.achieves) {

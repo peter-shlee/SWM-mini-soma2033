@@ -8,22 +8,22 @@
 		"options": [
 			{
 				"option_text": "인공지능 (AI +1)",
-				"option_condition": [],
+				"option_condition": ["coin"],
 				"option_action": ["del_coin_1", "add_AI_1"]
 			},
 			{
 				"option_text": "프론트엔드 (frontend +1)",
-				"option_condition": [],
+				"option_condition": ["coin"],
 				"option_action": ["del_coin_1", "add_frontend_1"]
 			},
 			{
 				"option_text": "백엔드 (backend +1)",
-				"option_condition": [],
+				"option_condition": ["coin"],
 				"option_action": ["del_coin_1", "add_backend_1"]
 			},
 			{
 				"option_text": "우주기술 (space +1)",
-				"option_condition": [],
+				"option_condition": ["coin"],
 				"option_action": ["del_coin_1", "add_space_1"]
 			},
 			{
@@ -79,5 +79,5 @@
 				"option_action": ["del_health_1"]
 			}
 		]
-	},
+	}
 }

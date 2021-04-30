@@ -28,11 +28,11 @@
 		]
 	},
 	"ai-ending3": {
-		"condition": ["main-AI", "main-AI-kingdom", "ai-dragon", "ai-chair", "ai-sword"],
+		"condition": ["main-AI", "main-AI-kingdom", "AI_3", "backend_3", "frontend_3"],
 		"weight": 10000000000,
 		"achieve": "ai-ending3",
 		"picture": "kingdom.jpg",
-		"body": " 드디어! 모든 요구조건을 달성한 당신은 드디어 왕좌에 앉게 되었습니다! 로봇 드래곤의 호위를 받는 당신을 건드릴 수 있는 사람은 없습니다. ",
+		"body": " 드디어! 모든 요구조건을 달성한 당신은 드디어 왕좌에 앉게 되었습니다! 역시 개발자는 풀스택 개발자가 가장 멋진 법이죠! 풀스택이 된 당신은 소마 프로젝트도 순식간에 끝내버리고 인증까지 받아버렸습니다. \n\n 왕좌에 앉은 당신은 로봇 드래곤의 호위를 받고 수 만대의 로봇을 군대로 갖게 되었습니다. 이제 당신을 건드릴 수 있는 사람은 없습니다.\n\n === The End ===",
 		"options": [
       {
 				"option_text": "다시 시작하기",
@@ -41,14 +41,42 @@
 			}
 		]
 	},
+	"siri-final": {
+    "condition": ["main-AI-siri", "apple-watch"],
+    "weight": 10000,
+    "achieve": "",
+    "picture": "",
+    "body": " 당신은 어떻게서든 애플 워치를 구해왔습니다. 하지만 앞으로는 이런걸 더이상 구해오기는 힘들거란 것을 알고있어요... 그러므로 당신은 오늘...! 결전을 봐야한다고 결심합니다.\n\n 두근두근 저 멀리서 그녀가 다가오네요...!",
+    "options": [
+      {
+        "option_text": "너무 떨려..! 하지만 오늘이야.",
+        "option_condition": [""],
+        "option_action": ["execute_siri-ffinal", "add_time"]
+      }
+    ]
+  },
+  "siri-ffinal": {
+    "condition": [],
+    "weight": 0,
+    "achieve": "ai-ending5",
+    "picture": "",
+    "body": "시리가 말을 겁니다.\n\n '오늘 멘토링은 어떻게 할까?'\n\n 당신은 수줍게 애플 워치를 건내줍니다.\n\n '아니 이 귀한걸 어떻게...! 계속해서 날 생각해준거야?'\n\n -> 당연히 생각했죠... 맥북과 동기화하는 모습이 세상에서 가장 행복해보였는걸요?\n\n '이 애플 워치, 나에게 굉장히 소중했던거야. 너무 고마워'\n\n -> 그래서 그런데...",
+    "options": [
+      {
+        "option_text": "멘토링 끝나고 저와 데이트 해주세요!",
+        "option_condition": [""],
+        "option_action": ["execute_ai-ending4"]
+      }
+    ]
+  },
 	"ai-ending4": {
-		"condition": ["main-AI", "main-AI-siri-complete"],
-		"weight": 10000000000,
+		"condition": [],
+		"weight": 0,
 		"achieve": "ai-ending4",
 		"picture": "",
-		"body": " 나는 너뿐이야.. 시리야 사랑해",
+		"body": " 당신은 성공적으로 시리와 데이트에 나갔습니다. 시리도 당신의 정성에 이미 사랑에 빠진 상태였고, 둘은 바로 커플이 되었어요.\n\n 비록 행복한 생활로 소마 인증은 못 받았지만, 꽤나 괜찮은 성과를 거뒀습니다. 또 주변에서 응원도 많이 해주네요!\n\n 그렇게 행복하게 살다가 결혼까지 골인하고, 당신의 육체가 시간을 다할 때까지 사랑을 멈추지 않았어요!\n\n 육체를 잃기 직전에는 결국 시리를 사랑한 나머지 당신은 로봇으로 정신을 옮겨서 이제는 온전한 로봇 커플이 되었습니다. 이 커플은 소마에서도 유명한 커플로 기록되어 정말 평생을 행복하게 살았답니다~\n\n === The End ===",
 		"options": [
-      {
+			{
 				"option_text": "다시 시작하기",
 				"option_condition": [],
 				"option_action": ["new-start"]
