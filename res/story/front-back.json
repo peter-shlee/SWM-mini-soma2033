@@ -50,7 +50,7 @@
         "option_action": []
       },
       {
-        "option_text": "바로 외주맞기자!",
+        "option_text": "바로 외주맡기자!",
         "option_condition": ["coin"],
         "option_action": ["del_coin"]
       },

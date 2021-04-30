@@ -1,7 +1,7 @@
 {
 	"subject-select": {
 		"condition": ["start", "need-subject"],
-		"weight": 200,
+		"weight": 400,
 		"achieve": "",
 		"picture": "",
 		"body": " 이제 슬슬 어떤 주제를 할지 생각해봐야 할 것 같지 않나요? 다른 팀들은 이미 주제를 선택했다구요!\n\n 아래 선택지들은 현재 당신의 능력으로 선택 가능한 주제들입니다. 원하는 주제를 선택해주세요!",

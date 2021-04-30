@@ -1,7 +1,7 @@
 {
 	"substory1": {
 		"condition": ["main"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "substory1.jpg",
 		"body": "오늘은 구름에서 강의들이 할인하는 날 입니다. 평소에 부족했던 공부를 하면 많은 도움이 되지 않을까요?\n어떤 강의를 들을까요?\n수강 시 1 소마코인이 지불됩니다.",
@@ -35,7 +35,7 @@
 	},
 	"substory2": {
 		"condition": ["robo-dog"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "robodog.jpg",
 		"body": "앗! 우리 로봇개가 무엇을 찾아냈나봐요! 확인해보니 frontend 기술이 담겨있는 메모리였어요! 당신은 바로 그것을 주입받고 프론트엔드에 대한 기술력이 높아졌습니다.",
@@ -49,7 +49,7 @@
 	},
 	"substory3": {
 		"condition": ["robo-dog"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "robodog.jpg",
 		"body": "개와 함께하는 운동은 너무나 즐겁네요! 체력이 1 증가하였습니다.",
@@ -63,7 +63,7 @@
 	},
 	"substory4": {
 		"condition": ["robo-dog"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "robodog.jpg",
 		"body": " 앗! 당신의 로봇개가 어디가 아픈 것 같습니다. 보아하니 통신상의 문제인 것 같은데... 어떻게 할까요?",
@@ -87,7 +87,7 @@
 	},
 	"substory5": {
 		"condition": [],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "",
 		"body": "오늘은 등산이나 가볼까요? 아무리 프로젝트도 중요하지만 그걸 끝까지 할 수 있는 체력도 중요하죠!",
@@ -101,7 +101,7 @@
 	},
 	"substory6": {
 		"condition": [],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "",
 		"body": "오늘은 시간이 남네요! 뭘해볼까요?",
@@ -125,7 +125,7 @@
 	},
 	"substory7": {
 		"condition": ["robo-dog_3"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "robodog-mania",
 		"picture": "robodogs.jpg",
 		"body": " 왈왈왈왈왈! 아주 개 환장 파티군요! 이렇게 많은 로봇 개는 당신만이 보유하고 있을거에요. 매일매일이 행복한 하루네요! 당신은 개들과 행복한 하루를 보냅니다.",
@@ -139,7 +139,7 @@
 	},
 	"substory8": {
 		"condition": ["robo-dog_3"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "",
 		"body": " 큰일났어요! 로봇 개들이 싸우기 시작했습니다! 한번 싸우기 시작하니까 난리가 나고 풍비박산이 나기 직전이에요. 3마리 이상은 아무래도 무리였던 걸까요?\n\n 결국에는 로봇 개 1마리가 죽고 당신도 싸움을 멈추려다가 상처를 입었습니다.",
@@ -153,7 +153,7 @@
 	},
 	"substory9": {
 		"condition": ["robo-dog"],
-		"weight": 100,
+		"weight": 50,
 		"achieve": "",
 		"picture": "",
 		"body": " 앗 당신의 로봇 개의 스크린이 정상이 아닌 것 같아요! 아까 달리다가 넘어져서 프론트엔드 코드가 꼬인 걸까요? 앞도 안보이는 것 같습니다.",
