@@ -6,6 +6,7 @@
 
 <p align="center"> 
 <img width="500" alt="mainLogo" src="https://user-images.githubusercontent.com/48276633/116639955-aa30fd00-a9a4-11eb-8acf-b910fb19301b.jpeg">
+<h5 align = "center">소마2033은 메트로2033에서 영감을 받은 서울2033에서 영감을 받아서 제작되었습니다.</h5>
 </p>
 
 ## 스토리📚
@@ -47,3 +48,10 @@
 <br><br><br>
 
 
+## 팀원🤜 
+SWM 12기 미니프로젝트 카카오워크 챗봇 13팀 
+- <a href="https://github.com/dymicboy">이재홍🤴🏻</a>
+- <a href="https://github.com/shlee4290">이승현🧑🏻‍💻</a>
+- <a href="https://github.com/wndnjs9878">이주원👩🏻‍💻</a>
+- <a href="https://github.com/DoubleHoon">이중훈🧑🏻‍💻</a>
+- <a href="https://github.com/MilkClouds">최수환🧑🏻‍💻</a>
