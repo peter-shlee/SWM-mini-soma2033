@@ -24,25 +24,13 @@ getStatusBar = (a, b, c) => {
 
 // 스토리 블록킷을 넘겨줍니다.
 exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
-	userBaseState = ['', '', ''];
-	for (state of user_json.states) {
-		first = state.split('_')[0];
-		if (first == 'health') {
-			userBaseState[0] = state.split('_')[1];
-		}
-		if (first == 'wifi') {
-			userBaseState[1] = state.split('_')[1];
-		}
-		if (first == 'coin') {
-			userBaseState[2] = state.split('_')[1];
-		}
-	}
+	const state_dict = play.statesList2dict(user_json.states);
 	// text length 500 limitation
 	if (story_json.body.length > 500) {
 		console.log({ story_id: story_id, errorMsg: 'body length 500 exceeded' });
 		story_json.body = story_json.body.slice(0, 500);
 	}
-	ret_object = {
+	const ret_object = {
 		conversationId: conversation_id,
 		text: '새로운 이야기가 도착했어요!',
 		blocks: [
@@ -52,9 +40,9 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 				style: 'blue',
 			},
 			getStatusBar(
-				parseInt(userBaseState[0]),
-				parseInt(userBaseState[1]),
-				parseInt(userBaseState[2])
+				state_dict["health"],
+				state_dict["wifi"],
+				state_dict["coin"]
 			),
 			{
 				type: 'text',
@@ -73,16 +61,18 @@ exports.storyBlock = (conversation_id, user_json, story_json, story_id) => {
 		};
 		ret_object.blocks.splice(2, 0, imgBlock);
 	}
-	cnt = -1;
-	user_states = [];
-	for (state of user_json.states) {
-		user_states.push(state.split('_')[0]);
-	}
-	for (option of story_json.options) {
+	var cnt = -1;
+	for (const option of story_json.options) {
 		cnt++;
-		flag = 0;
-		for (op of option.option_condition) {
-			if (!user_states.includes(op)) {
+		var flag = 0;
+		const option_condition_dict = play.statesList2dict(option.option_condition);
+		for (const op of Object.keys(option_condition_dict)) {
+			if (!Object.keys(state_dict).includes(op)) {
+				flag = 1;
+				break;
+			}
+			
+			if (state_dict[op] < option_condition_dict[op]) {
 				flag = 1;
 				break;
 			}
