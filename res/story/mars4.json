@@ -73,9 +73,9 @@
 		"body": "비트코인 가격이 아주 높아졌다는 소식입니다. 지금 매도할까요?",
 		"options": [
 			{
-				"option_text": "풀매도한다. (소마코인 +2) (업적 획득)",
+				"option_text": "풀매도한다. (소마코인 +3) (업적 획득)",
 				"option_condition": [],
-				"option_action": ["add_coin_2", "execute_marscoinking"]
+				"option_action": ["add_coin_3", "execute_marscoinking"]
 			}
 		]
 	},
@@ -108,7 +108,7 @@
 			{
 				"option_text": "일단 지나간다.",
 				"option_condition": [],
-				"option_action": ["execute_maon1"]
+				"option_action": ["execute_marsstorycon1"]
 			},
 			{
 				"option_text": "우주기술 업적을 획득한다.",

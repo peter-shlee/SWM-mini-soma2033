@@ -1,0 +1,44 @@
+{
+	"mentorsub1": {
+		"condition": ["main"],
+		"weight": 20,
+		"achieve": "",
+		"picture": "",
+		"body": "반갑습니다! 시리입니다.\n오늘은 대망의 ios 20.0 발표일 입니다!\n기분이 아주 좋은 오늘 저를 만나신 것은 큰 행운이겠죠?\n\n특별히 펌웨어 업데이트를 해드리겠습니다!",
+		"options": [
+			{
+				"option_text": "무야호! (wifi +1)",
+				"option_condition": [],
+				"option_action": ["add_wifi_1"]
+			}
+		]
+	},
+	"mentorsub2": {
+		"condition": ["main"],
+		"weight": 20,
+		"achieve": "",
+		"picture": "mentorsub2.jpg",
+		"body": "안녕하세요~\n일론 머스큽니다? 으이~\n\n오늘은 정말 중요한 날이에요.\n금성에서 착륙 시험하는 날이거든요.\n\n드디어 성공! 성공 했잖아 봐봐\n테슬라 주가 떨어진다고 뭐라 했던 사람들!!! 나 이럴\n\n\n\n\n아...아..\n\n괜찮아. 언젠가 금성 갈끄니까?",
+		"options": [
+			{
+				"option_text": "설마 금성도 가겠어? (우주기술 +1)",
+				"option_condition": [],
+				"option_action": ["add_space_1"]
+			}
+		]
+	},
+	"mentorsub3": {
+		"condition": ["main"],
+		"weight": 20,
+		"achieve": "",
+		"picture": "mentorsub3.jpg",
+		"body": "안녕하세요! 마크 저커버그 입니다.\n요즘 저희가 개발자가 부족해서 외주를 많이 찾고 있습니다. 설마 멘티가 멘토 말을 안듣는건 아니겠죠?\n\n내일 아침까지 이거좀 읽어보시고 이대로 개발 좀 해와주세요~",
+		"options": [
+			{
+				"option_text": "이게 맞나..? (체력 -1)",
+				"option_condition": [],
+				"option_action": ["del_health_1"]
+			}
+		]
+	}
+}
